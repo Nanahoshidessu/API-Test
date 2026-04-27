@@ -1,0 +1,23 @@
+﻿สรุปความแตกต่างของ 3 Endpoints,,,,
+,Feature,GetDataMeterSum,GetDataMultimeter,GetDataMeterDetail
+,Meter,ตัวเดียว (string),หลายตัว (string[]),หลายตัว (string[])
+,DataSelect,หลายค่า (string[]),ค่าเดียว (string?),ค่าเดียว (string?)
+,Response Key,ช่วงเวลา,รหัสมิเตอร์,Sub-Meter (ChartSeries)
+,กราฟ,เปรียบเทียบช่วงเวลา,เปรียบเทียบมิเตอร์,Stacked Bar (Sub-Meter)
+,Response Model,MeterCompareResponse,MeterCompareResponse,MeterDetailResponse
+,,,,
+Server Configuration,,,,
+,Setting,Value,,
+,HTTP Port,5000 (ListenAnyIP),,
+,HTTPS Port,5001 (ListenAnyIP),,
+,CORS,"AllowAnyOrigin, AllowAnyMethod, AllowAnyHeader",,
+,Swagger,เปิดใช้งานทุก Environment,,
+,Database,SQL Server (unimicron_db),,
+,,,,
+หมายเหตุ,,,,
+- ทุก Endpoint ใช้ HTTP POST พร้อม JSON body,,,,
+"- ค่า DataSelect สำหรับ Week ใช้รูปแบบ ""YYYY-MM-DD||YYYY-MM-DD"" (วันเริ่ม||วันสิ้นสุด)",,,,
+"- ค่า DataSelect สำหรับ Max10Year ใช้รูปแบบ ""ปีปัจจุบัน|ปีเริ่มต้น"" เช่น ""2025|2016""",,,,
+- Interval มีผลเฉพาะ Type = Day (5/15/60 นาที) และ Week (7 วัน),,,,
+- Month จำเป็นสำหรับ Type = Day และ Week เพื่อระบุเดือนที่ต้องการ,,,,
+"- Past = 0 หมายถึงปีปัจจุบัน, Past = 1 หมายถึงปีที่แล้ว",,,,

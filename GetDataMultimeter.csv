@@ -1,0 +1,87 @@
+﻿2. POST /GetDataMultimeter,,,,
+"วัตถุประสงค์: เปรียบเทียบข้อมูล Target vs Actual 
+ของ หลายมิเตอร์ ในช่วงเวลา เดียวกัน (DataSelect ค่าเดียว)",,,,
+Request Body — MultimeterRequest,,,,
+,Parameter,Type,Required,Description
+,Type,string,✅,ประเภทการดูข้อมูล
+,Meter,string[],✅,"อาร์เรย์ ของรหัสมิเตอร์ที่ต้องการเปรียบเทียบ เช่น [""PM001"", ""PM002"", ""PM003""]"
+,DataSelect,string?,✅,ช่วงเวลา ค่าเดียว ที่ต้องการดู
+,Interval,int,✅,ช่วงเวลาแบ่งข้อมูล (นาที)
+,Past,int,✅,จำนวนปีย้อนหลัง
+,Month,string?,❌,เดือน
+,WeekMonth,string?,❌,บริบทเพิ่มเติม
+,,,,
+Response Body — MeterCompareResponse,,,,
+เหมือนกับ GetDataMeterSum Response แต่ key ใน Dictionary จะเป็นรหัสมิเตอร์ แทนช่วงเวลา,,,,
+,Field,Type,Description,
+,ArrDataTarget,"Dictionary<string, List<double>>","key = รหัสมิเตอร์ (เช่น ""PM001""), value = ข้อมูล Target",
+,ArrDataActual,"Dictionary<string, List<double>>","key = รหัสมิเตอร์, value = ข้อมูล Actual",
+,(อื่นๆ),(เหมือน MeterCompareResponse),,
+,,,,
+ตัวอย่าง Request/Response ตาม Type,,,,
+"Type = ""Day""",,,,
+,"// Request
+{
+  ""Type"": ""Day"",
+  ""Meter"": [""PM001"", ""PM002"", ""PM003""],
+  ""DataSelect"": ""15"",
+  ""Interval"": 15,
+  ""Past"": 0,
+  ""Month"": ""06""
+}
+
+// Response
+{
+  ""MaxValueTarget"": 200.0,
+  ""MaxValueActual"": 185.0,
+  ""ArrDataTarget"": {
+    ""PM001"": [50.0, 60.0, 70.0, ...],
+    ""PM002"": [55.0, 65.0, 75.0, ...],
+    ""PM003"": [48.0, 58.0, 68.0, ...]
+  },
+  ""ArrDataActual"": {
+    ""PM001"": [45.0, 55.0, 65.0, ...],
+    ""PM002"": [50.0, 60.0, 70.0, ...],
+    ""PM003"": [43.0, 53.0, 63.0, ...]
+  },
+  ""ArrCategories"": [""00:00"", ""00:15"", ""00:30"", ...],
+  ""ShortMonth"": ""Jun"",
+  ""Year"": ""2025""
+}",,,
+,,,,
+"Type = ""Week""",,,,
+,"{
+  ""Type"": ""Week"",
+  ""Meter"": [""PM001"", ""PM002""],
+  ""DataSelect"": ""2025-06-09||2025-06-15"",
+  ""Interval"": 7,
+  ""Past"": 0,
+  ""Month"": ""06""
+}",,,
+,,,,
+"Type = ""Month""",,,,
+,"{
+  ""Type"": ""Month"",
+  ""Meter"": [""PM001"", ""PM002""],
+  ""DataSelect"": ""06"",
+  ""Interval"": 0,
+  ""Past"": 0
+}",,,
+,,,,
+"Type = ""Year""",,,,
+,"{
+  ""Type"": ""Year"",
+  ""Meter"": [""PM001"", ""PM002""],
+  ""DataSelect"": ""2025"",
+  ""Interval"": 0,
+  ""Past"": 0
+}",,,
+,,,,
+"Type = ""Max10Year""",,,,
+,"{
+  ""Type"": ""Max10Year"",
+  ""Meter"": [""PM001"", ""PM002""],
+  ""DataSelect"": ""2025|2016"",
+  ""Interval"": 0,
+  ""Past"": 0
+}",,,

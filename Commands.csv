@@ -1,0 +1,98 @@
+﻿Commands,,
+PING,,
+ใช้ทดสอบว่า server ยังทำงานอยู่,,
+,,
+Request:,,
+"{ ""cmd"": ""PING"" }",,
+,,
+Response:,,
+{,,
+"  ""Command"": ""PING"",",,
+"  ""Status"": ""OK"",",,
+"  ""Response"": ""PONG"",",,
+"  ""Timestamp"": ""2025-01-15T10:30:00.123""",,
+},,
+,,
+Field,Type,Description
+Command,string,ชื่อ command ที่ request มา
+Status,string,"""OK"" เสมอเมื่อสำเร็จ"
+Response,string,"""PONG"" เสมอ"
+Timestamp,string (ISO 8601),เวลาที่ server ตอบกลับ
+,,
+INFO,,
+ดึงข้อมูล sensor สรุปภาพรวม และรายชื่อ sensor ที่ online ทั้งหมด,,
+,,
+Request:,,
+"{ ""cmd"": ""INFO"" }",,
+,,
+Response:,,
+{,,
+"  ""Command"": ""INFO"",",,
+"  ""Status"": ""OK"",",,
+"  ""Timestamp"": ""2025-01-15T10:30:00.123"",",,
+"  ""Total"": 800,",,
+"  ""Online"": 790,",,
+"  ""Alarm"": 5,",,
+"  ""Offline"": 3,",,
+"  ""Disabled"": 2,",,
+"  ""Sensors"": [",,
+    {,,
+"      ""SensorId"": 1,",,
+"      ""SensorName"": ""FLW-F1-A-001"",",,
+"      ""FlowId"": 101,",,
+"      ""Value"": 25,",,
+"      ""Accumulate"": 12345,",,
+"      ""Status"": ""Online"",",,
+"      ""LastUpdated"": ""2025-01-15T10:29:58.456""",,
+    },,
+  ],,
+},,
+,,
+Response Fields (Root),,
+Field,Type,Description
+Command,string,"""INFO"""
+Status,string,"""OK"" เมื่อสำเร็จ"
+Timestamp,string (ISO 8601),เวลาที่ server ตอบกลับ
+Total,int,จำนวน sensor ทั้งหมดที่กำหนดไว้
+Online,int,จำนวน sensor ที่ online (StatusCode = 1)
+Alarm,int,จำนวน sensor ที่มี alarm (StatusCode = 2)
+Offline,int,จำนวน sensor ที่ offline หรือ invalid (StatusCode = 9 หรือ IsValid = false)
+Disabled,int,จำนวน sensor ที่ถูก disable (StatusCode = 0)
+Sensors,array,รายชื่อ sensor ที่ online เท่านั้น (StatusCode = 1)
+,,
+Sensor Object Fields,,
+Field,Type,Description
+SensorId,int,ID ของ sensor
+SensorName,string,"ชื่อ sensor เช่น ""FLW-F1-A-001"""
+FlowId,int,Flow ID จาก PLC
+Value,int,ค่า flow realtime (หน่วยตามที่กำหนดใน PLC)
+Accumulate,uint,ค่า flow สะสม (accumulate)
+Status,string,"ข้อความสถานะ เช่น ""Online"", ""Alarm"""
+LastUpdated,string (ISO 8601),เวลาที่อ่านค่าล่าสุดจาก PLC
+,,
+Sensor Status Codes,,
+StatusCode,StatusText,ความหมาย
+0,Disabled,sensor ถูก disable ไว้
+1,Online,sensor ทำงานปกติ มีค่าใหม่
+2,Alarm,sensor มีสัญญาณ alarm
+9,Offline,sensor ไม่ตอบสนอง หรืออ่านค่าไม่ได้
+,,
+Error Responses,,
+"เมื่อ request ไม่ถูกต้อง server จะตอบกลับด้วย ""Status"": ""ERROR""",,
+Message,เหตุการณ์,
+INVALID_JSON,JSON parse ไม่ได้,
+INVALID_JSON_OBJECT,JSON valid แต่ไม่ใช่ object (เช่น array หรือ string),
+CMD_REQUIRED,ไม่มี field cmd หรือ value ว่าง,
+UNKNOWN_CMD,มี cmd แต่ไม่รู้จัก command นั้น,
+,,
+ตัวอย่าง error response:,,
+{,,
+"  ""Status"": ""ERROR"",",,
+"  ""Message"": ""INVALID_JSON""",,
+},,
+,,
+{,,
+"  ""Command"": ""HELLO"",",,
+"  ""Status"": ""ERROR"",",,
+"  ""Message"": ""UNKNOWN_CMD""",,
+},,

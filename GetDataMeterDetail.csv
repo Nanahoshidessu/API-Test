@@ -1,0 +1,80 @@
+﻿3. POST /GetDataMeterDetail,,,,
+"วัตถุประสงค์: แสดงข้อมูลรายละเอียดของ หลายมิเตอร์ ในรูปแบบ Stacked Bar Chart 
+โดยแยก Sub-Meter เป็น Series แต่ละตัว",,,,
+Request Body — MeterDetailRequest,,,,
+,Parameter,Type,Required,Description
+,Type,string,✅,ประเภทการดูข้อมูล
+,Meter,string[],✅,"อาร์เรย์ ของรหัสมิเตอร์ เช่น [""PM001"", ""PM002""]"
+,DataSelect,string?,✅,ช่วงเวลา ค่าเดียว (รูปแบบเดียวกับ Multimeter)
+,Interval,int,✅,ช่วงเวลาแบ่งข้อมูล (นาที)
+,Past,int,✅,จำนวนปีย้อนหลัง
+,Month,string?,❌,เดือน
+,WeekMonth,string?,❌,บริบทเพิ่มเติม
+,,,,
+Response Body — MeterDetailResponse,,,,
+,Field,Type,Description,
+,MaxData,double,ค่าสูงสุดของข้อมูล (ใช้กำหนด Y-axis),
+,ArrDataChart,List<ChartSeries>,อาร์เรย์ของ Series สำหรับ Stacked Bar Chart,
+,ArrStrokeChart,List<int>,ความหนาเส้นขอบของแต่ละ Series (0 = ไม่มีเส้นขอบ),
+,ArrCategories,List<string>,ป้ายแกน X ของกราฟ,
+,MeterLabelMap,"List<Dictionary<string, string>>","แมปรหัสมิเตอร์กับชื่อที่แสดง เช่น [{""id"": ""PM001"", ""label"": ""Main Meter 1""}]",
+,,,,
+ChartSeries Object,,,,
+,Field,Type,Description,
+,Name,string,ชื่อ Series (ชื่อ Sub-Meter),
+,Type,string,"ประเภทกราฟ เช่น ""bar""",
+,Color,string,"สี HEX เช่น ""#FF6384""",
+,Data,List<double>,ข้อมูลตัวเลขของ Series,
+,,,,
+ตัวอย่าง Request/Response,,,,
+"Type = ""Day""",,,,
+,"// Request
+{
+  ""Type"": ""Day"",
+  ""Meter"": [""PM001"", ""PM002""],
+  ""DataSelect"": ""15"",
+  ""Interval"": 15,
+  ""Past"": 0,
+  ""Month"": ""06""
+}
+
+// Response
+{
+  ""MaxData"": 250.0,
+  ""ArrDataChart"": [
+    {
+      ""Name"": ""Sub-Meter A"",
+      ""Type"": ""bar"",
+      ""Color"": ""#FF6384"",
+      ""Data"": [10.0, 15.0, 20.0, 25.0, ...]
+    },
+    {
+      ""Name"": ""Sub-Meter B"",
+      ""Type"": ""bar"",
+      ""Color"": ""#36A2EB"",
+      ""Data"": [8.0, 12.0, 18.0, 22.0, ...]
+    },
+    {
+      ""Name"": ""Sub-Meter C"",
+      ""Type"": ""bar"",
+      ""Color"": ""#FFCE56"",
+      ""Data"": [5.0, 10.0, 15.0, 20.0, ...]
+    }
+  ],
+  ""ArrStrokeChart"": [0, 0, 0],
+  ""ArrCategories"": [""00:00"", ""00:15"", ""00:30"", ""00:45"", ...],
+  ""MeterLabelMap"": [
+    {""id"": ""PM001"", ""label"": ""Power Meter 001""},
+    {""id"": ""PM002"", ""label"": ""Power Meter 002""}
+  ]
+}",,,
+,,,,
+,,,,
+"Type = ""Month""",,,,
+,"{
+  ""Type"": ""Month"",
+  ""Meter"": [""PM001""],
+  ""DataSelect"": ""06"",
+  ""Interval"": 0,
+  ""Past"": 0
+}",,,

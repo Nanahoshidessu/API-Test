@@ -1,0 +1,94 @@
+﻿1. POST /GetDataMeterSum,,,,
+"วัตถุประสงค์: เปรียบเทียบข้อมูล Target vs Actual 
+ของ มิเตอร์ตัวเดียว แต่เปรียบเทียบ หลายช่วงเวลา (DataSelect หลายค่า)",,,,
+Request Body — MeterSumRequest,,,,
+,Parameter,Type,Required,Description
+,Type,string,✅,ประเภทการดูข้อมูล (ดู Common Parameters)
+,Meter,string,✅,"รหัสมิเตอร์ตัวเดียว เช่น ""ALL"" (ทั้งหมด), ""G001"" (กลุ่ม), ""PM001"" (มิเตอร์เฉพาะ)"
+,DataSelect,string[],✅,อาร์เรย์ ของช่วงเวลาที่ต้องการเปรียบเทียบ (หลายค่า)
+,Interval,int,✅,ช่วงเวลาแบ่งข้อมูล (นาที)
+,Past,int,✅,จำนวนปีย้อนหลัง
+,Month,string?,❌,เดือน (ใช้กับ Day/Week)
+,WeekMonth,string?,❌,บริบทเพิ่มเติม
+,,,,
+Response Body — MeterCompareResponse,,,,
+,Field,Type,Description,
+,MaxValueTarget,double,ค่าสูงสุดของ Target (ใช้กำหนด Y-axis ของกราฟ),
+,MaxValueActual,double,ค่าสูงสุดของ Actual,
+,ArrDataTarget,"Dictionary<string, List<double>>","ข้อมูล Target — key = DataSelect แต่ละค่า, value = อาร์เรย์ตัวเลข",
+,ArrDataActual,"Dictionary<string, List<double>>","ข้อมูล Actual — key = DataSelect แต่ละค่า, value = อาร์เรย์ตัวเลข",
+,ArrCategories,List<string>,ป้ายแกน X ของกราฟ (เวลา/วันที่/เดือน/ปี),
+,ShortMonth,string,"ชื่อเดือนแบบย่อ เช่น ""Jun""",
+,Year,string,"ปี เช่น ""2025""",
+,,,,
+ตัวอย่าง Request/Response ตาม Type,,,,
+"Type = ""Day"" — เปรียบเทียบหลายวัน",,,,
+,"// Request
+{
+  ""Type"": ""Day"",
+  ""Meter"": ""PM001"",
+  ""DataSelect"": [""10"", ""11"", ""12""],
+  ""Interval"": 15,
+  ""Past"": 0,
+  ""Month"": ""06""
+}
+
+// Response
+{
+  ""MaxValueTarget"": 150.0,
+  ""MaxValueActual"": 142.5,
+  ""ArrDataTarget"": {
+    ""10"": [50.0, 60.0, 70.0, ...],
+    ""11"": [55.0, 65.0, 75.0, ...],
+    ""12"": [48.0, 58.0, 68.0, ...]
+  },
+  ""ArrDataActual"": {
+    ""10"": [45.0, 55.0, 65.0, ...],
+    ""11"": [50.0, 60.0, 70.0, ...],
+    ""12"": [43.0, 53.0, 63.0, ...]
+  },
+  ""ArrCategories"": [""00:00"", ""00:15"", ""00:30"", ""00:45"", ""01:00"", ...],
+  ""ShortMonth"": ""Jun"",
+  ""Year"": ""2025""
+}",,,
+,,,,
+"Type = ""Week"" — เปรียบเทียบหลายสัปดาห์",,,,
+,"// Request
+{
+  ""Type"": ""Week"",
+  ""Meter"": ""ALL"",
+  ""DataSelect"": [""2025-06-02||2025-06-08"", ""2025-06-09||2025-06-15""],
+  ""Interval"": 7,
+  ""Past"": 0,
+  ""Month"": ""06""
+}",,,
+,,,,
+"Type = ""Month"" — เปรียบเทียบหลายเดือน",,,,
+,"// Request
+{
+  ""Type"": ""Month"",
+  ""Meter"": ""G001"",
+  ""DataSelect"": [""04"", ""05"", ""06""],
+  ""Interval"": 0,
+  ""Past"": 0
+}",,,
+,,,,
+"Type = ""Year"" — เปรียบเทียบหลายปี",,,,
+,"// Request
+{
+  ""Type"": ""Year"",
+  ""Meter"": ""PM001"",
+  ""DataSelect"": [""2023"", ""2024"", ""2025""],
+  ""Interval"": 0,
+  ""Past"": 0
+}",,,
+,,,,
+"Type = ""Max10Year"" — เปรียบเทียบหลายปี (ย้อนหลัง 10 ปี)",,,,
+,"// Request
+{
+  ""Type"": ""Max10Year"",
+  ""Meter"": ""ALL"",
+  ""DataSelect"": [""2016"", ""2017"", ""2018"", ""2019"", ""2020"", ""2021"", ""2022"", ""2023"", ""2024"", ""2025""],
+  ""Interval"": 0,
+  ""Past"": 0
+}",,,
