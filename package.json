@@ -1,5 +1,26 @@
 {
+  "name": "unimicron-api-test",
+  "version": "1.0.0",
+  "description": "Newman automated test runner for Unimicron Pegasus API",
+  "scripts": {
+    "scenario:build": "node scripts/apply-scenario-automation.js",
+    "test": "node newman-run.js --suite scenario",
+    "test:plan": "node newman-run.js --suite scenario --dry-run",
+    "test:functional": "node newman-run.js --suite scenario:functional",
+    "test:validation": "node newman-run.js --suite scenario:validation",
+    "test:cross": "node newman-run.js --suite scenario:cross",
+    "test:iot": "node newman-run.js --suite iot",
+    "test:login": "node newman-run.js --folder Login --reporters cli",
+    "test:smoke": "node newman-run.js --folder Login --folder \"Flow Summary\" --folder \"Monitor Mode\" --reporters cli,htmlextra,json",
+    "test:http-load": "node newman-run.js --suite http-load --iteration-count 20",
+    "test:http-load:concurrent": "node newman-run.js --suite http-load --concurrency 20 --reporters cli,json",
+    "test:report": "start test-results"
+  },
   "dependencies": {
     "pptxgenjs": "^4.0.1"
+  },
+  "devDependencies": {
+    "newman": "^6.2.1",
+    "newman-reporter-htmlextra": "^1.23.1"
   }
 }

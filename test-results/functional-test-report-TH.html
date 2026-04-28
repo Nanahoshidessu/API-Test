@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>รายงานผลการทดสอบ API — Unimicron</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Sarabun', 'TH Sarabun New', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #1a1a2e;
+    background: #fff;
+    padding: 0;
+  }
+
+  /* Cover Page */
+  .cover {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 60%, #1a1a2e 100%);
+    color: #fff;
+    text-align: center;
+    padding: 60px 40px;
+    page-break-after: always;
+  }
+  .cover .badge {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #a8d8ea;
+  }
+  .cover h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  .cover h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #a8d8ea;
+    margin-bottom: 40px;
+  }
+  .cover .divider {
+    width: 60px;
+    height: 3px;
+    background: #e94560;
+    margin: 20px auto;
+    border-radius: 2px;
+  }
+  .cover .meta-table {
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 24px 40px;
+    margin-top: 30px;
+    text-align: left;
+    min-width: 440px;
+  }
+  .cover .meta-table table { width: 100%; border-collapse: collapse; }
+  .cover .meta-table td { padding: 7px 12px; font-size: 13px; }
+  .cover .meta-table td:first-child { color: #a8d8ea; font-weight: 500; width: 50%; }
+  .cover .meta-table td:last-child { color: #fff; font-weight: 600; }
+  .cover .status-badge {
+    display: inline-block;
+    background: #e94560;
+    color: #fff;
+    border-radius: 6px;
+    padding: 4px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 24px;
+  }
+
+  /* Content pages */
+  .content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 50px;
+  }
+
+  /* Section headers */
+  .section-header {
+    background: linear-gradient(90deg, #0f3460, #16213e);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 36px 0 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-header .num {
+    background: #e94560;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .subsection {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f3460;
+    margin: 24px 0 10px 0;
+    padding-left: 12px;
+    border-left: 4px solid #0f3460;
+  }
+
+  /* Summary cards */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .card {
+    border-radius: 10px;
+    padding: 18px 14px;
+    text-align: center;
+  }
+  .card .val { font-size: 28px; font-weight: 700; line-height: 1; }
+  .card .lbl { font-size: 11px; margin-top: 6px; opacity: 0.85; }
+  .card.blue { background: #0f3460; color: #fff; }
+  .card.green { background: #1db954; color: #fff; }
+  .card.red { background: #e94560; color: #fff; }
+  .card.orange { background: #f7931e; color: #fff; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 12px; }
+  thead tr { background: #0f3460; color: #fff; }
+  thead th { padding: 9px 10px; text-align: left; font-weight: 600; }
+  tbody tr:nth-child(even) { background: #f8f9fc; }
+  tbody tr:hover { background: #eef2ff; }
+  tbody td { padding: 8px 10px; border-bottom: 1px solid #e8eaf0; vertical-align: top; }
+
+  /* Status badges */
+  .pass { background: #d4edda; color: #155724; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+  .partial { background: #fff3cd; color: #856404; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+  .fail { background: #f8d7da; color: #721c24; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+  .http200 { color: #1db954; font-weight: 700; }
+  .http500 { color: #e94560; font-weight: 700; }
+
+  /* Defect cards */
+  .defect {
+    border-radius: 10px;
+    margin: 16px 0;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .defect-header {
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+  }
+  .defect-header.critical { background: #c0392b; }
+  .defect-header.high { background: #e67e22; }
+  .defect-header.medium { background: #2980b9; }
+  .defect-id { font-size: 18px; font-weight: 700; }
+  .defect-title { font-size: 13px; font-weight: 600; }
+  .severity-tag {
+    margin-left: auto;
+    background: rgba(255,255,255,0.25);
+    border-radius: 4px;
+    padding: 2px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .defect-body { background: #fff; padding: 14px 18px; }
+  .defect-body table { margin: 0; }
+  .defect-body thead tr { background: #f0f4ff; color: #0f3460; }
+  .defect-body thead th { font-size: 11px; }
+
+  /* Recommendation table */
+  .rec-critical td:first-child { color: #c0392b; font-weight: 700; }
+  .rec-high td:first-child { color: #e67e22; font-weight: 700; }
+  .rec-medium td:first-child { color: #2980b9; font-weight: 700; }
+
+  code {
+    background: #f0f4ff;
+    border: 1px solid #d0d8ff;
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: #0f3460;
+  }
+
+  .info-box {
+    background: #e8f4fd;
+    border-left: 4px solid #2980b9;
+    border-radius: 0 6px 6px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 12px;
+    color: #1a3a5c;
+  }
+
+  .page-break { page-break-before: always; }
+
+  .footer {
+    text-align: center;
+    font-size: 11px;
+    color: #888;
+    margin-top: 50px;
+    padding-top: 16px;
+    border-top: 1px solid #e8eaf0;
+  }
+
+  @media print {
+    body { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .cover { min-height: 100vh; page-break-after: always; }
+    .page-break { page-break-before: always; }
+    @page { margin: 15mm 12mm; size: A4; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Cover Page -->
+<div class="cover">
+  <div class="badge">รายงานผลการทดสอบ · Confidential</div>
+  <h1>รายงานผลการทดสอบ API</h1>
+  <h2>UMTH Flow meter Visualization API<br>ชุดทดสอบ Functional Testing</h2>
+  <div class="divider"></div>
+  <div class="meta-table">
+    <table>
+      <tr><td>เลขที่โครงการ</td><td>PJ250104</td></tr>
+      <tr><td>ผู้ว่าจ้าง</td><td>Unimicron (Thailand) Co., Ltd.</td></tr>
+      <tr><td>ผู้ทดสอบ</td><td>Tomas Tech Co., Ltd.</td></tr>
+      <tr><td>วันที่ทดสอบ</td><td>28 เมษายน 2569</td></tr>
+      <tr><td>เวอร์ชันเอกสาร</td><td>1.0</td></tr>
+      <tr><td>ชุดทดสอบ</td><td>MS-F, MM-F, MD-F, RF (Functional Suite)</td></tr>
+      <tr><td>เครื่องมือ</td><td>Newman 6.2.1 + newman-reporter-htmlextra</td></tr>
+    </table>
+  </div>
+  <div class="status-badge">ผลการทดสอบ: ไม่ผ่าน (FAIL)</div>
+</div>
+
+<!-- Content -->
+<div class="content">
+
+  <!-- Section 1: Executive Summary -->
+  <div class="section-header"><span class="num">1</span> สรุปผลการทดสอบ</div>
+
+  <div class="summary-grid">
+    <div class="card blue">
+      <div class="val">25</div>
+      <div class="lbl">Requests ทั้งหมด</div>
+    </div>
+    <div class="card green">
+      <div class="val">182</div>
+      <div class="lbl">Assertions ผ่าน (89.2%)</div>
+    </div>
+    <div class="card red">
+      <div class="val">22</div>
+      <div class="lbl">Assertions ล้มเหลว (10.8%)</div>
+    </div>
+    <div class="card orange">
+      <div class="val">4</div>
+      <div class="lbl">ประเภทปัญหาที่พบ</div>
+    </div>
+  </div>
+
+  <div class="info-box">
+    ทุก Request เชื่อมต่อกับ API Server สำเร็จ (0 connection error) — ปัญหาที่พบทั้งหมดเป็น assertion failure จากพฤติกรรม API ที่ไม่ตรงกับ specification
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>กลุ่มทดสอบ</th>
+        <th>Requests</th>
+        <th>ผ่านทั้งหมด</th>
+        <th>ผ่านบางส่วน</th>
+        <th>ล้มเหลว</th>
+        <th>Assertions ล้มเหลว</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>POST /GetDataMeterSum (MS-F)</td>
+        <td>5</td>
+        <td>0</td>
+        <td>5</td>
+        <td>0</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>POST /GetDataMultimeter (MM-F)</td>
+        <td>5</td>
+        <td>4</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>POST /GetDataMeterDetail (MD-F)</td>
+        <td>5</td>
+        <td>0</td>
+        <td>4</td>
+        <td>1</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>Response Structure (RF)</td>
+        <td>10</td>
+        <td>2</td>
+        <td>8</td>
+        <td>0</td>
+        <td>9</td>
+      </tr>
+      <tr style="font-weight:700; background:#f0f4ff;">
+        <td>รวม</td>
+        <td>25</td>
+        <td>6</td>
+        <td>18</td>
+        <td>1</td>
+        <td>22</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Section 2: Environment -->
+  <div class="section-header"><span class="num">2</span> สภาพแวดล้อมการทดสอบ</div>
+  <table>
+    <thead><tr><th>รายการ</th><th>ค่าที่ใช้</th></tr></thead>
+    <tbody>
+      <tr><td>API Base URL</td><td><code>http://localhost:5000</code></td></tr>
+      <tr><td>Meter ID ที่ใช้ทดสอบ</td><td><code>1</code>, <code>2</code>, <code>3</code></td></tr>
+      <tr><td>Meter ID ที่ไม่มีในระบบ</td><td><code>9999</code></td></tr>
+      <tr><td>เดือนที่ใช้ทดสอบ</td><td>มิถุนายน 2568 (06/2025)</td></tr>
+      <tr><td>ปีที่ใช้ทดสอบ</td><td>2025</td></tr>
+      <tr><td>Collection</td><td>unimicron-api.postman_collection.json</td></tr>
+      <tr><td>Environment</td><td>postman-environment.json (Unimicron Pegasus - Local)</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Section 3: Detailed Results -->
+  <div class="page-break"></div>
+  <div class="section-header"><span class="num">3</span> ผลการทดสอบรายละเอียด</div>
+
+  <!-- MS-F -->
+  <div class="subsection">3.1 POST /GetDataMeterSum — Happy Path (MS-F)</div>
+  <table>
+    <thead>
+      <tr><th>Test ID</th><th>รายละเอียด</th><th>HTTP</th><th>เวลา (ms)</th><th>Pass</th><th>Fail</th><th>สถานะ</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>MS-F-01</td><td>Day — เปรียบเทียบข้อมูลรายวัน</td><td class="http200">200</td><td>762</td><td>8</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>MS-F-02</td><td>Week — เปรียบเทียบข้อมูลรายสัปดาห์</td><td class="http200">200</td><td>96</td><td>7</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>MS-F-03</td><td>Month — เปรียบเทียบข้อมูลรายเดือน</td><td class="http200">200</td><td>127</td><td>7</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>MS-F-04</td><td>Year — เปรียบเทียบข้อมูลรายปี</td><td class="http200">200</td><td>122</td><td>7</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>MS-F-05</td><td>Max10Year — เปรียบเทียบ 10 ปี</td><td class="http200">200</td><td>107</td><td>7</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- MM-F -->
+  <div class="subsection">3.2 POST /GetDataMultimeter — Happy Path (MM-F)</div>
+  <table>
+    <thead>
+      <tr><th>Test ID</th><th>รายละเอียด</th><th>HTTP</th><th>เวลา (ms)</th><th>Pass</th><th>Fail</th><th>สถานะ</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>MM-F-01</td><td>Day — ข้อมูลหลายมิเตอร์</td><td class="http200">200</td><td>169</td><td>8</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>MM-F-02</td><td>Week — ข้อมูลหลายมิเตอร์</td><td class="http200">200</td><td>86</td><td>8</td><td>0</td><td><span class="pass">ผ่าน</span></td></tr>
+      <tr><td>MM-F-03</td><td>Month — ข้อมูลหลายมิเตอร์</td><td class="http200">200</td><td>68</td><td>8</td><td>0</td><td><span class="pass">ผ่าน</span></td></tr>
+      <tr><td>MM-F-04</td><td>Year — ข้อมูลหลายมิเตอร์</td><td class="http200">200</td><td>95</td><td>8</td><td>0</td><td><span class="pass">ผ่าน</span></td></tr>
+      <tr><td>MM-F-05</td><td>Max10Year — ข้อมูลหลายมิเตอร์</td><td class="http200">200</td><td>101</td><td>8</td><td>0</td><td><span class="pass">ผ่าน</span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- MD-F -->
+  <div class="subsection">3.3 POST /GetDataMeterDetail — Happy Path (MD-F)</div>
+  <table>
+    <thead>
+      <tr><th>Test ID</th><th>รายละเอียด</th><th>HTTP</th><th>เวลา (ms)</th><th>Pass</th><th>Fail</th><th>สถานะ</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>MD-F-01</td><td>Day — กราฟรายละเอียด</td><td class="http200">200</td><td>106</td><td>7</td><td>2</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>MD-F-02</td><td>Week — กราฟรายละเอียด</td><td class="http200">200</td><td>45</td><td>7</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>MD-F-03</td><td>Month — กราฟรายละเอียด</td><td class="http200">200</td><td>41</td><td>7</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>MD-F-04</td><td>Year — กราฟรายละเอียด</td><td class="http200">200</td><td>90</td><td>7</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>MD-F-05</td><td>Max10Year — กราฟรายละเอียด</td><td class="http500">500</td><td>56</td><td>1</td><td>2</td><td><span class="fail">ล้มเหลว</span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- RF -->
+  <div class="subsection">3.4 Response Structure & Field Integrity (RF)</div>
+  <table>
+    <thead>
+      <tr><th>Test ID</th><th>รายละเอียด</th><th>HTTP</th><th>เวลา (ms)</th><th>Pass</th><th>Fail</th><th>สถานะ</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>RF-01</td><td>MeterSum Day keys เป็น time strings</td><td class="http200">200</td><td>99</td><td>8</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>RF-02</td><td>Multimeter Day keys เป็น meter IDs</td><td class="http200">200</td><td>39</td><td>8</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>RF-03</td><td>MeterSum max values ครอบคลุม Month data</td><td class="http200">200</td><td>209</td><td>7</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>RF-04</td><td>Multimeter max values ครอบคลุม Month data</td><td class="http200">200</td><td>94</td><td>8</td><td>0</td><td><span class="pass">ผ่าน</span></td></tr>
+      <tr><td>RF-05</td><td>MeterDetail chart series object structure</td><td class="http200">200</td><td>68</td><td>7</td><td>2</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>RF-06</td><td>MeterDetail MeterLabelMap selected IDs</td><td class="http200">200</td><td>67</td><td>7</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>RF-07</td><td>MeterDetail stroke length consistency</td><td class="http200">200</td><td>65</td><td>7</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>RF-08a</td><td>ArrCategories — interval 5 นาที (288 entries)</td><td class="http200">200</td><td>69</td><td>8</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>RF-08b</td><td>ArrCategories — interval 15 นาที (96 entries)</td><td class="http200">200</td><td>39</td><td>8</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
+      <tr><td>RF-08c</td><td>ArrCategories — interval 60 นาที (24 entries)</td><td class="http200">200</td><td>44</td><td>9</td><td>0</td><td><span class="pass">ผ่าน</span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- Section 4: Defects -->
+  <div class="page-break"></div>
+  <div class="section-header"><span class="num">4</span> รายการปัญหาที่พบ (Defect Register)</div>
+
+  <!-- DEF-001 -->
+  <div class="defect">
+    <div class="defect-header medium">
+      <div class="defect-id">DEF-001</div>
+      <div class="defect-title">จำนวน ArrCategories ไม่ตรงกับ specification สำหรับ Type=Day</div>
+      <div class="severity-tag">MEDIUM</div>
+    </div>
+    <div class="defect-body">
+      <table>
+        <thead><tr><th>รายการ</th><th>รายละเอียด</th></tr></thead>
+        <tbody>
+          <tr><td>Endpoint ที่ได้รับผลกระทบ</td><td><code>/GetDataMeterSum</code>, <code>/GetDataMultimeter</code>, <code>/GetDataMeterDetail</code></td></tr>
+          <tr><td>Test Cases</td><td>MS-F-01, MM-F-01, MD-F-01, RF-01, RF-02, RF-05, RF-08a, RF-08b (รวม 8 กรณี)</td></tr>
+          <tr><td>คำอธิบาย</td><td>เมื่อใช้ <code>Type=Day</code> API คืนจำนวน time-slot ใน ArrCategories น้อยกว่าที่ spec กำหนด สำหรับ Interval=15 นาที ต้องการ 96 รายการ (24 ชั่วโมง × 4) แต่ได้รับ 93 รายการ สำหรับ Interval=5 นาที ต้องการ 288 รายการ (24 ชั่วโมง × 12) แต่ได้รับ 277 รายการ</td></tr>
+          <tr><td>Expected</td><td>Interval=15 → 96 entries | Interval=5 → 288 entries</td></tr>
+          <tr><td>Actual</td><td>Interval=15 → 93 entries | Interval=5 → 277 entries</td></tr>
+          <tr><td>สมมติฐานสาเหตุ</td><td>API อาจสร้าง categories เฉพาะ time slot ที่มีข้อมูลจริง แทนที่จะสร้าง grid ตลอด 24 ชั่วโมง</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- DEF-002 -->
+  <div class="defect">
+    <div class="defect-header critical">
+      <div class="defect-id">DEF-002</div>
+      <div class="defect-title">Dictionary keys ใช้ numeric index แทน DataSelect values</div>
+      <div class="severity-tag">HIGH · CRITICAL PRIORITY</div>
+    </div>
+    <div class="defect-body">
+      <table>
+        <thead><tr><th>รายการ</th><th>รายละเอียด</th></tr></thead>
+        <tbody>
+          <tr><td>Endpoint ที่ได้รับผลกระทบ</td><td><code>/GetDataMeterSum</code></td></tr>
+          <tr><td>Test Cases</td><td>MS-F-02, MS-F-03, MS-F-04, MS-F-05, RF-03 (รวม 5 กรณี)</td></tr>
+          <tr><td>คำอธิบาย</td><td>สำหรับ Type=Week, Month, Year, Max10Year ค่า key ใน <code>ArrDataTarget</code> และ <code>ArrDataActual</code> เป็น numeric index (<code>'0'</code>, <code>'1'</code>, <code>'2'</code>) แทนที่จะเป็นค่า DataSelect จริง ทำให้ client ไม่สามารถ map ข้อมูลกราฟกับ label ที่ถูกต้องได้</td></tr>
+          <tr><td>ตัวอย่าง — Month</td><td>Expected keys: <code>'04'</code>, <code>'05'</code>, <code>'06'</code> → Actual: <code>'0'</code>, <code>'1'</code>, <code>'2'</code></td></tr>
+          <tr><td>ตัวอย่าง — Week</td><td>Expected: <code>'2025-06-02||2025-06-08'</code> → Actual: <code>'0'</code>, <code>'1'</code></td></tr>
+          <tr><td>สมมติฐานสาเหตุ</td><td>API serialize response เป็น ordered array และใช้ sequential integer keys แทนที่จะ preserve DataSelect strings เป็น key</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- DEF-003 -->
+  <div class="defect">
+    <div class="defect-header medium">
+      <div class="defect-id">DEF-003</div>
+      <div class="defect-title">MeterLabelMap — ไม่พบ field ชื่อ meter ID ใน response</div>
+      <div class="severity-tag">MEDIUM</div>
+    </div>
+    <div class="defect-body">
+      <table>
+        <thead><tr><th>รายการ</th><th>รายละเอียด</th></tr></thead>
+        <tbody>
+          <tr><td>Endpoint ที่ได้รับผลกระทบ</td><td><code>/GetDataMeterDetail</code></td></tr>
+          <tr><td>Test Cases</td><td>MD-F-01, MD-F-02, MD-F-03, MD-F-04, RF-05, RF-06, RF-07 (รวม 7 กรณี)</td></tr>
+          <tr><td>คำอธิบาย</td><td>Script ตรวจหา meter identifier ใน MeterLabelMap จาก field ชื่อ <code>id</code>, <code>Id</code>, <code>Meter</code>, <code>meter</code> แต่ไม่พบ field ใดเลย ต้องยืนยันชื่อ field จริงจาก API response</td></tr>
+          <tr><td>Expected</td><td>แต่ละรายการใน MeterLabelMap มี field <code>id</code> หรือ <code>Id</code> ที่ตรงกับ meter ที่ request</td></tr>
+          <tr><td>Actual</td><td>ไม่พบ field ดังกล่าว — ได้ <code>undefined</code> ทั้งหมด</td></tr>
+          <tr><td>การแก้ไข</td><td>ตรวจสอบ response จริงเพื่อหาชื่อ field ที่ถูกต้อง แล้วอัปเดต assertion ใน script</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- DEF-004 -->
+  <div class="defect">
+    <div class="defect-header critical">
+      <div class="defect-id">DEF-004</div>
+      <div class="defect-title">HTTP 500 Internal Server Error — /GetDataMeterDetail Type=Max10Year</div>
+      <div class="severity-tag">HIGH · CRITICAL PRIORITY</div>
+    </div>
+    <div class="defect-body">
+      <table>
+        <thead><tr><th>รายการ</th><th>รายละเอียด</th></tr></thead>
+        <tbody>
+          <tr><td>Endpoint ที่ได้รับผลกระทบ</td><td><code>/GetDataMeterDetail</code></td></tr>
+          <tr><td>Test Cases</td><td>MD-F-05</td></tr>
+          <tr><td>คำอธิบาย</td><td>เมื่อส่ง <code>type=Max10Year</code> ไปยัง <code>/GetDataMeterDetail</code> server คืน HTTP 500 Internal Server Error — เป็นสภาวะ crash ของ server สำหรับ input ชุดนี้</td></tr>
+          <tr><td>Request ที่ทำให้เกิดปัญหา</td><td><code>POST /GetDataMeterDetail</code> body: <code>{"type":"Max10Year","Meter":[1],"DataSelect":"2025|2016"}</code></td></tr>
+          <tr><td>Expected</td><td>HTTP 200 พร้อม chart series response</td></tr>
+          <tr><td>Actual</td><td>HTTP 500 Internal Server Error</td></tr>
+          <tr><td>สมมติฐานสาเหตุ</td><td>Type <code>Max10Year</code> อาจยังไม่ได้ implement หรือมี unhandled exception ใน MeterDetail handler</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Section 5: Completion Matrix -->
+  <div class="page-break"></div>
+  <div class="section-header"><span class="num">5</span> ตารางสรุปผลการทดสอบ</div>
+  <table>
+    <thead>
+      <tr><th>Test ID</th><th>รายละเอียด</th><th>สถานะ</th><th>ปัญหาที่เกี่ยวข้อง</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>MS-F-01</td><td>Day — MeterSum</td><td><span class="partial">บางส่วน</span></td><td>DEF-001</td></tr>
+      <tr><td>MS-F-02</td><td>Week — MeterSum</td><td><span class="partial">บางส่วน</span></td><td>DEF-002</td></tr>
+      <tr><td>MS-F-03</td><td>Month — MeterSum</td><td><span class="partial">บางส่วน</span></td><td>DEF-002</td></tr>
+      <tr><td>MS-F-04</td><td>Year — MeterSum</td><td><span class="partial">บางส่วน</span></td><td>DEF-002</td></tr>
+      <tr><td>MS-F-05</td><td>Max10Year — MeterSum</td><td><span class="partial">บางส่วน</span></td><td>DEF-002</td></tr>
+      <tr><td>MM-F-01</td><td>Day — Multimeter</td><td><span class="partial">บางส่วน</span></td><td>DEF-001</td></tr>
+      <tr><td>MM-F-02</td><td>Week — Multimeter</td><td><span class="pass">ผ่าน</span></td><td>—</td></tr>
+      <tr><td>MM-F-03</td><td>Month — Multimeter</td><td><span class="pass">ผ่าน</span></td><td>—</td></tr>
+      <tr><td>MM-F-04</td><td>Year — Multimeter</td><td><span class="pass">ผ่าน</span></td><td>—</td></tr>
+      <tr><td>MM-F-05</td><td>Max10Year — Multimeter</td><td><span class="pass">ผ่าน</span></td><td>—</td></tr>
+      <tr><td>MD-F-01</td><td>Day — MeterDetail</td><td><span class="partial">บางส่วน</span></td><td>DEF-001, DEF-003</td></tr>
+      <tr><td>MD-F-02</td><td>Week — MeterDetail</td><td><span class="partial">บางส่วน</span></td><td>DEF-003</td></tr>
+      <tr><td>MD-F-03</td><td>Month — MeterDetail</td><td><span class="partial">บางส่วน</span></td><td>DEF-003</td></tr>
+      <tr><td>MD-F-04</td><td>Year — MeterDetail</td><td><span class="partial">บางส่วน</span></td><td>DEF-003</td></tr>
+      <tr><td>MD-F-05</td><td>Max10Year — MeterDetail</td><td><span class="fail">ล้มเหลว</span></td><td>DEF-004</td></tr>
+      <tr><td>RF-01</td><td>MeterSum Day key type</td><td><span class="partial">บางส่วน</span></td><td>DEF-001</td></tr>
+      <tr><td>RF-02</td><td>Multimeter Day key type</td><td><span class="partial">บางส่วน</span></td><td>DEF-001</td></tr>
+      <tr><td>RF-03</td><td>MeterSum Month max values</td><td><span class="partial">บางส่วน</span></td><td>DEF-002</td></tr>
+      <tr><td>RF-04</td><td>Multimeter Month max values</td><td><span class="pass">ผ่าน</span></td><td>—</td></tr>
+      <tr><td>RF-05</td><td>MeterDetail chart series structure</td><td><span class="partial">บางส่วน</span></td><td>DEF-001, DEF-003</td></tr>
+      <tr><td>RF-06</td><td>MeterLabelMap selected IDs</td><td><span class="partial">บางส่วน</span></td><td>DEF-003</td></tr>
+      <tr><td>RF-07</td><td>Stroke length consistency</td><td><span class="partial">บางส่วน</span></td><td>DEF-003</td></tr>
+      <tr><td>RF-08a</td><td>ArrCategories interval=5 min</td><td><span class="partial">บางส่วน</span></td><td>DEF-001</td></tr>
+      <tr><td>RF-08b</td><td>ArrCategories interval=15 min</td><td><span class="partial">บางส่วน</span></td><td>DEF-001</td></tr>
+      <tr><td>RF-08c</td><td>ArrCategories interval=60 min</td><td><span class="pass">ผ่าน</span></td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Section 6: Recommendations -->
+  <div class="section-header"><span class="num">6</span> ข้อเสนอแนะ</div>
+  <table>
+    <thead><tr><th>ลำดับความสำคัญ</th><th>Defect</th><th>การดำเนินการที่แนะนำ</th></tr></thead>
+    <tbody>
+      <tr class="rec-critical"><td>Critical</td><td>DEF-004</td><td>แก้ไข HTTP 500 บน <code>POST /GetDataMeterDetail</code> เมื่อ type=Max10Year — เป็น server crash ที่ต้องแก้ด่วน</td></tr>
+      <tr class="rec-critical"><td>Critical</td><td>DEF-002</td><td>ยืนยันและแก้ไข format ของ dictionary keys ใน ArrDataTarget/ArrDataActual ให้ใช้ DataSelect values ไม่ใช่ array indices</td></tr>
+      <tr class="rec-high"><td>High</td><td>DEF-003</td><td>ตรวจสอบ field name จริงใน MeterLabelMap จาก API developer แล้วอัปเดต test assertion ให้ตรงกัน</td></tr>
+      <tr class="rec-medium"><td>Medium</td><td>DEF-001</td><td>ยืนยันกับ developer ว่า ArrCategories ควรเป็น full-day grid หรือ data-driven — แล้วอัปเดต spec หรือ API ให้ตรงกัน</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Section 7: Remaining Scope -->
+  <div class="section-header"><span class="num">7</span> ขอบเขตการทดสอบที่เหลือ</div>
+  <div class="info-box">
+    ชุดทดสอบต่อไปนี้ยังไม่ได้รัน — ควรดำเนินการต่อหลังจาก developer แก้ไขปัญหา DEF-002 และ DEF-004 แล้ว
+  </div>
+  <table>
+    <thead><tr><th>Suite</th><th>กรณีทดสอบ</th><th>คำสั่ง</th><th>ประเภท</th></tr></thead>
+    <tbody>
+      <tr><td>Validation (VR, VT, VO, VF, VM)</td><td>18 cases</td><td><code>npm run test:validation</code></td><td>Automated</td></tr>
+      <tr><td>Cross-Endpoint (CE-I)</td><td>3 cases</td><td><code>npm run test:cross</code></td><td>Automated</td></tr>
+      <tr><td>REST Load (HTTP-L)</td><td>5 profiles</td><td><code>npm run test:http-load</code></td><td>Automated</td></tr>
+      <tr><td>DB Integration (DB-I)</td><td>3 cases</td><td>Manual — ต้องการ DB access</td><td>Manual</td></tr>
+      <tr><td>System Failure (ERR-I-01, 03)</td><td>2 cases</td><td>Manual — ops step</td><td>Manual</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    รายงานนี้จัดทำโดย Tomas Tech Co., Ltd. · โครงการ PJ250104 · 28 เมษายน 2569<br>
+    เอกสารนี้เป็นความลับ — ห้ามเผยแพร่โดยไม่ได้รับอนุญาต
+  </div>
+
+</div>
+
+</body>
+</html>

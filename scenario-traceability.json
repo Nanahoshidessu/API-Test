@@ -1,0 +1,742 @@
+{
+  "source": "API Test Scenario Unimicron",
+  "generatedBy": "scripts/apply-scenario-automation.js",
+  "totalScenarioCases": 70,
+  "rows": [
+    {
+      "testId": "CE-I-01",
+      "category": "Integration",
+      "group": "Cross Endpoint Consistency",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum, GetDataMultimeter",
+      "postmanItems": [
+        "CE-I-01a - Store MeterSum actual Month data for CE-I-01",
+        "CE-I-01b - Compare Multimeter actual data with MeterSum for CE-I-01"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "CE-I-02",
+      "category": "Integration",
+      "group": "Cross Endpoint Consistency",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMultimeter, GetDataMeterDetail",
+      "postmanItems": [
+        "CE-I-02a - Store Multimeter actual Month data for CE-I-02",
+        "CE-I-02b - Compare MeterDetail summed data with Multimeter for CE-I-02"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "CE-I-03",
+      "category": "Integration",
+      "group": "Cross Endpoint Consistency",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "CE-I-03a - Store MeterSum Past 0 data for CE-I-03",
+        "CE-I-03b - Compare MeterSum Past 1 data differs for CE-I-03"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "DB-I-01",
+      "category": "Integration",
+      "group": "HTTP API SQL Server",
+      "automationStatus": "DB helper required",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Compare MeterSum Actual with SQL query result."
+    },
+    {
+      "testId": "DB-I-02",
+      "category": "Integration",
+      "group": "HTTP API SQL Server",
+      "automationStatus": "DB helper required",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Compare MeterSum Target with SQL query result."
+    },
+    {
+      "testId": "DB-I-03",
+      "category": "Integration",
+      "group": "HTTP API SQL Server",
+      "automationStatus": "DB helper required",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Compare MeterDetail labels with SQL meter names."
+    },
+    {
+      "testId": "ERR-I-01",
+      "category": "Integration",
+      "group": "System Failure Handling",
+      "automationStatus": "Manual ops step",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Stop SQL Server before request."
+    },
+    {
+      "testId": "ERR-I-02",
+      "category": "Integration",
+      "group": "System Failure Handling",
+      "automationStatus": "Manual ops step",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Stop WebSocket server before client connect."
+    },
+    {
+      "testId": "ERR-I-03",
+      "category": "Integration",
+      "group": "System Failure Handling",
+      "automationStatus": "Manual ops step",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Simulate high DB load."
+    },
+    {
+      "testId": "HTTP-L-01",
+      "category": "Load",
+      "group": "REST API Load",
+      "automationStatus": "Runner profile",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "HTTP-L-01 - Load profile request for GetDataMeterSum Month"
+      ],
+      "notes": "Use newman-run.js --suite http-load --scenario HTTP-L-01."
+    },
+    {
+      "testId": "HTTP-L-02",
+      "category": "Load",
+      "group": "REST API Load",
+      "automationStatus": "Runner profile",
+      "endpoint": "GetDataMultimeter",
+      "postmanItems": [
+        "HTTP-L-02 - Load profile request for GetDataMultimeter Month"
+      ],
+      "notes": "Use newman-run.js --suite http-load --scenario HTTP-L-02."
+    },
+    {
+      "testId": "HTTP-L-03",
+      "category": "Load",
+      "group": "REST API Load",
+      "automationStatus": "Runner profile",
+      "endpoint": "GetDataMeterDetail",
+      "postmanItems": [
+        "HTTP-L-03 - Load profile request for GetDataMeterDetail Month"
+      ],
+      "notes": "Use newman-run.js --suite http-load --scenario HTTP-L-03."
+    },
+    {
+      "testId": "HTTP-L-04",
+      "category": "Load",
+      "group": "REST API Load",
+      "automationStatus": "Runner profile",
+      "endpoint": "GetDataMeterSum, GetDataMultimeter, GetDataMeterDetail",
+      "postmanItems": [
+        "HTTP-L-04a - Mixed load MeterSum request",
+        "HTTP-L-04b - Mixed load Multimeter request",
+        "HTTP-L-04c - Mixed load MeterDetail request"
+      ],
+      "notes": "Use newman-run.js --suite http-load --scenario HTTP-L-04."
+    },
+    {
+      "testId": "HTTP-L-05",
+      "category": "Load",
+      "group": "REST API Load",
+      "automationStatus": "Runner profile",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "HTTP-L-05 - Sustained load MeterSum request"
+      ],
+      "notes": "Use newman-run.js --suite http-load --scenario HTTP-L-05."
+    },
+    {
+      "testId": "MD-F-01",
+      "category": "Functional",
+      "group": "Functional - MeterDetail",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterDetail",
+      "postmanItems": [
+        "MD-F-01 - Day detail chart"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "MD-F-02",
+      "category": "Functional",
+      "group": "Functional - MeterDetail",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterDetail",
+      "postmanItems": [
+        "MD-F-02 - Week detail chart"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "MD-F-03",
+      "category": "Functional",
+      "group": "Functional - MeterDetail",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterDetail",
+      "postmanItems": [
+        "MD-F-03 - Month detail chart"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "MD-F-04",
+      "category": "Functional",
+      "group": "Functional - MeterDetail",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterDetail",
+      "postmanItems": [
+        "MD-F-04 - Year detail chart"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "MD-F-05",
+      "category": "Functional",
+      "group": "Functional - MeterDetail",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterDetail",
+      "postmanItems": [
+        "MD-F-05 - Max10Year detail chart"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "MM-F-01",
+      "category": "Functional",
+      "group": "Functional - Multimeter",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMultimeter",
+      "postmanItems": [
+        "MM-F-01 - Day data for multiple meters"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "MM-F-02",
+      "category": "Functional",
+      "group": "Functional - Multimeter",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMultimeter",
+      "postmanItems": [
+        "MM-F-02 - Week data for multiple meters"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "MM-F-03",
+      "category": "Functional",
+      "group": "Functional - Multimeter",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMultimeter",
+      "postmanItems": [
+        "MM-F-03 - Month data for multiple meters"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "MM-F-04",
+      "category": "Functional",
+      "group": "Functional - Multimeter",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMultimeter",
+      "postmanItems": [
+        "MM-F-04 - Year data for multiple meters"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "MM-F-05",
+      "category": "Functional",
+      "group": "Functional - Multimeter",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMultimeter",
+      "postmanItems": [
+        "MM-F-05 - Max10Year data for multiple meters"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "MS-F-01",
+      "category": "Functional",
+      "group": "Functional - MeterSum",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "MS-F-01 - Day comparison by selected days"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "MS-F-02",
+      "category": "Functional",
+      "group": "Functional - MeterSum",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "MS-F-02 - Week comparison by selected week ranges"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "MS-F-03",
+      "category": "Functional",
+      "group": "Functional - MeterSum",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "MS-F-03 - Month comparison by selected months"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "MS-F-04",
+      "category": "Functional",
+      "group": "Functional - MeterSum",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "MS-F-04 - Year comparison by selected years"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "MS-F-05",
+      "category": "Functional",
+      "group": "Functional - MeterSum",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "MS-F-05 - Max10Year comparison across ten years"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "RF-01",
+      "category": "Functional",
+      "group": "Response Integrity",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "RF-01 - MeterSum Day keys are time/data-select strings"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "RF-02",
+      "category": "Functional",
+      "group": "Response Integrity",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMultimeter",
+      "postmanItems": [
+        "RF-02 - Multimeter Day keys are meter IDs"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "RF-03",
+      "category": "Functional",
+      "group": "Response Integrity",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "RF-03 - MeterSum max values cover Month data"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "RF-04",
+      "category": "Functional",
+      "group": "Response Integrity",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMultimeter",
+      "postmanItems": [
+        "RF-04 - Multimeter max values cover Month data"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "RF-05",
+      "category": "Functional",
+      "group": "Response Integrity",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterDetail",
+      "postmanItems": [
+        "RF-05 - MeterDetail chart series object structure"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "RF-06",
+      "category": "Functional",
+      "group": "Response Integrity",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterDetail",
+      "postmanItems": [
+        "RF-06 - MeterDetail MeterLabelMap selected IDs"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "RF-07",
+      "category": "Functional",
+      "group": "Response Integrity",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterDetail",
+      "postmanItems": [
+        "RF-07 - MeterDetail stroke length consistency"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "RF-08",
+      "category": "Functional",
+      "group": "Response Integrity",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "RF-08a - MeterSum Day categories for 5 minute interval",
+        "RF-08b - MeterSum Day categories for 15 minute interval",
+        "RF-08c - MeterSum Day categories for 60 minute interval"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VF-01",
+      "category": "Validation",
+      "group": "Validation - Invalid Format",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "VF-01 - MeterSum malformed week DataSelect"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VF-02",
+      "category": "Validation",
+      "group": "Validation - Invalid Format",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMultimeter",
+      "postmanItems": [
+        "VF-02 - Multimeter malformed Max10Year DataSelect"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VF-03",
+      "category": "Validation",
+      "group": "Validation - Invalid Format",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterDetail",
+      "postmanItems": [
+        "VF-03 - MeterDetail month without leading zero"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VM-01",
+      "category": "Validation",
+      "group": "Validation - Invalid Meter ID",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "VM-01 - MeterSum invalid meter ID"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VM-02",
+      "category": "Validation",
+      "group": "Validation - Invalid Meter ID",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMultimeter",
+      "postmanItems": [
+        "VM-02 - Multimeter mixed valid and invalid meter IDs"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VO-01",
+      "category": "Validation",
+      "group": "Validation - Out Of Range",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "VO-01 - MeterSum negative Past"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VO-02",
+      "category": "Validation",
+      "group": "Validation - Out Of Range",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "VO-02 - MeterSum unsupported Day interval"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VO-03",
+      "category": "Validation",
+      "group": "Validation - Out Of Range",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "VO-03 - MeterSum invalid Month 13"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VO-04",
+      "category": "Validation",
+      "group": "Validation - Out Of Range",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterDetail",
+      "postmanItems": [
+        "VO-04 - MeterDetail unreasonably large past"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VR-01",
+      "category": "Validation",
+      "group": "Validation - Required Fields",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "VR-01 - MeterSum missing Type"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VR-02",
+      "category": "Validation",
+      "group": "Validation - Required Fields",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "VR-02 - MeterSum missing Meter"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VR-03",
+      "category": "Validation",
+      "group": "Validation - Required Fields",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "VR-03 - MeterSum missing DataSelect"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VR-04",
+      "category": "Validation",
+      "group": "Validation - Required Fields",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMultimeter",
+      "postmanItems": [
+        "VR-04 - Multimeter missing Interval"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VR-05",
+      "category": "Validation",
+      "group": "Validation - Required Fields",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterDetail",
+      "postmanItems": [
+        "VR-05 - MeterDetail missing past"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VT-01",
+      "category": "Validation",
+      "group": "Validation - Wrong Data Type",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "VT-01 - MeterSum Interval as string"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VT-02",
+      "category": "Validation",
+      "group": "Validation - Wrong Data Type",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMultimeter",
+      "postmanItems": [
+        "VT-02 - Multimeter Meter as scalar"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VT-03",
+      "category": "Validation",
+      "group": "Validation - Wrong Data Type",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterSum",
+      "postmanItems": [
+        "VT-03 - MeterSum DataSelect as string"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "VT-04",
+      "category": "Validation",
+      "group": "Validation - Wrong Data Type",
+      "automationStatus": "Automated in Postman/Newman",
+      "endpoint": "GetDataMeterDetail",
+      "postmanItems": [
+        "VT-04 - MeterDetail past as string"
+      ],
+      "notes": "Generated under Automated Scenario Tests."
+    },
+    {
+      "testId": "WS-F-01",
+      "category": "Functional",
+      "group": "WebSocket Happy Path",
+      "automationStatus": "WebSocket helper required",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Send PING and validate PONG fields."
+    },
+    {
+      "testId": "WS-F-02",
+      "category": "Functional",
+      "group": "WebSocket Happy Path",
+      "automationStatus": "WebSocket helper required",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Validate case-insensitive Cmd/ping."
+    },
+    {
+      "testId": "WS-F-03",
+      "category": "Functional",
+      "group": "WebSocket Happy Path",
+      "automationStatus": "WebSocket helper required",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Validate alternative command field name."
+    },
+    {
+      "testId": "WS-F-04",
+      "category": "Functional",
+      "group": "WebSocket Happy Path",
+      "automationStatus": "WebSocket helper required",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Validate INFO root fields."
+    },
+    {
+      "testId": "WS-F-05",
+      "category": "Functional",
+      "group": "WebSocket Happy Path",
+      "automationStatus": "WebSocket helper required",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Validate INFO Sensors array filters."
+    },
+    {
+      "testId": "WS-F-06",
+      "category": "Functional",
+      "group": "WebSocket Happy Path",
+      "automationStatus": "WebSocket helper required",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Validate INFO count arithmetic."
+    },
+    {
+      "testId": "WS-F-07",
+      "category": "Functional",
+      "group": "WebSocket Happy Path",
+      "automationStatus": "WebSocket helper required",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Validate INFO sensor object fields."
+    },
+    {
+      "testId": "WS-I-01",
+      "category": "Integration",
+      "group": "WebSocket Sensor/PLC",
+      "automationStatus": "Manual with PLC reference",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Compare INFO Value with direct PLC reading."
+    },
+    {
+      "testId": "WS-I-02",
+      "category": "Integration",
+      "group": "WebSocket Sensor/PLC",
+      "automationStatus": "Manual with PLC reference",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Verify LastUpdated age for online sensors."
+    },
+    {
+      "testId": "WS-I-03",
+      "category": "Integration",
+      "group": "WebSocket Sensor/PLC",
+      "automationStatus": "Manual with PLC reference",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Compare Online count with PLC count."
+    },
+    {
+      "testId": "WS-L-01",
+      "category": "Load",
+      "group": "WebSocket Load",
+      "automationStatus": "Load helper required",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "10 concurrent WS PING clients."
+    },
+    {
+      "testId": "WS-L-02",
+      "category": "Load",
+      "group": "WebSocket Load",
+      "automationStatus": "Load helper required",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "50 concurrent WS PING clients."
+    },
+    {
+      "testId": "WS-L-03",
+      "category": "Load",
+      "group": "WebSocket Load",
+      "automationStatus": "Load helper required",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "100 concurrent WS PING clients."
+    },
+    {
+      "testId": "WS-L-04",
+      "category": "Load",
+      "group": "WebSocket Load",
+      "automationStatus": "Load helper required",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Single client sends 100 PING frames."
+    },
+    {
+      "testId": "WS-L-05",
+      "category": "Load",
+      "group": "WebSocket Load",
+      "automationStatus": "Load helper required",
+      "endpoint": "",
+      "postmanItems": [],
+      "notes": "Single client sends 50 INFO frames."
+    }
+  ]
+}
