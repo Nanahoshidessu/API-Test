@@ -5392,7 +5392,7 @@
                 "url": "{{iot_url}}/GetDataMeterDetail",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"type\": \"Max10Year\",\n  \"Meter\": [\n    \"{{test_meter_1}}\"\n  ],\n  \"DataSelect\": \"{{scenario_year}}|{{scenario_year_start}}\",\n  \"interval\": 0,\n  \"past\": 0,\n  \"month\": \"\",\n  \"WeekMonth\": \"\"\n}",
+                  "raw": "{\n  \"type\": \"Max10Year\",\n  \"Meter\": [\n    \"{{test_meter_1}}\"\n  ],\n  \"DataSelect\": \"{{scenario_year}}\",\n  \"interval\": 0,\n  \"past\": 0,\n  \"month\": \"\",\n  \"WeekMonth\": \"\"\n}",
                   "options": {
                     "raw": {
                       "language": "json"
