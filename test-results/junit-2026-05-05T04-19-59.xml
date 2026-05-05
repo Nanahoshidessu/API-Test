@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Unimicron Pegasus API" tests="25" time="2.547">
+  <testsuite name="Automated Scenario Tests / Functional - MeterSum / MS-F-01 - Day comparison by selected days" id="e0556cec-9138-4b98-a69a-2cb1177e4bb2" timestamp="2026-05-05T04:20:00.307Z" tests="9" failures="0" errors="0" time="0.170">
+    <testcase name="MS-F-01 - request completed and returned a response code" time="0.170" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+    <testcase name="MS-F-01 - no HTTP 500 server error" time="0.170" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+    <testcase name="MS-F-01 - HTTP status is success" time="0.170" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+    <testcase name="MS-F-01 - response is a JSON object" time="0.170" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+    <testcase name="MS-F-01 - MeterCompare response has chart dictionaries and categories" time="0.170" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+    <testcase name="MS-F-01 - response dictionary keys match expected scenario keys" time="0.170" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+    <testcase name="MS-F-01 - data arrays align with ArrCategories" time="0.170" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+    <testcase name="MS-F-01 - max values are not lower than returned data" time="0.170" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+    <testcase name="MS-F-01 - ArrCategories length matches scenario interval" time="0.170" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterSum / MS-F-02 - Week comparison by selected week ranges" id="86ce4741-e300-4b0c-8562-2cdacea8589f" timestamp="2026-05-05T04:20:00.307Z" tests="8" failures="0" errors="0" time="0.065">
+    <testcase name="MS-F-02 - request completed and returned a response code" time="0.065" classname="AutomatedScenarioTestsFunctionalMeterSumMsF02WeekComparisonBySelectedWeekRanges"/>
+    <testcase name="MS-F-02 - no HTTP 500 server error" time="0.065" classname="AutomatedScenarioTestsFunctionalMeterSumMsF02WeekComparisonBySelectedWeekRanges"/>
+    <testcase name="MS-F-02 - HTTP status is success" time="0.065" classname="AutomatedScenarioTestsFunctionalMeterSumMsF02WeekComparisonBySelectedWeekRanges"/>
+    <testcase name="MS-F-02 - response is a JSON object" time="0.065" classname="AutomatedScenarioTestsFunctionalMeterSumMsF02WeekComparisonBySelectedWeekRanges"/>
+    <testcase name="MS-F-02 - MeterCompare response has chart dictionaries and categories" time="0.065" classname="AutomatedScenarioTestsFunctionalMeterSumMsF02WeekComparisonBySelectedWeekRanges"/>
+    <testcase name="MS-F-02 - response dictionary keys match expected scenario keys" time="0.065" classname="AutomatedScenarioTestsFunctionalMeterSumMsF02WeekComparisonBySelectedWeekRanges"/>
+    <testcase name="MS-F-02 - data arrays align with ArrCategories" time="0.065" classname="AutomatedScenarioTestsFunctionalMeterSumMsF02WeekComparisonBySelectedWeekRanges"/>
+    <testcase name="MS-F-02 - max values are not lower than returned data" time="0.065" classname="AutomatedScenarioTestsFunctionalMeterSumMsF02WeekComparisonBySelectedWeekRanges"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterSum / MS-F-03 - Month comparison by selected months" id="72668f9f-ee88-4af8-b1e4-7dbd4cc243e0" timestamp="2026-05-05T04:20:00.307Z" tests="8" failures="0" errors="0" time="0.095">
+    <testcase name="MS-F-03 - request completed and returned a response code" time="0.095" classname="AutomatedScenarioTestsFunctionalMeterSumMsF03MonthComparisonBySelectedMonths"/>
+    <testcase name="MS-F-03 - no HTTP 500 server error" time="0.095" classname="AutomatedScenarioTestsFunctionalMeterSumMsF03MonthComparisonBySelectedMonths"/>
+    <testcase name="MS-F-03 - HTTP status is success" time="0.095" classname="AutomatedScenarioTestsFunctionalMeterSumMsF03MonthComparisonBySelectedMonths"/>
+    <testcase name="MS-F-03 - response is a JSON object" time="0.095" classname="AutomatedScenarioTestsFunctionalMeterSumMsF03MonthComparisonBySelectedMonths"/>
+    <testcase name="MS-F-03 - MeterCompare response has chart dictionaries and categories" time="0.095" classname="AutomatedScenarioTestsFunctionalMeterSumMsF03MonthComparisonBySelectedMonths"/>
+    <testcase name="MS-F-03 - response dictionary keys match expected scenario keys" time="0.095" classname="AutomatedScenarioTestsFunctionalMeterSumMsF03MonthComparisonBySelectedMonths"/>
+    <testcase name="MS-F-03 - data arrays align with ArrCategories" time="0.095" classname="AutomatedScenarioTestsFunctionalMeterSumMsF03MonthComparisonBySelectedMonths"/>
+    <testcase name="MS-F-03 - max values are not lower than returned data" time="0.095" classname="AutomatedScenarioTestsFunctionalMeterSumMsF03MonthComparisonBySelectedMonths"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterSum / MS-F-04 - Year comparison by selected years" id="e6b733e6-317c-458c-8e90-fc791bcbcfe6" timestamp="2026-05-05T04:20:00.307Z" tests="8" failures="0" errors="0" time="0.062">
+    <testcase name="MS-F-04 - request completed and returned a response code" time="0.062" classname="AutomatedScenarioTestsFunctionalMeterSumMsF04YearComparisonBySelectedYears"/>
+    <testcase name="MS-F-04 - no HTTP 500 server error" time="0.062" classname="AutomatedScenarioTestsFunctionalMeterSumMsF04YearComparisonBySelectedYears"/>
+    <testcase name="MS-F-04 - HTTP status is success" time="0.062" classname="AutomatedScenarioTestsFunctionalMeterSumMsF04YearComparisonBySelectedYears"/>
+    <testcase name="MS-F-04 - response is a JSON object" time="0.062" classname="AutomatedScenarioTestsFunctionalMeterSumMsF04YearComparisonBySelectedYears"/>
+    <testcase name="MS-F-04 - MeterCompare response has chart dictionaries and categories" time="0.062" classname="AutomatedScenarioTestsFunctionalMeterSumMsF04YearComparisonBySelectedYears"/>
+    <testcase name="MS-F-04 - response dictionary keys match expected scenario keys" time="0.062" classname="AutomatedScenarioTestsFunctionalMeterSumMsF04YearComparisonBySelectedYears"/>
+    <testcase name="MS-F-04 - data arrays align with ArrCategories" time="0.062" classname="AutomatedScenarioTestsFunctionalMeterSumMsF04YearComparisonBySelectedYears"/>
+    <testcase name="MS-F-04 - max values are not lower than returned data" time="0.062" classname="AutomatedScenarioTestsFunctionalMeterSumMsF04YearComparisonBySelectedYears"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterSum / MS-F-05 - Max10Year comparison across ten years" id="56b95b4b-1607-4814-90f4-b965f29a4f0a" timestamp="2026-05-05T04:20:00.307Z" tests="8" failures="0" errors="0" time="0.046">
+    <testcase name="MS-F-05 - request completed and returned a response code" time="0.046" classname="AutomatedScenarioTestsFunctionalMeterSumMsF05Max10YearComparisonAcrossTenYears"/>
+    <testcase name="MS-F-05 - no HTTP 500 server error" time="0.046" classname="AutomatedScenarioTestsFunctionalMeterSumMsF05Max10YearComparisonAcrossTenYears"/>
+    <testcase name="MS-F-05 - HTTP status is success" time="0.046" classname="AutomatedScenarioTestsFunctionalMeterSumMsF05Max10YearComparisonAcrossTenYears"/>
+    <testcase name="MS-F-05 - response is a JSON object" time="0.046" classname="AutomatedScenarioTestsFunctionalMeterSumMsF05Max10YearComparisonAcrossTenYears"/>
+    <testcase name="MS-F-05 - MeterCompare response has chart dictionaries and categories" time="0.046" classname="AutomatedScenarioTestsFunctionalMeterSumMsF05Max10YearComparisonAcrossTenYears"/>
+    <testcase name="MS-F-05 - response dictionary keys match expected scenario keys" time="0.046" classname="AutomatedScenarioTestsFunctionalMeterSumMsF05Max10YearComparisonAcrossTenYears"/>
+    <testcase name="MS-F-05 - data arrays align with ArrCategories" time="0.046" classname="AutomatedScenarioTestsFunctionalMeterSumMsF05Max10YearComparisonAcrossTenYears"/>
+    <testcase name="MS-F-05 - max values are not lower than returned data" time="0.046" classname="AutomatedScenarioTestsFunctionalMeterSumMsF05Max10YearComparisonAcrossTenYears"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - Multimeter / MM-F-01 - Day data for multiple meters" id="ae8b42ae-aaf4-44a5-a77d-1f5af72d5654" timestamp="2026-05-05T04:20:00.307Z" tests="9" failures="0" errors="0" time="0.081">
+    <testcase name="MM-F-01 - request completed and returned a response code" time="0.081" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+    <testcase name="MM-F-01 - no HTTP 500 server error" time="0.081" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+    <testcase name="MM-F-01 - HTTP status is success" time="0.081" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+    <testcase name="MM-F-01 - response is a JSON object" time="0.081" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+    <testcase name="MM-F-01 - MeterCompare response has chart dictionaries and categories" time="0.081" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+    <testcase name="MM-F-01 - response dictionary keys match expected scenario keys" time="0.081" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+    <testcase name="MM-F-01 - data arrays align with ArrCategories" time="0.081" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+    <testcase name="MM-F-01 - max values are not lower than returned data" time="0.081" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+    <testcase name="MM-F-01 - ArrCategories length matches scenario interval" time="0.081" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - Multimeter / MM-F-02 - Week data for multiple meters" id="04d624b9-0042-49e5-a0b8-639b6d0e18e6" timestamp="2026-05-05T04:20:00.307Z" tests="8" failures="0" errors="0" time="0.048">
+    <testcase name="MM-F-02 - request completed and returned a response code" time="0.048" classname="AutomatedScenarioTestsFunctionalMultimeterMmF02WeekDataForMultipleMeters"/>
+    <testcase name="MM-F-02 - no HTTP 500 server error" time="0.048" classname="AutomatedScenarioTestsFunctionalMultimeterMmF02WeekDataForMultipleMeters"/>
+    <testcase name="MM-F-02 - HTTP status is success" time="0.048" classname="AutomatedScenarioTestsFunctionalMultimeterMmF02WeekDataForMultipleMeters"/>
+    <testcase name="MM-F-02 - response is a JSON object" time="0.048" classname="AutomatedScenarioTestsFunctionalMultimeterMmF02WeekDataForMultipleMeters"/>
+    <testcase name="MM-F-02 - MeterCompare response has chart dictionaries and categories" time="0.048" classname="AutomatedScenarioTestsFunctionalMultimeterMmF02WeekDataForMultipleMeters"/>
+    <testcase name="MM-F-02 - response dictionary keys match expected scenario keys" time="0.048" classname="AutomatedScenarioTestsFunctionalMultimeterMmF02WeekDataForMultipleMeters"/>
+    <testcase name="MM-F-02 - data arrays align with ArrCategories" time="0.048" classname="AutomatedScenarioTestsFunctionalMultimeterMmF02WeekDataForMultipleMeters"/>
+    <testcase name="MM-F-02 - max values are not lower than returned data" time="0.048" classname="AutomatedScenarioTestsFunctionalMultimeterMmF02WeekDataForMultipleMeters"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - Multimeter / MM-F-03 - Month data for multiple meters" id="4770a725-4ce7-4137-a0a6-75c0c3f11128" timestamp="2026-05-05T04:20:00.307Z" tests="8" failures="0" errors="0" time="0.043">
+    <testcase name="MM-F-03 - request completed and returned a response code" time="0.043" classname="AutomatedScenarioTestsFunctionalMultimeterMmF03MonthDataForMultipleMeters"/>
+    <testcase name="MM-F-03 - no HTTP 500 server error" time="0.043" classname="AutomatedScenarioTestsFunctionalMultimeterMmF03MonthDataForMultipleMeters"/>
+    <testcase name="MM-F-03 - HTTP status is success" time="0.043" classname="AutomatedScenarioTestsFunctionalMultimeterMmF03MonthDataForMultipleMeters"/>
+    <testcase name="MM-F-03 - response is a JSON object" time="0.043" classname="AutomatedScenarioTestsFunctionalMultimeterMmF03MonthDataForMultipleMeters"/>
+    <testcase name="MM-F-03 - MeterCompare response has chart dictionaries and categories" time="0.043" classname="AutomatedScenarioTestsFunctionalMultimeterMmF03MonthDataForMultipleMeters"/>
+    <testcase name="MM-F-03 - response dictionary keys match expected scenario keys" time="0.043" classname="AutomatedScenarioTestsFunctionalMultimeterMmF03MonthDataForMultipleMeters"/>
+    <testcase name="MM-F-03 - data arrays align with ArrCategories" time="0.043" classname="AutomatedScenarioTestsFunctionalMultimeterMmF03MonthDataForMultipleMeters"/>
+    <testcase name="MM-F-03 - max values are not lower than returned data" time="0.043" classname="AutomatedScenarioTestsFunctionalMultimeterMmF03MonthDataForMultipleMeters"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - Multimeter / MM-F-04 - Year data for multiple meters" id="cb3ff6a0-ea8a-42e1-9bf8-577385bf31e5" timestamp="2026-05-05T04:20:00.307Z" tests="8" failures="0" errors="0" time="0.048">
+    <testcase name="MM-F-04 - request completed and returned a response code" time="0.048" classname="AutomatedScenarioTestsFunctionalMultimeterMmF04YearDataForMultipleMeters"/>
+    <testcase name="MM-F-04 - no HTTP 500 server error" time="0.048" classname="AutomatedScenarioTestsFunctionalMultimeterMmF04YearDataForMultipleMeters"/>
+    <testcase name="MM-F-04 - HTTP status is success" time="0.048" classname="AutomatedScenarioTestsFunctionalMultimeterMmF04YearDataForMultipleMeters"/>
+    <testcase name="MM-F-04 - response is a JSON object" time="0.048" classname="AutomatedScenarioTestsFunctionalMultimeterMmF04YearDataForMultipleMeters"/>
+    <testcase name="MM-F-04 - MeterCompare response has chart dictionaries and categories" time="0.048" classname="AutomatedScenarioTestsFunctionalMultimeterMmF04YearDataForMultipleMeters"/>
+    <testcase name="MM-F-04 - response dictionary keys match expected scenario keys" time="0.048" classname="AutomatedScenarioTestsFunctionalMultimeterMmF04YearDataForMultipleMeters"/>
+    <testcase name="MM-F-04 - data arrays align with ArrCategories" time="0.048" classname="AutomatedScenarioTestsFunctionalMultimeterMmF04YearDataForMultipleMeters"/>
+    <testcase name="MM-F-04 - max values are not lower than returned data" time="0.048" classname="AutomatedScenarioTestsFunctionalMultimeterMmF04YearDataForMultipleMeters"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - Multimeter / MM-F-05 - Max10Year data for multiple meters" id="d5cf45bf-de58-4978-b58a-cbbe121cd003" timestamp="2026-05-05T04:20:00.307Z" tests="8" failures="0" errors="0" time="0.060">
+    <testcase name="MM-F-05 - request completed and returned a response code" time="0.060" classname="AutomatedScenarioTestsFunctionalMultimeterMmF05Max10YearDataForMultipleMeters"/>
+    <testcase name="MM-F-05 - no HTTP 500 server error" time="0.060" classname="AutomatedScenarioTestsFunctionalMultimeterMmF05Max10YearDataForMultipleMeters"/>
+    <testcase name="MM-F-05 - HTTP status is success" time="0.060" classname="AutomatedScenarioTestsFunctionalMultimeterMmF05Max10YearDataForMultipleMeters"/>
+    <testcase name="MM-F-05 - response is a JSON object" time="0.060" classname="AutomatedScenarioTestsFunctionalMultimeterMmF05Max10YearDataForMultipleMeters"/>
+    <testcase name="MM-F-05 - MeterCompare response has chart dictionaries and categories" time="0.060" classname="AutomatedScenarioTestsFunctionalMultimeterMmF05Max10YearDataForMultipleMeters"/>
+    <testcase name="MM-F-05 - response dictionary keys match expected scenario keys" time="0.060" classname="AutomatedScenarioTestsFunctionalMultimeterMmF05Max10YearDataForMultipleMeters"/>
+    <testcase name="MM-F-05 - data arrays align with ArrCategories" time="0.060" classname="AutomatedScenarioTestsFunctionalMultimeterMmF05Max10YearDataForMultipleMeters"/>
+    <testcase name="MM-F-05 - max values are not lower than returned data" time="0.060" classname="AutomatedScenarioTestsFunctionalMultimeterMmF05Max10YearDataForMultipleMeters"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterDetail / MD-F-01 - Day detail chart" id="50198a82-3e0c-4197-874e-7a8806c33d7a" timestamp="2026-05-05T04:20:00.307Z" tests="9" failures="0" errors="0" time="0.059">
+    <testcase name="MD-F-01 - request completed and returned a response code" time="0.059" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart"/>
+    <testcase name="MD-F-01 - no HTTP 500 server error" time="0.059" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart"/>
+    <testcase name="MD-F-01 - HTTP status is success" time="0.059" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart"/>
+    <testcase name="MD-F-01 - response is a JSON object" time="0.059" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart"/>
+    <testcase name="MD-F-01 - MeterDetail response has chart structure" time="0.059" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart"/>
+    <testcase name="MD-F-01 - each chart series is a bar series with valid data" time="0.059" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart"/>
+    <testcase name="MD-F-01 - stroke chart length matches chart series length" time="0.059" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart"/>
+    <testcase name="MD-F-01 - MeterLabelMap contains selected meter IDs" time="0.059" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart"/>
+    <testcase name="MD-F-01 - ArrCategories length matches scenario interval" time="0.059" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterDetail / MD-F-02 - Week detail chart" id="9f1d1a33-69ac-44ab-aa3d-13cf92049687" timestamp="2026-05-05T04:20:00.307Z" tests="8" failures="0" errors="0" time="0.032">
+    <testcase name="MD-F-02 - request completed and returned a response code" time="0.032" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF02WeekDetailChart"/>
+    <testcase name="MD-F-02 - no HTTP 500 server error" time="0.032" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF02WeekDetailChart"/>
+    <testcase name="MD-F-02 - HTTP status is success" time="0.032" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF02WeekDetailChart"/>
+    <testcase name="MD-F-02 - response is a JSON object" time="0.032" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF02WeekDetailChart"/>
+    <testcase name="MD-F-02 - MeterDetail response has chart structure" time="0.032" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF02WeekDetailChart"/>
+    <testcase name="MD-F-02 - each chart series is a bar series with valid data" time="0.032" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF02WeekDetailChart"/>
+    <testcase name="MD-F-02 - stroke chart length matches chart series length" time="0.032" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF02WeekDetailChart"/>
+    <testcase name="MD-F-02 - MeterLabelMap contains selected meter IDs" time="0.032" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF02WeekDetailChart"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterDetail / MD-F-03 - Month detail chart" id="e654b987-6e90-4727-876e-e251f12fffd0" timestamp="2026-05-05T04:20:00.307Z" tests="8" failures="0" errors="0" time="0.113">
+    <testcase name="MD-F-03 - request completed and returned a response code" time="0.113" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF03MonthDetailChart"/>
+    <testcase name="MD-F-03 - no HTTP 500 server error" time="0.113" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF03MonthDetailChart"/>
+    <testcase name="MD-F-03 - HTTP status is success" time="0.113" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF03MonthDetailChart"/>
+    <testcase name="MD-F-03 - response is a JSON object" time="0.113" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF03MonthDetailChart"/>
+    <testcase name="MD-F-03 - MeterDetail response has chart structure" time="0.113" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF03MonthDetailChart"/>
+    <testcase name="MD-F-03 - each chart series is a bar series with valid data" time="0.113" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF03MonthDetailChart"/>
+    <testcase name="MD-F-03 - stroke chart length matches chart series length" time="0.113" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF03MonthDetailChart"/>
+    <testcase name="MD-F-03 - MeterLabelMap contains selected meter IDs" time="0.113" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF03MonthDetailChart"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterDetail / MD-F-04 - Year detail chart" id="40803d7f-5c77-4b20-8b27-a0b523a39595" timestamp="2026-05-05T04:20:00.307Z" tests="8" failures="0" errors="0" time="0.279">
+    <testcase name="MD-F-04 - request completed and returned a response code" time="0.279" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF04YearDetailChart"/>
+    <testcase name="MD-F-04 - no HTTP 500 server error" time="0.279" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF04YearDetailChart"/>
+    <testcase name="MD-F-04 - HTTP status is success" time="0.279" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF04YearDetailChart"/>
+    <testcase name="MD-F-04 - response is a JSON object" time="0.279" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF04YearDetailChart"/>
+    <testcase name="MD-F-04 - MeterDetail response has chart structure" time="0.279" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF04YearDetailChart"/>
+    <testcase name="MD-F-04 - each chart series is a bar series with valid data" time="0.279" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF04YearDetailChart"/>
+    <testcase name="MD-F-04 - stroke chart length matches chart series length" time="0.279" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF04YearDetailChart"/>
+    <testcase name="MD-F-04 - MeterLabelMap contains selected meter IDs" time="0.279" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF04YearDetailChart"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterDetail / MD-F-05 - Max10Year detail chart" id="33a57943-a20a-4a17-b41a-5e5761c24ced" timestamp="2026-05-05T04:20:00.307Z" tests="8" failures="0" errors="0" time="0.140">
+    <testcase name="MD-F-05 - request completed and returned a response code" time="0.140" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF05Max10YearDetailChart"/>
+    <testcase name="MD-F-05 - no HTTP 500 server error" time="0.140" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF05Max10YearDetailChart"/>
+    <testcase name="MD-F-05 - HTTP status is success" time="0.140" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF05Max10YearDetailChart"/>
+    <testcase name="MD-F-05 - response is a JSON object" time="0.140" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF05Max10YearDetailChart"/>
+    <testcase name="MD-F-05 - MeterDetail response has chart structure" time="0.140" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF05Max10YearDetailChart"/>
+    <testcase name="MD-F-05 - each chart series is a bar series with valid data" time="0.140" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF05Max10YearDetailChart"/>
+    <testcase name="MD-F-05 - stroke chart length matches chart series length" time="0.140" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF05Max10YearDetailChart"/>
+    <testcase name="MD-F-05 - MeterLabelMap contains selected meter IDs" time="0.140" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF05Max10YearDetailChart"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-01 - MeterSum Day keys are time/data-select strings" id="ab12edf2-d285-470e-984b-2773f513287c" timestamp="2026-05-05T04:20:00.307Z" tests="9" failures="0" errors="0" time="0.113">
+    <testcase name="RF-01 - request completed and returned a response code" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+    <testcase name="RF-01 - no HTTP 500 server error" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+    <testcase name="RF-01 - HTTP status is success" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+    <testcase name="RF-01 - response is a JSON object" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+    <testcase name="RF-01 - MeterCompare response has chart dictionaries and categories" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+    <testcase name="RF-01 - response dictionary keys match expected scenario keys" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+    <testcase name="RF-01 - data arrays align with ArrCategories" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+    <testcase name="RF-01 - max values are not lower than returned data" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+    <testcase name="RF-01 - ArrCategories length matches scenario interval" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-02 - Multimeter Day keys are meter IDs" id="27ad54b4-f26b-4888-9620-4884dc9f3081" timestamp="2026-05-05T04:20:00.307Z" tests="9" failures="0" errors="0" time="0.399">
+    <testcase name="RF-02 - request completed and returned a response code" time="0.399" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+    <testcase name="RF-02 - no HTTP 500 server error" time="0.399" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+    <testcase name="RF-02 - HTTP status is success" time="0.399" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+    <testcase name="RF-02 - response is a JSON object" time="0.399" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+    <testcase name="RF-02 - MeterCompare response has chart dictionaries and categories" time="0.399" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+    <testcase name="RF-02 - response dictionary keys match expected scenario keys" time="0.399" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+    <testcase name="RF-02 - data arrays align with ArrCategories" time="0.399" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+    <testcase name="RF-02 - max values are not lower than returned data" time="0.399" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+    <testcase name="RF-02 - ArrCategories length matches scenario interval" time="0.399" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-03 - MeterSum max values cover Month data" id="e5015fdb-9d90-4c1c-b310-b7544b7fd1ac" timestamp="2026-05-05T04:20:00.307Z" tests="8" failures="0" errors="0" time="0.037">
+    <testcase name="RF-03 - request completed and returned a response code" time="0.037" classname="AutomatedScenarioTestsResponseIntegrityRf03MeterSumMaxValuesCoverMonthData"/>
+    <testcase name="RF-03 - no HTTP 500 server error" time="0.037" classname="AutomatedScenarioTestsResponseIntegrityRf03MeterSumMaxValuesCoverMonthData"/>
+    <testcase name="RF-03 - HTTP status is success" time="0.037" classname="AutomatedScenarioTestsResponseIntegrityRf03MeterSumMaxValuesCoverMonthData"/>
+    <testcase name="RF-03 - response is a JSON object" time="0.037" classname="AutomatedScenarioTestsResponseIntegrityRf03MeterSumMaxValuesCoverMonthData"/>
+    <testcase name="RF-03 - MeterCompare response has chart dictionaries and categories" time="0.037" classname="AutomatedScenarioTestsResponseIntegrityRf03MeterSumMaxValuesCoverMonthData"/>
+    <testcase name="RF-03 - response dictionary keys match expected scenario keys" time="0.037" classname="AutomatedScenarioTestsResponseIntegrityRf03MeterSumMaxValuesCoverMonthData"/>
+    <testcase name="RF-03 - data arrays align with ArrCategories" time="0.037" classname="AutomatedScenarioTestsResponseIntegrityRf03MeterSumMaxValuesCoverMonthData"/>
+    <testcase name="RF-03 - max values are not lower than returned data" time="0.037" classname="AutomatedScenarioTestsResponseIntegrityRf03MeterSumMaxValuesCoverMonthData"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-04 - Multimeter max values cover Month data" id="c808f61b-cae0-41a6-a7bb-a1b717a90f20" timestamp="2026-05-05T04:20:00.307Z" tests="8" failures="0" errors="0" time="0.093">
+    <testcase name="RF-04 - request completed and returned a response code" time="0.093" classname="AutomatedScenarioTestsResponseIntegrityRf04MultimeterMaxValuesCoverMonthData"/>
+    <testcase name="RF-04 - no HTTP 500 server error" time="0.093" classname="AutomatedScenarioTestsResponseIntegrityRf04MultimeterMaxValuesCoverMonthData"/>
+    <testcase name="RF-04 - HTTP status is success" time="0.093" classname="AutomatedScenarioTestsResponseIntegrityRf04MultimeterMaxValuesCoverMonthData"/>
+    <testcase name="RF-04 - response is a JSON object" time="0.093" classname="AutomatedScenarioTestsResponseIntegrityRf04MultimeterMaxValuesCoverMonthData"/>
+    <testcase name="RF-04 - MeterCompare response has chart dictionaries and categories" time="0.093" classname="AutomatedScenarioTestsResponseIntegrityRf04MultimeterMaxValuesCoverMonthData"/>
+    <testcase name="RF-04 - response dictionary keys match expected scenario keys" time="0.093" classname="AutomatedScenarioTestsResponseIntegrityRf04MultimeterMaxValuesCoverMonthData"/>
+    <testcase name="RF-04 - data arrays align with ArrCategories" time="0.093" classname="AutomatedScenarioTestsResponseIntegrityRf04MultimeterMaxValuesCoverMonthData"/>
+    <testcase name="RF-04 - max values are not lower than returned data" time="0.093" classname="AutomatedScenarioTestsResponseIntegrityRf04MultimeterMaxValuesCoverMonthData"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-05 - MeterDetail chart series object structure" id="4bd83e0e-3da3-492a-bc28-3c7ca77a1c6e" timestamp="2026-05-05T04:20:00.307Z" tests="3" failures="1" errors="0" time="0.216">
+    <testcase name="RF-05 - request completed and returned a response code" time="0.216" classname="AutomatedScenarioTestsResponseIntegrityRf05MeterDetailChartSeriesObjectStructure"/>
+    <testcase name="RF-05 - no HTTP 500 server error" time="0.216" classname="AutomatedScenarioTestsResponseIntegrityRf05MeterDetailChartSeriesObjectStructure"/>
+    <testcase name="RF-05 - HTTP status is success" time="0.216" classname="AutomatedScenarioTestsResponseIntegrityRf05MeterDetailChartSeriesObjectStructure">
+      <failure type="AssertionFailure" message="expected 502 to be within 200..299">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 13a4bcbf-1998-4d08-8435-5739a28c2908.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Response Integrity / RF-05 - MeterDetail chart series object structure.]]>
+        <![CDATA[Test description: RF-05 - HTTP status is success.]]>
+        <![CDATA[Error message: expected 502 to be within 200..299.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 502 to be within 200..299
+   at Object.eval sandbox-script.js:3:20).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-06 - MeterDetail MeterLabelMap selected IDs" id="1e57f996-5b81-406d-a97e-b8916de35fc5" timestamp="2026-05-05T04:20:00.307Z" tests="8" failures="0" errors="0" time="0.056">
+    <testcase name="RF-06 - request completed and returned a response code" time="0.056" classname="AutomatedScenarioTestsResponseIntegrityRf06MeterDetailMeterLabelMapSelectedIDs"/>
+    <testcase name="RF-06 - no HTTP 500 server error" time="0.056" classname="AutomatedScenarioTestsResponseIntegrityRf06MeterDetailMeterLabelMapSelectedIDs"/>
+    <testcase name="RF-06 - HTTP status is success" time="0.056" classname="AutomatedScenarioTestsResponseIntegrityRf06MeterDetailMeterLabelMapSelectedIDs"/>
+    <testcase name="RF-06 - response is a JSON object" time="0.056" classname="AutomatedScenarioTestsResponseIntegrityRf06MeterDetailMeterLabelMapSelectedIDs"/>
+    <testcase name="RF-06 - MeterDetail response has chart structure" time="0.056" classname="AutomatedScenarioTestsResponseIntegrityRf06MeterDetailMeterLabelMapSelectedIDs"/>
+    <testcase name="RF-06 - each chart series is a bar series with valid data" time="0.056" classname="AutomatedScenarioTestsResponseIntegrityRf06MeterDetailMeterLabelMapSelectedIDs"/>
+    <testcase name="RF-06 - stroke chart length matches chart series length" time="0.056" classname="AutomatedScenarioTestsResponseIntegrityRf06MeterDetailMeterLabelMapSelectedIDs"/>
+    <testcase name="RF-06 - MeterLabelMap contains selected meter IDs" time="0.056" classname="AutomatedScenarioTestsResponseIntegrityRf06MeterDetailMeterLabelMapSelectedIDs"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-07 - MeterDetail stroke length consistency" id="28080368-8a20-4233-a8c8-87f44abc5722" timestamp="2026-05-05T04:20:00.307Z" tests="8" failures="0" errors="0" time="0.064">
+    <testcase name="RF-07 - request completed and returned a response code" time="0.064" classname="AutomatedScenarioTestsResponseIntegrityRf07MeterDetailStrokeLengthConsistency"/>
+    <testcase name="RF-07 - no HTTP 500 server error" time="0.064" classname="AutomatedScenarioTestsResponseIntegrityRf07MeterDetailStrokeLengthConsistency"/>
+    <testcase name="RF-07 - HTTP status is success" time="0.064" classname="AutomatedScenarioTestsResponseIntegrityRf07MeterDetailStrokeLengthConsistency"/>
+    <testcase name="RF-07 - response is a JSON object" time="0.064" classname="AutomatedScenarioTestsResponseIntegrityRf07MeterDetailStrokeLengthConsistency"/>
+    <testcase name="RF-07 - MeterDetail response has chart structure" time="0.064" classname="AutomatedScenarioTestsResponseIntegrityRf07MeterDetailStrokeLengthConsistency"/>
+    <testcase name="RF-07 - each chart series is a bar series with valid data" time="0.064" classname="AutomatedScenarioTestsResponseIntegrityRf07MeterDetailStrokeLengthConsistency"/>
+    <testcase name="RF-07 - stroke chart length matches chart series length" time="0.064" classname="AutomatedScenarioTestsResponseIntegrityRf07MeterDetailStrokeLengthConsistency"/>
+    <testcase name="RF-07 - MeterLabelMap contains selected meter IDs" time="0.064" classname="AutomatedScenarioTestsResponseIntegrityRf07MeterDetailStrokeLengthConsistency"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-08a - MeterSum Day categories for 5 minute interval" id="850bd5d7-d2e4-4502-95a1-2973dc81187f" timestamp="2026-05-05T04:20:00.307Z" tests="9" failures="0" errors="0" time="0.084">
+    <testcase name="RF-08a - request completed and returned a response code" time="0.084" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+    <testcase name="RF-08a - no HTTP 500 server error" time="0.084" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+    <testcase name="RF-08a - HTTP status is success" time="0.084" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+    <testcase name="RF-08a - response is a JSON object" time="0.084" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+    <testcase name="RF-08a - MeterCompare response has chart dictionaries and categories" time="0.084" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+    <testcase name="RF-08a - response dictionary keys match expected scenario keys" time="0.084" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+    <testcase name="RF-08a - data arrays align with ArrCategories" time="0.084" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+    <testcase name="RF-08a - max values are not lower than returned data" time="0.084" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+    <testcase name="RF-08a - ArrCategories length matches scenario interval" time="0.084" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-08b - MeterSum Day categories for 15 minute interval" id="b7d134a8-1344-41c3-9de9-fc4e6bb5c243" timestamp="2026-05-05T04:20:00.307Z" tests="9" failures="0" errors="0" time="0.053">
+    <testcase name="RF-08b - request completed and returned a response code" time="0.053" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+    <testcase name="RF-08b - no HTTP 500 server error" time="0.053" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+    <testcase name="RF-08b - HTTP status is success" time="0.053" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+    <testcase name="RF-08b - response is a JSON object" time="0.053" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+    <testcase name="RF-08b - MeterCompare response has chart dictionaries and categories" time="0.053" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+    <testcase name="RF-08b - response dictionary keys match expected scenario keys" time="0.053" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+    <testcase name="RF-08b - data arrays align with ArrCategories" time="0.053" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+    <testcase name="RF-08b - max values are not lower than returned data" time="0.053" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+    <testcase name="RF-08b - ArrCategories length matches scenario interval" time="0.053" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-08c - MeterSum Day categories for 60 minute interval" id="4606141a-db56-4a92-b6b9-bc580b577980" timestamp="2026-05-05T04:20:00.307Z" tests="9" failures="0" errors="0" time="0.091">
+    <testcase name="RF-08c - request completed and returned a response code" time="0.091" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+    <testcase name="RF-08c - no HTTP 500 server error" time="0.091" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+    <testcase name="RF-08c - HTTP status is success" time="0.091" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+    <testcase name="RF-08c - response is a JSON object" time="0.091" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+    <testcase name="RF-08c - MeterCompare response has chart dictionaries and categories" time="0.091" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+    <testcase name="RF-08c - response dictionary keys match expected scenario keys" time="0.091" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+    <testcase name="RF-08c - data arrays align with ArrCategories" time="0.091" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+    <testcase name="RF-08c - max values are not lower than returned data" time="0.091" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+    <testcase name="RF-08c - ArrCategories length matches scenario interval" time="0.091" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+  </testsuite>
+</testsuites>

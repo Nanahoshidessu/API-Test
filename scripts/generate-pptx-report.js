@@ -165,9 +165,9 @@ function sectionHead(slide, text, y) {
     ['โครงการ',         'PJ250104'],
     ['ลูกค้า',          'Unimicron (Thailand) Co., Ltd.'],
     ['จัดทำโดย',        'Tomas Tech Co., Ltd.'],
-    ['วันที่รายงาน',    '28 เมษายน 2569'],
+    ['วันที่รายงาน',    '5 พฤษภาคม 2569'],
     ['ชุดทดสอบ',        'Functional — MS-F · MM-F · MD-F · RF'],
-    ['เวอร์ชันเอกสาร', '1.0'],
+    ['เวอร์ชันเอกสาร', '1.2'],
   ];
   let iy = 5.75;
   for (const [lbl, val] of info) {
@@ -199,7 +199,7 @@ function sectionHead(slide, text, y) {
 {
   const sl = pres.addSlide();
   sl.background = { color: C.bgPage };
-  addHeader(sl, '1. สรุปผลการทดสอบ', 'Functional Test Suite — รันเมื่อ 28 เมษายน 2569 เวลา 02:07 UTC');
+  addHeader(sl, '1. สรุปผลการทดสอบ', 'Functional Test Suite — รันเมื่อ 5 พฤษภาคม 2569 เวลา 04:24 UTC');
   addFooter(sl, 2);
 
   let y = CTOP + 0.08;
@@ -207,13 +207,13 @@ function sectionHead(slide, text, y) {
   // Overall status banner
   sl.addShape(pres.shapes.RECTANGLE, {
     x: MX, y, w: CW, h: 0.52,
-    fill: { color: C.failBg }, line: { color: 'FCA5A5', width: 1 },
+    fill: { color: C.passBg }, line: { color: '86EFAC', width: 1 },
   });
   sl.addText(
-    '⚠  สถานะโดยรวม: FAIL  —  พบ 4 ประเภทข้อบกพร่อง ใน 22 assertion ที่ล้มเหลว จากทั้งหมด 204 assertions',
+    '✅  สถานะโดยรวม: PASS  —  ผ่านทุก 209 assertions  —  ข้อบกพร่อง 4 รายการได้รับการแก้ไขแล้วในเวอร์ชัน v1.2',
     {
       x: MX + 0.12, y, w: CW - 0.24, h: 0.52,
-      fontSize: 10, fontFace: 'Calibri', bold: true, color: C.failText,
+      fontSize: 10, fontFace: 'Calibri', bold: true, color: C.passText,
       align: 'center', valign: 'middle', margin: 0,
     }
   );
@@ -226,11 +226,11 @@ function sectionHead(slide, text, y) {
 
   const stats = [
     { lbl: 'Requests ที่รัน',      val: '25',   sub: 'requests',    bg: C.blueLight, tc: C.blueTxt },
-    { lbl: 'Assertions ทั้งหมด',   val: '204',  sub: 'assertions',  bg: C.blueLight, tc: C.blueTxt },
-    { lbl: 'Assertions ผ่าน',      val: '182',  sub: '89.2%',       bg: C.passBg,    tc: C.passText },
-    { lbl: 'Assertions ล้มเหลว',   val: '22',   sub: '10.8%',       bg: C.failBg,    tc: C.failText },
-    { lbl: 'เทสเคสผ่านทั้งหมด',   val: '9',    sub: 'จาก 25',      bg: C.passBg,    tc: C.passText },
-    { lbl: 'HTTP 500 Error',       val: '1',    sub: 'กรณี',        bg: C.failBg,    tc: C.failText },
+    { lbl: 'Assertions ทั้งหมด',   val: '209',  sub: 'assertions',  bg: C.blueLight, tc: C.blueTxt },
+    { lbl: 'Assertions ผ่าน',      val: '209',  sub: '100%',        bg: C.passBg,    tc: C.passText },
+    { lbl: 'Assertions ล้มเหลว',   val: '0',    sub: '0%',          bg: C.passBg,    tc: C.passText },
+    { lbl: 'เทสเคสผ่านทั้งหมด',   val: '25',   sub: 'จาก 25',      bg: C.passBg,    tc: C.passText },
+    { lbl: 'HTTP 500 Error',       val: '0',    sub: 'กรณี',        bg: C.passBg,    tc: C.passText },
   ];
 
   for (let i = 0; i < stats.length; i++) {
@@ -278,11 +278,11 @@ function sectionHead(slide, text, y) {
 
   const grpHdr = ['กลุ่มทดสอบ', 'เทสเคส', 'ผ่าน', 'บางส่วน', 'ล้มเหลว', 'สถานะ'];
   const grpData = [
-    ['MS-F — GetDataMeterSum Functional',      '5',  '0', '5', '0', 'PARTIAL'],
-    ['MM-F — GetDataMultimeter Functional',     '5',  '4', '1', '0', 'PARTIAL'],
-    ['MD-F — GetDataMeterDetail Functional',    '5',  '0', '4', '1', 'FAIL'   ],
-    ['RF — Response Structure & Integrity',     '10', '2', '8', '0', 'PARTIAL'],
-    ['รวมทั้งหมด',                              '25', '9', '15','1', 'FAIL'   ],
+    ['MS-F — GetDataMeterSum Functional',      '5',  '5',  '0', '0', 'PASS'],
+    ['MM-F — GetDataMultimeter Functional',     '5',  '5',  '0', '0', 'PASS'],
+    ['MD-F — GetDataMeterDetail Functional',    '5',  '5',  '0', '0', 'PASS'],
+    ['RF — Response Structure & Integrity',     '10', '10', '0', '0', 'PASS'],
+    ['รวมทั้งหมด',                              '25', '25', '0', '0', 'PASS'],
   ];
 
   const grpRows = [
@@ -332,7 +332,7 @@ function sectionHead(slide, text, y) {
 
   const envData = [
     ['รายการ',                'ค่า'],
-    ['API Base URL',           'http://localhost:5000'],
+    ['API Base URL',           'https://tom-demo-01.proen.app.ruk-com.cloud/unimicron-api'],
     ['WebSocket URL',          'ws://localhost:9001/ws/'],
     ['Meter ID ที่ทดสอบ',      '1, 2, 3'],
     ['Meter ID ที่ไม่มีในระบบ', '9999'],
@@ -343,7 +343,7 @@ function sectionHead(slide, text, y) {
     ['เครื่องมืออัตโนมัติ',   'Newman 6.2.1 + newman-reporter-htmlextra'],
     ['Postman Collection',     'unimicron-api.postman_collection.json'],
     ['Environment File',       'postman-environment.json'],
-    ['วันที่รันทดสอบ',         '28 เมษายน 2569 เวลา 02:07 UTC'],
+    ['วันที่รันทดสอบ',         '5 พฤษภาคม 2569 เวลา 04:24 UTC'],
     ['ผู้ทดสอบ',               'Tomas Tech Co., Ltd.'],
   ];
 
@@ -473,22 +473,16 @@ function addGroupSlide(pageNum, headerTitle, headerSub, groupNote, cases, failur
 addGroupSlide(
   4,
   '3. POST /GetDataMeterSum — Functional (MS-F)',
-  'Happy Path — Type: Day, Week, Month, Year, Max10Year  |  ผลกลุ่ม: 0 / 5 เทสเคสผ่าน',
-  'กลุ่มนี้มีข้อบกพร่องในทุก 5 เทสเคส: DEF-001 (Day category count) และ DEF-002 (dictionary key format)',
+  'Happy Path — Type: Day, Week, Month, Year, Max10Year  |  ผลกลุ่ม: 5 / 5 เทสเคสผ่าน',
+  'ทุกเทสเคสผ่านสมบูรณ์ — DEF-001 และ DEF-002 ได้รับการแก้ไขแล้วในเวอร์ชัน v1.2',
   [
-    { id: 'MS-F-01', desc: 'Day comparison by selected days',         http: 200, pass: 8, fail: 1, status: 'PARTIAL' },
-    { id: 'MS-F-02', desc: 'Week comparison by selected week ranges', http: 200, pass: 7, fail: 1, status: 'PARTIAL' },
-    { id: 'MS-F-03', desc: 'Month comparison by selected months',     http: 200, pass: 7, fail: 1, status: 'PARTIAL' },
-    { id: 'MS-F-04', desc: 'Year comparison by selected years',       http: 200, pass: 7, fail: 1, status: 'PARTIAL' },
-    { id: 'MS-F-05', desc: 'Max10Year comparison across ten years',   http: 200, pass: 7, fail: 1, status: 'PARTIAL' },
+    { id: 'MS-F-01', desc: 'Day comparison by selected days',         http: 200, pass: 9, fail: 0, status: 'PASS' },
+    { id: 'MS-F-02', desc: 'Week comparison by selected week ranges', http: 200, pass: 8, fail: 0, status: 'PASS' },
+    { id: 'MS-F-03', desc: 'Month comparison by selected months',     http: 200, pass: 8, fail: 0, status: 'PASS' },
+    { id: 'MS-F-04', desc: 'Year comparison by selected years',       http: 200, pass: 8, fail: 0, status: 'PASS' },
+    { id: 'MS-F-05', desc: 'Max10Year comparison across ten years',   http: 200, pass: 8, fail: 0, status: 'PASS' },
   ],
-  [
-    { id: 'MS-F-01', assertion: 'ArrCategories length (Interval=15)',  expected: '96 entries',              actual: '93 entries'   },
-    { id: 'MS-F-02', assertion: 'Dictionary key format (Week)',         expected: "'2025-06-02||2025-06-08'", actual: "'0', '1'"     },
-    { id: 'MS-F-03', assertion: 'Dictionary key format (Month)',        expected: "'04', '05', '06'",         actual: "'0', '1', '2'" },
-    { id: 'MS-F-04', assertion: 'Dictionary key format (Year)',         expected: "'2023', '2024', '2025'",   actual: "'0', '1', '2'" },
-    { id: 'MS-F-05', assertion: 'Dictionary key format (Max10Year)',    expected: "'2016' ... '2025'",        actual: "'0' ... '9'"   },
-  ]
+  []
 );
 
 // ════════════════════════════════════════════════════════════════════════
@@ -497,18 +491,16 @@ addGroupSlide(
 addGroupSlide(
   5,
   '4. POST /GetDataMultimeter — Functional (MM-F)',
-  'Happy Path — Type: Day, Week, Month, Year, Max10Year  |  ผลกลุ่ม: 4 / 5 เทสเคสผ่าน',
-  'กลุ่มนี้ผ่านส่วนใหญ่ — ล้มเหลวเฉพาะ MM-F-01 เนื่องจาก DEF-001 (Day category count)',
+  'Happy Path — Type: Day, Week, Month, Year, Max10Year  |  ผลกลุ่ม: 5 / 5 เทสเคสผ่าน',
+  'ทุกเทสเคสผ่านสมบูรณ์ — DEF-001 ได้รับการแก้ไขแล้วในเวอร์ชัน v1.2',
   [
-    { id: 'MM-F-01', desc: 'Day data for multiple meters',      http: 200, pass: 8, fail: 1, status: 'PARTIAL' },
-    { id: 'MM-F-02', desc: 'Week data for multiple meters',     http: 200, pass: 8, fail: 0, status: 'PASS'    },
-    { id: 'MM-F-03', desc: 'Month data for multiple meters',    http: 200, pass: 8, fail: 0, status: 'PASS'    },
-    { id: 'MM-F-04', desc: 'Year data for multiple meters',     http: 200, pass: 8, fail: 0, status: 'PASS'    },
-    { id: 'MM-F-05', desc: 'Max10Year data for multiple meters',http: 200, pass: 8, fail: 0, status: 'PASS'    },
+    { id: 'MM-F-01', desc: 'Day data for multiple meters',      http: 200, pass: 9, fail: 0, status: 'PASS' },
+    { id: 'MM-F-02', desc: 'Week data for multiple meters',     http: 200, pass: 8, fail: 0, status: 'PASS' },
+    { id: 'MM-F-03', desc: 'Month data for multiple meters',    http: 200, pass: 8, fail: 0, status: 'PASS' },
+    { id: 'MM-F-04', desc: 'Year data for multiple meters',     http: 200, pass: 8, fail: 0, status: 'PASS' },
+    { id: 'MM-F-05', desc: 'Max10Year data for multiple meters',http: 200, pass: 8, fail: 0, status: 'PASS' },
   ],
-  [
-    { id: 'MM-F-01', assertion: 'ArrCategories length (Interval=15)', expected: '96 entries', actual: '93 entries' },
-  ]
+  []
 );
 
 // ════════════════════════════════════════════════════════════════════════
@@ -517,23 +509,16 @@ addGroupSlide(
 addGroupSlide(
   6,
   '5. POST /GetDataMeterDetail — Functional (MD-F)',
-  'Happy Path — Type: Day, Week, Month, Year, Max10Year  |  ผลกลุ่ม: 0 / 5 เทสเคสผ่าน — พบ HTTP 500',
-  'กลุ่มนี้มีปัญหาหนักที่สุด: DEF-003 ทุกเทสเคส (MeterLabelMap field ไม่พบ) และ DEF-004 ทำให้ MD-F-05 ล้มเหลวสมบูรณ์',
+  'Happy Path — Type: Day, Week, Month, Year, Max10Year  |  ผลกลุ่ม: 5 / 5 เทสเคสผ่าน',
+  'ทุกเทสเคสผ่านสมบูรณ์ — DEF-001, DEF-003, และ DEF-004 ได้รับการแก้ไขแล้วในเวอร์ชัน v1.2 (HTTP 500 บน Max10Year หายแล้ว)',
   [
-    { id: 'MD-F-01', desc: 'Day detail chart',       http: 200, pass: 7, fail: 2, status: 'PARTIAL' },
-    { id: 'MD-F-02', desc: 'Week detail chart',      http: 200, pass: 7, fail: 1, status: 'PARTIAL' },
-    { id: 'MD-F-03', desc: 'Month detail chart',     http: 200, pass: 7, fail: 1, status: 'PARTIAL' },
-    { id: 'MD-F-04', desc: 'Year detail chart',      http: 200, pass: 7, fail: 1, status: 'PARTIAL' },
-    { id: 'MD-F-05', desc: 'Max10Year detail chart', http: 500, pass: 1, fail: 2, status: 'FAIL'    },
+    { id: 'MD-F-01', desc: 'Day detail chart',       http: 200, pass: 9, fail: 0, status: 'PASS' },
+    { id: 'MD-F-02', desc: 'Week detail chart',      http: 200, pass: 8, fail: 0, status: 'PASS' },
+    { id: 'MD-F-03', desc: 'Month detail chart',     http: 200, pass: 8, fail: 0, status: 'PASS' },
+    { id: 'MD-F-04', desc: 'Year detail chart',      http: 200, pass: 8, fail: 0, status: 'PASS' },
+    { id: 'MD-F-05', desc: 'Max10Year detail chart', http: 200, pass: 8, fail: 0, status: 'PASS' },
   ],
-  [
-    { id: 'MD-F-01', assertion: 'MeterLabelMap — ID field',       expected: "ID '1' in map",      actual: "['undefined','undefined']" },
-    { id: 'MD-F-01', assertion: 'ArrCategories length (Int=15)',   expected: '96 entries',          actual: '93 entries'               },
-    { id: 'MD-F-02', assertion: 'MeterLabelMap — ID field',       expected: "ID '1' in map",      actual: '[] (empty)'               },
-    { id: 'MD-F-03', assertion: 'MeterLabelMap — ID field',       expected: "ID '1' in map",      actual: "['undefined']"            },
-    { id: 'MD-F-04', assertion: 'MeterLabelMap — ID field',       expected: "ID '1' in map",      actual: "['undefined','undefined']" },
-    { id: 'MD-F-05', assertion: 'HTTP status ต้องเป็น 2xx',       expected: 'HTTP 200',           actual: 'HTTP 500'                 },
-  ]
+  []
 );
 
 // ════════════════════════════════════════════════════════════════════════
@@ -542,31 +527,21 @@ addGroupSlide(
 addGroupSlide(
   7,
   '6. Response Structure & Field Integrity (RF)',
-  'ตรวจสอบโครงสร้าง Response และความถูกต้องของ Field  |  ผลกลุ่ม: 2 / 10 เทสเคสผ่าน',
-  'ผ่านเฉพาะ RF-04 และ RF-08c — ที่เหลือล้มเหลวจาก DEF-001 หรือ DEF-002/003 รวมกัน',
+  'ตรวจสอบโครงสร้าง Response และความถูกต้องของ Field  |  ผลกลุ่ม: 10 / 10 เทสเคสผ่าน',
+  'ทุกเทสเคสผ่านสมบูรณ์ — DEF-001, DEF-002, และ DEF-003 ได้รับการแก้ไขแล้วในเวอร์ชัน v1.2',
   [
-    { id: 'RF-01',  desc: 'MeterSum Day keys เป็น time string',          http: 200, pass: 8, fail: 1, status: 'PARTIAL' },
-    { id: 'RF-02',  desc: 'Multimeter Day keys เป็น meter ID',           http: 200, pass: 8, fail: 1, status: 'PARTIAL' },
-    { id: 'RF-03',  desc: 'MeterSum max values ครอบคลุม Month data',     http: 200, pass: 7, fail: 1, status: 'PARTIAL' },
-    { id: 'RF-04',  desc: 'Multimeter max values ครอบคลุม Month data',   http: 200, pass: 8, fail: 0, status: 'PASS'    },
-    { id: 'RF-05',  desc: 'MeterDetail ChartSeries object structure',     http: 200, pass: 7, fail: 2, status: 'PARTIAL' },
-    { id: 'RF-06',  desc: 'MeterDetail MeterLabelMap selected IDs',       http: 200, pass: 7, fail: 1, status: 'PARTIAL' },
-    { id: 'RF-07',  desc: 'MeterDetail ArrStrokeChart length consistency', http: 200, pass: 7, fail: 1, status: 'PARTIAL' },
-    { id: 'RF-08a', desc: 'MeterSum Day categories — Interval=5 min',    http: 200, pass: 8, fail: 1, status: 'PARTIAL' },
-    { id: 'RF-08b', desc: 'MeterSum Day categories — Interval=15 min',   http: 200, pass: 8, fail: 1, status: 'PARTIAL' },
-    { id: 'RF-08c', desc: 'MeterSum Day categories — Interval=60 min',   http: 200, pass: 9, fail: 0, status: 'PASS'    },
+    { id: 'RF-01',  desc: 'MeterSum Day keys เป็น time string',          http: 200, pass: 9, fail: 0, status: 'PASS' },
+    { id: 'RF-02',  desc: 'Multimeter Day keys เป็น meter ID',           http: 200, pass: 9, fail: 0, status: 'PASS' },
+    { id: 'RF-03',  desc: 'MeterSum max values ครอบคลุม Month data',     http: 200, pass: 8, fail: 0, status: 'PASS' },
+    { id: 'RF-04',  desc: 'Multimeter max values ครอบคลุม Month data',   http: 200, pass: 8, fail: 0, status: 'PASS' },
+    { id: 'RF-05',  desc: 'MeterDetail ChartSeries object structure',     http: 200, pass: 9, fail: 0, status: 'PASS' },
+    { id: 'RF-06',  desc: 'MeterDetail MeterLabelMap selected IDs',       http: 200, pass: 8, fail: 0, status: 'PASS' },
+    { id: 'RF-07',  desc: 'MeterDetail ArrStrokeChart length consistency', http: 200, pass: 8, fail: 0, status: 'PASS' },
+    { id: 'RF-08a', desc: 'MeterSum Day categories — Interval=5 min',    http: 200, pass: 9, fail: 0, status: 'PASS' },
+    { id: 'RF-08b', desc: 'MeterSum Day categories — Interval=15 min',   http: 200, pass: 9, fail: 0, status: 'PASS' },
+    { id: 'RF-08c', desc: 'MeterSum Day categories — Interval=60 min',   http: 200, pass: 9, fail: 0, status: 'PASS' },
   ],
-  [
-    { id: 'RF-01',  assertion: 'ArrCategories length (Int=15)',  expected: '96 entries',           actual: '93 entries'               },
-    { id: 'RF-02',  assertion: 'ArrCategories length (Int=15)',  expected: '96 entries',           actual: '93 entries'               },
-    { id: 'RF-03',  assertion: 'Dictionary key (Month)',         expected: "'06'",                 actual: "'0'"                      },
-    { id: 'RF-05',  assertion: 'MeterLabelMap — ID field',      expected: "ID '1' in map",       actual: "['undefined','undefined']" },
-    { id: 'RF-05',  assertion: 'ArrCategories length (Int=15)', expected: '96 entries',           actual: '93 entries'               },
-    { id: 'RF-06',  assertion: 'MeterLabelMap — ID field',      expected: "ID '1' in map",       actual: "['undefined','undefined']" },
-    { id: 'RF-07',  assertion: 'MeterLabelMap — ID field',      expected: "ID '1' in map",       actual: "['undefined','undefined']" },
-    { id: 'RF-08a', assertion: 'ArrCategories length (Int=5)',  expected: '288 entries',          actual: '277 entries'              },
-    { id: 'RF-08b', assertion: 'ArrCategories length (Int=15)', expected: '96 entries',           actual: '93 entries'               },
-  ]
+  []
 );
 
 // ════════════════════════════════════════════════════════════════════════
@@ -643,19 +618,19 @@ function defectCard(sl, def, x, y, w, h) {
 
   defectCard(sl, {
     id: 'DEF-001', severity: 'Medium', priority: 'High',
-    title: 'ArrCategories Count ไม่ถูกต้องสำหรับ Type=Day',
+    title: '✅ RESOLVED v1.2 — ArrCategories Count ไม่ถูกต้องสำหรับ Type=Day',
     endpoint: '/GetDataMeterSum · /GetDataMultimeter · /GetDataMeterDetail',
     cases: 'MS-F-01, MM-F-01, MD-F-01, RF-01, RF-02, RF-05, RF-08a, RF-08b (8 กรณี)',
     desc:
       'เมื่อ Type=Day — API ส่งคืนจำนวน time-slot categories น้อยกว่าที่ Specification กำหนด\n' +
       '\nInterval=15 min : คาดหวัง 96 รายการ (24h × 4)  →  ได้รับจริง 93 รายการ' +
       '\nInterval=5 min  : คาดหวัง 288 รายการ (24h × 12) →  ได้รับจริง 277 รายการ' +
-      '\n\nสาเหตุที่คาดการณ์: Server สร้าง categories เฉพาะ time-slot ที่มีข้อมูลบันทึก หรืออาจยกเว้น boundary time-slot บางรายการ ต้องชี้แจงกับ Developer ว่า specification กำหนด full-day grid หรือ data-driven grid',
+      '\n\n✅ การแก้ไข (v1.2): ปรับ GenerateTimeCategories() ให้สร้าง full-day grid 24 ชั่วโมง โดยใช้ count = 1440 / interval — ตอนนี้ Interval=15 ได้ 96, Interval=5 ได้ 288, Interval=60 ได้ 24 ตามที่ Specification กำหนด',
   }, MX, CTOP + 0.05, CW, CARD_H);
 
   defectCard(sl, {
     id: 'DEF-002', severity: 'High', priority: 'Critical',
-    title: 'Dictionary Keys ใช้ Numeric Index แทน DataSelect Values',
+    title: '✅ RESOLVED v1.2 — Dictionary Keys ใช้ Numeric Index แทน DataSelect Values',
     endpoint: '/GetDataMeterSum',
     cases: 'MS-F-02, MS-F-03, MS-F-04, MS-F-05, RF-03 (5 กรณี)',
     desc:
@@ -663,8 +638,7 @@ function defectCard(sl, def, x, y, w, h) {
       '\n\nตัวอย่าง: POST /GetDataMeterSum Type=Month DataSelect=["04","05","06"]' +
       '\nคาดหวัง key: "04", "05", "06"' +
       '\nได้รับจริง: "0", "1", "2"' +
-      '\n\nผลกระทบ: Client-side ไม่สามารถ map ข้อมูล chart series กับ label ที่ถูกต้องได้ ทำให้ข้อมูลที่แสดงผลบนกราฟอาจสับสน' +
-      '\nสาเหตุที่คาดการณ์: API serialize response dictionary เป็น ordered array และใช้ sequential integer key แทนการรักษา DataSelect string',
+      '\n\n✅ การแก้ไข (v1.2): เปลี่ยน arrDataTarget[r.ToString()] เป็น arrDataTarget[request.DataSelect[r]] สำหรับ Month/Year — และใช้ year string เป็น key สำหรับ Max10Year — ตอนนี้ key match กับ DataSelect input ที่ส่งมาทุก type',
   }, MX, CTOP + 0.05 + CARD_H + 0.1, CW, CARD_H);
 }
 
@@ -681,7 +655,7 @@ function defectCard(sl, def, x, y, w, h) {
 
   defectCard(sl, {
     id: 'DEF-003', severity: 'Medium', priority: 'High',
-    title: 'MeterLabelMap ID Field ไม่สามารถระบุได้',
+    title: '✅ RESOLVED v1.2 — MeterLabelMap ID Field ไม่สามารถระบุได้',
     endpoint: '/GetDataMeterDetail',
     cases: 'MD-F-01, MD-F-02, MD-F-03, MD-F-04, RF-05, RF-06, RF-07 (7 กรณี)',
     desc:
@@ -689,12 +663,12 @@ function defectCard(sl, def, x, y, w, h) {
       '\n\nตัวอย่าง: POST /GetDataMeterDetail Type=Month Meter=[1,2]' +
       '\nคาดหวัง: MeterLabelMap แต่ละรายการมี field id ที่ match กับ Meter ที่ร้องขอ' +
       '\nได้รับจริง: ["undefined", "undefined"] — ไม่พบ field ชื่อดังกล่าว' +
-      '\n\nขั้นตอนถัดไป: ยืนยันชื่อ field จริงจาก Developer (เช่น MeterId, SensorId, meterID) แล้วอัปเดต test assertion ให้ตรงกัน',
+      '\n\n✅ การแก้ไข (v1.2): เปลี่ยน MeterLabelMap จาก List<Dictionary<string,string>> เป็น List<MeterLabel> — แต่ละ object มี field id และ label ตามที่ Specification กำหนด — เพิ่ม meterLabelMap.Add() ใน Week และ Max10Year case ที่ขาดด้วย',
   }, MX, CTOP + 0.05, CW, CARD_H);
 
   defectCard(sl, {
     id: 'DEF-004', severity: 'High', priority: 'Critical',
-    title: 'HTTP 500 Internal Server Error บน /GetDataMeterDetail ด้วย type=Max10Year',
+    title: '✅ RESOLVED v1.2 — HTTP 500 บน /GetDataMeterDetail ด้วย type=Max10Year',
     endpoint: '/GetDataMeterDetail',
     cases: 'MD-F-05 (1 กรณี)',
     desc:
@@ -704,7 +678,7 @@ function defectCard(sl, def, x, y, w, h) {
       '\n  Body: { "type": "Max10Year", "Meter": [1], "DataSelect": "2025|2016", "interval": 0 }' +
       '\n\nคาดหวัง: HTTP 200 พร้อม chart series response' +
       '\nได้รับจริง: HTTP 500 Internal Server Error' +
-      '\n\nสาเหตุที่คาดการณ์: type=Max10Year อาจยังไม่ได้ implement ใน MeterDetail handler หรือ trigger unhandled exception — ต้องแก้ไขฝั่ง Server ก่อน',
+      '\n\n✅ การแก้ไข (v1.2): handle DataSelect format "year|year" โดย split + TryParse เพื่อหลีกเลี่ยง Int32.Parse FormatException — Multimeter normalize min/max year — ตอนนี้ Max10Year ตอบ HTTP 200 ทุกกรณี',
   }, MX, CTOP + 0.05 + CARD_H + 0.1, CW, CARD_H);
 }
 
@@ -718,31 +692,31 @@ function defectCard(sl, def, x, y, w, h) {
   addFooter(sl, 10);
 
   const matrix = [
-    ['MS-F-01', 'PARTIAL', 'DEF-001'],
-    ['MS-F-02', 'PARTIAL', 'DEF-002'],
-    ['MS-F-03', 'PARTIAL', 'DEF-002'],
-    ['MS-F-04', 'PARTIAL', 'DEF-002'],
-    ['MS-F-05', 'PARTIAL', 'DEF-002'],
-    ['MM-F-01', 'PARTIAL', 'DEF-001'],
-    ['MM-F-02', 'PASS',    '—'],
-    ['MM-F-03', 'PASS',    '—'],
-    ['MM-F-04', 'PASS',    '—'],
-    ['MM-F-05', 'PASS',    '—'],
-    ['MD-F-01', 'PARTIAL', 'DEF-001, DEF-003'],
-    ['MD-F-02', 'PARTIAL', 'DEF-003'],
-    ['MD-F-03', 'PARTIAL', 'DEF-003'],
-    ['MD-F-04', 'PARTIAL', 'DEF-003'],
-    ['MD-F-05', 'FAIL',    'DEF-004'],
-    ['RF-01',   'PARTIAL', 'DEF-001'],
-    ['RF-02',   'PARTIAL', 'DEF-001'],
-    ['RF-03',   'PARTIAL', 'DEF-002'],
-    ['RF-04',   'PASS',    '—'],
-    ['RF-05',   'PARTIAL', 'DEF-001, DEF-003'],
-    ['RF-06',   'PARTIAL', 'DEF-003'],
-    ['RF-07',   'PARTIAL', 'DEF-003'],
-    ['RF-08a',  'PARTIAL', 'DEF-001'],
-    ['RF-08b',  'PARTIAL', 'DEF-001'],
-    ['RF-08c',  'PASS',    '—'],
+    ['MS-F-01', 'PASS', '—'],
+    ['MS-F-02', 'PASS', '—'],
+    ['MS-F-03', 'PASS', '—'],
+    ['MS-F-04', 'PASS', '—'],
+    ['MS-F-05', 'PASS', '—'],
+    ['MM-F-01', 'PASS', '—'],
+    ['MM-F-02', 'PASS', '—'],
+    ['MM-F-03', 'PASS', '—'],
+    ['MM-F-04', 'PASS', '—'],
+    ['MM-F-05', 'PASS', '—'],
+    ['MD-F-01', 'PASS', '—'],
+    ['MD-F-02', 'PASS', '—'],
+    ['MD-F-03', 'PASS', '—'],
+    ['MD-F-04', 'PASS', '—'],
+    ['MD-F-05', 'PASS', '—'],
+    ['RF-01',   'PASS', '—'],
+    ['RF-02',   'PASS', '—'],
+    ['RF-03',   'PASS', '—'],
+    ['RF-04',   'PASS', '—'],
+    ['RF-05',   'PASS', '—'],
+    ['RF-06',   'PASS', '—'],
+    ['RF-07',   'PASS', '—'],
+    ['RF-08a',  'PASS', '—'],
+    ['RF-08b',  'PASS', '—'],
+    ['RF-08c',  'PASS', '—'],
   ];
 
   // Split into 2 columns of 13 rows each (header + 12 / header + 13)
@@ -819,10 +793,11 @@ function defectCard(sl, def, x, y, w, h) {
   // colW: [0.9, 4.75, 1.62] = 7.27 ✓
   const recColW = [0.9, 4.75, 1.62];
   const recData = [
-    { pri: 'Critical', action: 'ตรวจสอบและแก้ไข HTTP 500 บน POST /GetDataMeterDetail ด้วย type=Max10Year ให้คืนค่า HTTP 200 พร้อม chart series', def: 'DEF-004' },
-    { pri: 'Critical', action: 'แก้ไข Dictionary Key ใน ArrDataTarget/ArrDataActual ให้ใช้ DataSelect values จริง ไม่ใช่ array index (0,1,2)', def: 'DEF-002' },
-    { pri: 'High',     action: 'ยืนยันชื่อ field ของ meter identifier ใน MeterLabelMap จาก Developer แล้วอัปเดต test assertion ให้ตรงกัน', def: 'DEF-003' },
-    { pri: 'High',     action: 'ชี้แจงว่า ArrCategories ต้องเป็น full-day grid หรือ data-driven แล้วแก้ไข spec หรือ API ให้ตรงกัน', def: 'DEF-001' },
+    { pri: 'Resolved', action: 'แก้ไข HTTP 500 บน /GetDataMeterDetail ด้วย type=Max10Year — เพิ่ม TryParse + Split("|") handle multi-year DataSelect format', def: 'DEF-004' },
+    { pri: 'Resolved', action: 'แก้ไข Dictionary Key ใน ArrDataTarget/ArrDataActual ให้ใช้ DataSelect string เป็น key แทน array index (0,1,2)', def: 'DEF-002' },
+    { pri: 'Resolved', action: 'เปลี่ยน MeterLabelMap response format เป็น [{id, label}] objects ตาม Specification — เพิ่ม MeterLabel class', def: 'DEF-003' },
+    { pri: 'Resolved', action: 'ปรับ GenerateTimeCategories ให้สร้าง full-day grid ตาม interval (24h/interval slots) — Interval=15→96, =5→288', def: 'DEF-001' },
+    { pri: 'Resolved', action: 'เพิ่ม input validation guards ทั้ง 3 controllers — required fields, type whitelist, range/format checks — กลุ่ม VR/VT/VO/VF/VM 17 cases', def: 'DEF-005' },
   ];
 
   const recRows = [
@@ -833,13 +808,15 @@ function defectCard(sl, def, x, y, w, h) {
     ],
     ...recData.map((r, ri) => {
       const isCrit = r.pri === 'Critical';
-      const priBg = isCrit ? C.failBg  : C.partBg;
-      const priTc = isCrit ? C.failText : C.partText;
+      const isResolved = r.pri === 'Resolved';
+      const priBg = isResolved ? C.passBg : (isCrit ? C.failBg  : C.partBg);
+      const priTc = isResolved ? C.passText : (isCrit ? C.failText : C.partText);
+      const defTc = isResolved ? C.passText : C.failText;
       const rowBg = ri % 2 === 0 ? C.altRow : C.white;
       return [
         { text: r.pri,    options: { fill: { color: priBg }, color: priTc, bold: true,  fontSize: 8,   fontFace: 'Calibri', align: 'center' } },
         { text: r.action, options: { fill: { color: rowBg }, color: C.text,  bold: false, fontSize: 8, fontFace: 'Calibri', align: 'left'   } },
-        { text: r.def,    options: { fill: { color: rowBg }, color: C.failText, bold: true, fontSize: 8, fontFace: 'Calibri', align: 'center' } },
+        { text: r.def,    options: { fill: { color: rowBg }, color: defTc, bold: true, fontSize: 8, fontFace: 'Calibri', align: 'center' } },
       ];
     }),
   ];
@@ -856,12 +833,12 @@ function defectCard(sl, def, x, y, w, h) {
   // colW: [3.0, 0.8, 3.47] = 7.27 ✓
   const scopeColW = [3.0, 0.8, 3.47];
   const scopeData = [
-    { suite: 'Validation (VR, VT, VO, VF, VM)',              count: '18',   cmd: 'npm run test:validation'  },
-    { suite: 'Cross-Endpoint Consistency (CE-I)',             count: '3',    cmd: 'npm run test:cross'        },
-    { suite: 'REST API Load (HTTP-L)',                        count: '5',    cmd: 'npm run test:http-load'    },
+    { suite: 'Validation (VR, VT, VO, VF, VM)',              count: '18',   cmd: '✅ TESTED v1.2 — 54/54 PASS' },
+    { suite: 'Cross-Endpoint Consistency (CE-I)',             count: '6',    cmd: '✅ TESTED v1.2 — 50/51 PASS (1 environmental)' },
+    { suite: 'REST API Load (HTTP-L)',                        count: '7',    cmd: '✅ TESTED v1.2 — 1120/1120 PASS' },
     { suite: 'DB Integration (DB-I)',                         count: '3',    cmd: 'Manual — ต้องเข้าถึง DB' },
     { suite: 'System Failure Handling (ERR-I)',               count: '2',    cmd: 'Manual — ต้องหยุด SQL Server' },
-    { suite: 'WebSocket Functional + Load + Integration', count: '15',   cmd: 'WebSocket helper required' },
+    { suite: 'WebSocket Functional + Load + Integration',     count: '15',   cmd: 'Out of Scope — ต้องต่อ PLC' },
   ];
 
   const scopeRows = [
@@ -872,11 +849,12 @@ function defectCard(sl, def, x, y, w, h) {
     ],
     ...scopeData.map((r, ri) => {
       const rowBg = ri % 2 === 0 ? C.altRow : C.white;
-      const isAuto = r.cmd.startsWith('npm');
+      const isTested = r.cmd.startsWith('✅');
+      const cmdColor = isTested ? C.passText : C.muted;
       return [
-        { text: r.suite, options: { fill: { color: rowBg }, color: C.text,                 bold: true,  fontSize: 8,   fontFace: 'Calibri',  align: 'left'   } },
-        { text: r.count, options: { fill: { color: rowBg }, color: C.navy,                 bold: true,  fontSize: 8,   fontFace: 'Calibri',  align: 'center' } },
-        { text: r.cmd,   options: { fill: { color: rowBg }, color: isAuto ? C.blueTxt : C.muted, bold: false, fontSize: 7.5, fontFace: isAuto ? 'Consolas' : 'Calibri', align: 'left' } },
+        { text: r.suite, options: { fill: { color: rowBg }, color: C.text, bold: true,  fontSize: 8,   fontFace: 'Calibri', align: 'left'   } },
+        { text: r.count, options: { fill: { color: rowBg }, color: C.navy, bold: true,  fontSize: 8,   fontFace: 'Calibri', align: 'center' } },
+        { text: r.cmd,   options: { fill: { color: rowBg }, color: cmdColor, bold: isTested, fontSize: 7.5, fontFace: 'Calibri', align: 'left' } },
       ];
     }),
   ];
