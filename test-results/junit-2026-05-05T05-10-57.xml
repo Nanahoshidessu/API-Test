@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Unimicron Pegasus API" tests="18" time="0.788">
+  <testsuite name="Automated Scenario Tests / Validation - Required Fields / VR-01 - MeterSum missing Type" id="44024d9c-669a-4289-8cc5-44c342b2cc2d" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="0" errors="0" time="0.155">
+    <testcase name="VR-01 - request completed and returned a response code" time="0.155" classname="AutomatedScenarioTestsValidationRequiredFieldsVr01MeterSumMissingType"/>
+    <testcase name="VR-01 - no HTTP 500 server error" time="0.155" classname="AutomatedScenarioTestsValidationRequiredFieldsVr01MeterSumMissingType"/>
+    <testcase name="VR-01 - controlled validation response" time="0.155" classname="AutomatedScenarioTestsValidationRequiredFieldsVr01MeterSumMissingType"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Required Fields / VR-02 - MeterSum missing Meter" id="71d3b997-b74b-48cd-b27e-7ebbb208972a" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="0" errors="0" time="0.008">
+    <testcase name="VR-02 - request completed and returned a response code" time="0.008" classname="AutomatedScenarioTestsValidationRequiredFieldsVr02MeterSumMissingMeter"/>
+    <testcase name="VR-02 - no HTTP 500 server error" time="0.008" classname="AutomatedScenarioTestsValidationRequiredFieldsVr02MeterSumMissingMeter"/>
+    <testcase name="VR-02 - controlled validation response" time="0.008" classname="AutomatedScenarioTestsValidationRequiredFieldsVr02MeterSumMissingMeter"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Required Fields / VR-03 - MeterSum missing DataSelect" id="e5e734f6-9b67-4fec-8e0f-8745a7800e74" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="0" errors="0" time="0.005">
+    <testcase name="VR-03 - request completed and returned a response code" time="0.005" classname="AutomatedScenarioTestsValidationRequiredFieldsVr03MeterSumMissingDataSelect"/>
+    <testcase name="VR-03 - no HTTP 500 server error" time="0.005" classname="AutomatedScenarioTestsValidationRequiredFieldsVr03MeterSumMissingDataSelect"/>
+    <testcase name="VR-03 - controlled validation response" time="0.005" classname="AutomatedScenarioTestsValidationRequiredFieldsVr03MeterSumMissingDataSelect"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Required Fields / VR-04 - Multimeter missing Interval" id="8a7157c3-7e5b-4f43-8b3b-4057ee072b34" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="0" errors="0" time="0.018">
+    <testcase name="VR-04 - request completed and returned a response code" time="0.018" classname="AutomatedScenarioTestsValidationRequiredFieldsVr04MultimeterMissingInterval"/>
+    <testcase name="VR-04 - no HTTP 500 server error" time="0.018" classname="AutomatedScenarioTestsValidationRequiredFieldsVr04MultimeterMissingInterval"/>
+    <testcase name="VR-04 - controlled validation response" time="0.018" classname="AutomatedScenarioTestsValidationRequiredFieldsVr04MultimeterMissingInterval"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Required Fields / VR-05 - MeterDetail missing past" id="ff275387-51ac-4f7d-a3cd-a072360f945e" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="0" errors="0" time="0.015">
+    <testcase name="VR-05 - request completed and returned a response code" time="0.015" classname="AutomatedScenarioTestsValidationRequiredFieldsVr05MeterDetailMissingPast"/>
+    <testcase name="VR-05 - no HTTP 500 server error" time="0.015" classname="AutomatedScenarioTestsValidationRequiredFieldsVr05MeterDetailMissingPast"/>
+    <testcase name="VR-05 - controlled validation response" time="0.015" classname="AutomatedScenarioTestsValidationRequiredFieldsVr05MeterDetailMissingPast"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Wrong Data Type / VT-01 - MeterSum Interval as string" id="f88b85a2-89de-47bc-84e3-c5eb65df3ae1" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="0" errors="0" time="0.023">
+    <testcase name="VT-01 - request completed and returned a response code" time="0.023" classname="AutomatedScenarioTestsValidationWrongDataTypeVt01MeterSumIntervalAsString"/>
+    <testcase name="VT-01 - no HTTP 500 server error" time="0.023" classname="AutomatedScenarioTestsValidationWrongDataTypeVt01MeterSumIntervalAsString"/>
+    <testcase name="VT-01 - controlled validation response" time="0.023" classname="AutomatedScenarioTestsValidationWrongDataTypeVt01MeterSumIntervalAsString"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Wrong Data Type / VT-02 - Multimeter Meter as scalar" id="201031a8-3528-46ae-b82d-bf21d44e0a70" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="0" errors="0" time="0.004">
+    <testcase name="VT-02 - request completed and returned a response code" time="0.004" classname="AutomatedScenarioTestsValidationWrongDataTypeVt02MultimeterMeterAsScalar"/>
+    <testcase name="VT-02 - no HTTP 500 server error" time="0.004" classname="AutomatedScenarioTestsValidationWrongDataTypeVt02MultimeterMeterAsScalar"/>
+    <testcase name="VT-02 - controlled validation response" time="0.004" classname="AutomatedScenarioTestsValidationWrongDataTypeVt02MultimeterMeterAsScalar"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Wrong Data Type / VT-03 - MeterSum DataSelect as string" id="99fcd1a4-a29e-4891-bf83-915dc8fd751b" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="VT-03 - request completed and returned a response code" time="0.002" classname="AutomatedScenarioTestsValidationWrongDataTypeVt03MeterSumDataSelectAsString"/>
+    <testcase name="VT-03 - no HTTP 500 server error" time="0.002" classname="AutomatedScenarioTestsValidationWrongDataTypeVt03MeterSumDataSelectAsString"/>
+    <testcase name="VT-03 - controlled validation response" time="0.002" classname="AutomatedScenarioTestsValidationWrongDataTypeVt03MeterSumDataSelectAsString"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Wrong Data Type / VT-04 - MeterDetail past as string" id="e8900c2e-15d3-497f-93c1-fe941bbd5b45" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="2" errors="0" time="0.040">
+    <testcase name="VT-04 - request completed and returned a response code" time="0.040" classname="AutomatedScenarioTestsValidationWrongDataTypeVt04MeterDetailPastAsString"/>
+    <testcase name="VT-04 - no HTTP 500 server error" time="0.040" classname="AutomatedScenarioTestsValidationWrongDataTypeVt04MeterDetailPastAsString">
+      <failure type="AssertionFailure" message="expected 500 to not equal 500">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: ac4dbb8c-ffda-4799-86ac-c502ae7ff135.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Wrong Data Type / VT-04 - MeterDetail past as string.]]>
+        <![CDATA[Test description: VT-04 - no HTTP 500 server error.]]>
+        <![CDATA[Error message: expected 500 to not equal 500.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 500 to not equal 500
+   at Object.eval sandbox-script.js:2:9).]]>
+      </failure>
+    </testcase>
+    <testcase name="VT-04 - controlled validation response" time="0.040" classname="AutomatedScenarioTestsValidationWrongDataTypeVt04MeterDetailPastAsString">
+      <failure type="AssertionFailure" message="Response is not valid JSON: Unexpected token 'S' at 1:1&#xA;System.Text.Json.JsonException: The JSON value could not be converted to System&#xA;^">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: ac4dbb8c-ffda-4799-86ac-c502ae7ff135.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Wrong Data Type / VT-04 - MeterDetail past as string.]]>
+        <![CDATA[Test description: VT-04 - controlled validation response.]]>
+        <![CDATA[Error message: Response is not valid JSON: Unexpected token 'S' at 1:1
+System.Text.Json.JsonException: The JSON value could not be converted to System
+^.]]>
+        <![CDATA[Stacktrace: Error: Response is not valid JSON: Unexpected token 'S' at 1:1
+System.Text.Json.JsonException: The JSON value could not be converted to System
+^
+   at Object.eval sandbox-script.js:3:9).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Out Of Range / VO-01 - MeterSum negative Past" id="0456669d-8903-4ecb-8fee-2c8e573ae1c3" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="0" errors="0" time="0.007">
+    <testcase name="VO-01 - request completed and returned a response code" time="0.007" classname="AutomatedScenarioTestsValidationOutOfRangeVo01MeterSumNegativePast"/>
+    <testcase name="VO-01 - no HTTP 500 server error" time="0.007" classname="AutomatedScenarioTestsValidationOutOfRangeVo01MeterSumNegativePast"/>
+    <testcase name="VO-01 - controlled validation response" time="0.007" classname="AutomatedScenarioTestsValidationOutOfRangeVo01MeterSumNegativePast"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Out Of Range / VO-02 - MeterSum unsupported Day interval" id="465c4567-b663-46bc-b4b3-5444f555f7a8" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="0" errors="0" time="0.004">
+    <testcase name="VO-02 - request completed and returned a response code" time="0.004" classname="AutomatedScenarioTestsValidationOutOfRangeVo02MeterSumUnsupportedDayInterval"/>
+    <testcase name="VO-02 - no HTTP 500 server error" time="0.004" classname="AutomatedScenarioTestsValidationOutOfRangeVo02MeterSumUnsupportedDayInterval"/>
+    <testcase name="VO-02 - controlled validation response" time="0.004" classname="AutomatedScenarioTestsValidationOutOfRangeVo02MeterSumUnsupportedDayInterval"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Out Of Range / VO-03 - MeterSum invalid Month 13" id="8f1d0d36-962e-45bc-9c87-af4e237b1472" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="VO-03 - request completed and returned a response code" time="0.002" classname="AutomatedScenarioTestsValidationOutOfRangeVo03MeterSumInvalidMonth13"/>
+    <testcase name="VO-03 - no HTTP 500 server error" time="0.002" classname="AutomatedScenarioTestsValidationOutOfRangeVo03MeterSumInvalidMonth13"/>
+    <testcase name="VO-03 - controlled validation response" time="0.002" classname="AutomatedScenarioTestsValidationOutOfRangeVo03MeterSumInvalidMonth13"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Out Of Range / VO-04 - MeterDetail unreasonably large past" id="a55401db-a80f-412c-9caf-84b921ff5685" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="0" errors="0" time="0.010">
+    <testcase name="VO-04 - request completed and returned a response code" time="0.010" classname="AutomatedScenarioTestsValidationOutOfRangeVo04MeterDetailUnreasonablyLargePast"/>
+    <testcase name="VO-04 - no HTTP 500 server error" time="0.010" classname="AutomatedScenarioTestsValidationOutOfRangeVo04MeterDetailUnreasonablyLargePast"/>
+    <testcase name="VO-04 - controlled validation response" time="0.010" classname="AutomatedScenarioTestsValidationOutOfRangeVo04MeterDetailUnreasonablyLargePast"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Invalid Format / VF-01 - MeterSum malformed week DataSelect" id="fe9d1026-b488-4767-9340-645203bb1565" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="VF-01 - request completed and returned a response code" time="0.002" classname="AutomatedScenarioTestsValidationInvalidFormatVf01MeterSumMalformedWeekDataSelect"/>
+    <testcase name="VF-01 - no HTTP 500 server error" time="0.002" classname="AutomatedScenarioTestsValidationInvalidFormatVf01MeterSumMalformedWeekDataSelect"/>
+    <testcase name="VF-01 - controlled validation response" time="0.002" classname="AutomatedScenarioTestsValidationInvalidFormatVf01MeterSumMalformedWeekDataSelect"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Invalid Format / VF-02 - Multimeter malformed Max10Year DataSelect" id="e040d7ca-a11c-4020-b8a2-3fe732ad70b3" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="VF-02 - request completed and returned a response code" time="0.002" classname="AutomatedScenarioTestsValidationInvalidFormatVf02MultimeterMalformedMax10YearDataSelect"/>
+    <testcase name="VF-02 - no HTTP 500 server error" time="0.002" classname="AutomatedScenarioTestsValidationInvalidFormatVf02MultimeterMalformedMax10YearDataSelect"/>
+    <testcase name="VF-02 - controlled validation response" time="0.002" classname="AutomatedScenarioTestsValidationInvalidFormatVf02MultimeterMalformedMax10YearDataSelect"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Invalid Format / VF-03 - MeterDetail month without leading zero" id="2b5234d6-7069-4c46-9e05-26dc2e257888" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="1" errors="0" time="0.439">
+    <testcase name="VF-03 - request completed and returned a response code" time="0.439" classname="AutomatedScenarioTestsValidationInvalidFormatVf03MeterDetailMonthWithoutLeadingZero"/>
+    <testcase name="VF-03 - no HTTP 500 server error" time="0.439" classname="AutomatedScenarioTestsValidationInvalidFormatVf03MeterDetailMonthWithoutLeadingZero"/>
+    <testcase name="VF-03 - controlled validation response" time="0.439" classname="AutomatedScenarioTestsValidationInvalidFormatVf03MeterDetailMonthWithoutLeadingZero">
+      <failure type="AssertionFailure" message="expected false to equal true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: ac4dbb8c-ffda-4799-86ac-c502ae7ff135.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Invalid Format / VF-03 - MeterDetail month without leading zero.]]>
+        <![CDATA[Test description: VF-03 - controlled validation response.]]>
+        <![CDATA[Error message: expected false to equal true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to equal true
+   at Object.eval sandbox-script.js:3:16).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Invalid Meter ID / VM-01 - MeterSum invalid meter ID" id="50ac1ad5-c20c-407b-ae4a-7a9341a86065" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="1" errors="0" time="0.044">
+    <testcase name="VM-01 - request completed and returned a response code" time="0.044" classname="AutomatedScenarioTestsValidationInvalidMeterIdVm01MeterSumInvalidMeterId"/>
+    <testcase name="VM-01 - no HTTP 500 server error" time="0.044" classname="AutomatedScenarioTestsValidationInvalidMeterIdVm01MeterSumInvalidMeterId"/>
+    <testcase name="VM-01 - controlled validation response" time="0.044" classname="AutomatedScenarioTestsValidationInvalidMeterIdVm01MeterSumInvalidMeterId">
+      <failure type="AssertionFailure" message="expected false to equal true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: ac4dbb8c-ffda-4799-86ac-c502ae7ff135.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Invalid Meter ID / VM-01 - MeterSum invalid meter ID.]]>
+        <![CDATA[Test description: VM-01 - controlled validation response.]]>
+        <![CDATA[Error message: expected false to equal true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to equal true
+   at Object.eval sandbox-script.js:3:17).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Invalid Meter ID / VM-02 - Multimeter mixed valid and invalid meter IDs" id="cb596962-fa9c-4bc5-b4cb-6f50d8c210d4" timestamp="2026-05-05T05:11:28.460Z" tests="3" failures="0" errors="0" time="0.008">
+    <testcase name="VM-02 - request completed and returned a response code" time="0.008" classname="AutomatedScenarioTestsValidationInvalidMeterIdVm02MultimeterMixedValidAndInvalidMeterIDs"/>
+    <testcase name="VM-02 - no HTTP 500 server error" time="0.008" classname="AutomatedScenarioTestsValidationInvalidMeterIdVm02MultimeterMixedValidAndInvalidMeterIDs"/>
+    <testcase name="VM-02 - controlled validation response" time="0.008" classname="AutomatedScenarioTestsValidationInvalidMeterIdVm02MultimeterMixedValidAndInvalidMeterIDs"/>
+  </testsuite>
+</testsuites>

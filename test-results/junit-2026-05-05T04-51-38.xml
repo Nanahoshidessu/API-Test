@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Unimicron Pegasus API" tests="140" time="11.587">
+  <testsuite name="Automated Scenario Tests / Load - HTTP / HTTP-L-01 - Load profile request for GetDataMeterSum Month" id="294f9c3f-8410-42ae-a737-40c5945c2556" timestamp="2026-05-05T04:51:39.566Z" tests="8" failures="0" errors="0" time="0.072">
+    <testcase name="HTTP-L-01 - request completed and returned a response code" time="0.103" classname="AutomatedScenarioTestsLoadHttpHttpL01LoadProfileRequestForGetDataMeterSumMonth"/>
+    <testcase name="HTTP-L-01 - no HTTP 500 server error" time="0.103" classname="AutomatedScenarioTestsLoadHttpHttpL01LoadProfileRequestForGetDataMeterSumMonth"/>
+    <testcase name="HTTP-L-01 - HTTP status is success" time="0.103" classname="AutomatedScenarioTestsLoadHttpHttpL01LoadProfileRequestForGetDataMeterSumMonth"/>
+    <testcase name="HTTP-L-01 - response is a JSON object" time="0.103" classname="AutomatedScenarioTestsLoadHttpHttpL01LoadProfileRequestForGetDataMeterSumMonth"/>
+    <testcase name="HTTP-L-01 - MeterCompare response has chart dictionaries and categories" time="0.103" classname="AutomatedScenarioTestsLoadHttpHttpL01LoadProfileRequestForGetDataMeterSumMonth"/>
+    <testcase name="HTTP-L-01 - response dictionary keys match expected scenario keys" time="0.103" classname="AutomatedScenarioTestsLoadHttpHttpL01LoadProfileRequestForGetDataMeterSumMonth"/>
+    <testcase name="HTTP-L-01 - data arrays align with ArrCategories" time="0.103" classname="AutomatedScenarioTestsLoadHttpHttpL01LoadProfileRequestForGetDataMeterSumMonth"/>
+    <testcase name="HTTP-L-01 - max values are not lower than returned data" time="0.103" classname="AutomatedScenarioTestsLoadHttpHttpL01LoadProfileRequestForGetDataMeterSumMonth"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Load - HTTP / HTTP-L-02 - Load profile request for GetDataMultimeter Month" id="e06e9d42-7910-451a-9ac4-636cd3664758" timestamp="2026-05-05T04:51:39.566Z" tests="8" failures="0" errors="0" time="0.099">
+    <testcase name="HTTP-L-02 - request completed and returned a response code" time="0.118" classname="AutomatedScenarioTestsLoadHttpHttpL02LoadProfileRequestForGetDataMultimeterMonth"/>
+    <testcase name="HTTP-L-02 - no HTTP 500 server error" time="0.118" classname="AutomatedScenarioTestsLoadHttpHttpL02LoadProfileRequestForGetDataMultimeterMonth"/>
+    <testcase name="HTTP-L-02 - HTTP status is success" time="0.118" classname="AutomatedScenarioTestsLoadHttpHttpL02LoadProfileRequestForGetDataMultimeterMonth"/>
+    <testcase name="HTTP-L-02 - response is a JSON object" time="0.118" classname="AutomatedScenarioTestsLoadHttpHttpL02LoadProfileRequestForGetDataMultimeterMonth"/>
+    <testcase name="HTTP-L-02 - MeterCompare response has chart dictionaries and categories" time="0.118" classname="AutomatedScenarioTestsLoadHttpHttpL02LoadProfileRequestForGetDataMultimeterMonth"/>
+    <testcase name="HTTP-L-02 - response dictionary keys match expected scenario keys" time="0.118" classname="AutomatedScenarioTestsLoadHttpHttpL02LoadProfileRequestForGetDataMultimeterMonth"/>
+    <testcase name="HTTP-L-02 - data arrays align with ArrCategories" time="0.118" classname="AutomatedScenarioTestsLoadHttpHttpL02LoadProfileRequestForGetDataMultimeterMonth"/>
+    <testcase name="HTTP-L-02 - max values are not lower than returned data" time="0.118" classname="AutomatedScenarioTestsLoadHttpHttpL02LoadProfileRequestForGetDataMultimeterMonth"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Load - HTTP / HTTP-L-03 - Load profile request for GetDataMeterDetail Month" id="e6184dbf-7ff4-48aa-81b0-df6857848f80" timestamp="2026-05-05T04:51:39.566Z" tests="8" failures="0" errors="0" time="0.082">
+    <testcase name="HTTP-L-03 - request completed and returned a response code" time="0.101" classname="AutomatedScenarioTestsLoadHttpHttpL03LoadProfileRequestForGetDataMeterDetailMonth"/>
+    <testcase name="HTTP-L-03 - no HTTP 500 server error" time="0.101" classname="AutomatedScenarioTestsLoadHttpHttpL03LoadProfileRequestForGetDataMeterDetailMonth"/>
+    <testcase name="HTTP-L-03 - HTTP status is success" time="0.101" classname="AutomatedScenarioTestsLoadHttpHttpL03LoadProfileRequestForGetDataMeterDetailMonth"/>
+    <testcase name="HTTP-L-03 - response is a JSON object" time="0.101" classname="AutomatedScenarioTestsLoadHttpHttpL03LoadProfileRequestForGetDataMeterDetailMonth"/>
+    <testcase name="HTTP-L-03 - MeterDetail response has chart structure" time="0.101" classname="AutomatedScenarioTestsLoadHttpHttpL03LoadProfileRequestForGetDataMeterDetailMonth"/>
+    <testcase name="HTTP-L-03 - each chart series is a bar series with valid data" time="0.101" classname="AutomatedScenarioTestsLoadHttpHttpL03LoadProfileRequestForGetDataMeterDetailMonth"/>
+    <testcase name="HTTP-L-03 - stroke chart length matches chart series length" time="0.101" classname="AutomatedScenarioTestsLoadHttpHttpL03LoadProfileRequestForGetDataMeterDetailMonth"/>
+    <testcase name="HTTP-L-03 - MeterLabelMap contains selected meter IDs" time="0.101" classname="AutomatedScenarioTestsLoadHttpHttpL03LoadProfileRequestForGetDataMeterDetailMonth"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Load - HTTP / HTTP-L-04a - Mixed load MeterSum request" id="4c98d9ae-a132-4d1c-bfe3-2504cddd3e46" timestamp="2026-05-05T04:51:39.566Z" tests="8" failures="0" errors="0" time="0.083">
+    <testcase name="HTTP-L-04a - request completed and returned a response code" time="0.092" classname="AutomatedScenarioTestsLoadHttpHttpL04AMixedLoadMeterSumRequest"/>
+    <testcase name="HTTP-L-04a - no HTTP 500 server error" time="0.092" classname="AutomatedScenarioTestsLoadHttpHttpL04AMixedLoadMeterSumRequest"/>
+    <testcase name="HTTP-L-04a - HTTP status is success" time="0.092" classname="AutomatedScenarioTestsLoadHttpHttpL04AMixedLoadMeterSumRequest"/>
+    <testcase name="HTTP-L-04a - response is a JSON object" time="0.092" classname="AutomatedScenarioTestsLoadHttpHttpL04AMixedLoadMeterSumRequest"/>
+    <testcase name="HTTP-L-04a - MeterCompare response has chart dictionaries and categories" time="0.092" classname="AutomatedScenarioTestsLoadHttpHttpL04AMixedLoadMeterSumRequest"/>
+    <testcase name="HTTP-L-04a - response dictionary keys match expected scenario keys" time="0.092" classname="AutomatedScenarioTestsLoadHttpHttpL04AMixedLoadMeterSumRequest"/>
+    <testcase name="HTTP-L-04a - data arrays align with ArrCategories" time="0.092" classname="AutomatedScenarioTestsLoadHttpHttpL04AMixedLoadMeterSumRequest"/>
+    <testcase name="HTTP-L-04a - max values are not lower than returned data" time="0.092" classname="AutomatedScenarioTestsLoadHttpHttpL04AMixedLoadMeterSumRequest"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Load - HTTP / HTTP-L-04b - Mixed load Multimeter request" id="032380c0-ee3f-430a-b328-ac59f846f6fb" timestamp="2026-05-05T04:51:39.566Z" tests="8" failures="0" errors="0" time="0.087">
+    <testcase name="HTTP-L-04b - request completed and returned a response code" time="0.052" classname="AutomatedScenarioTestsLoadHttpHttpL04BMixedLoadMultimeterRequest"/>
+    <testcase name="HTTP-L-04b - no HTTP 500 server error" time="0.052" classname="AutomatedScenarioTestsLoadHttpHttpL04BMixedLoadMultimeterRequest"/>
+    <testcase name="HTTP-L-04b - HTTP status is success" time="0.052" classname="AutomatedScenarioTestsLoadHttpHttpL04BMixedLoadMultimeterRequest"/>
+    <testcase name="HTTP-L-04b - response is a JSON object" time="0.052" classname="AutomatedScenarioTestsLoadHttpHttpL04BMixedLoadMultimeterRequest"/>
+    <testcase name="HTTP-L-04b - MeterCompare response has chart dictionaries and categories" time="0.052" classname="AutomatedScenarioTestsLoadHttpHttpL04BMixedLoadMultimeterRequest"/>
+    <testcase name="HTTP-L-04b - response dictionary keys match expected scenario keys" time="0.052" classname="AutomatedScenarioTestsLoadHttpHttpL04BMixedLoadMultimeterRequest"/>
+    <testcase name="HTTP-L-04b - data arrays align with ArrCategories" time="0.052" classname="AutomatedScenarioTestsLoadHttpHttpL04BMixedLoadMultimeterRequest"/>
+    <testcase name="HTTP-L-04b - max values are not lower than returned data" time="0.052" classname="AutomatedScenarioTestsLoadHttpHttpL04BMixedLoadMultimeterRequest"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Load - HTTP / HTTP-L-04c - Mixed load MeterDetail request" id="58780010-11e1-43e9-9905-75793986f301" timestamp="2026-05-05T04:51:39.566Z" tests="8" failures="0" errors="0" time="0.077">
+    <testcase name="HTTP-L-04c - request completed and returned a response code" time="0.048" classname="AutomatedScenarioTestsLoadHttpHttpL04CMixedLoadMeterDetailRequest"/>
+    <testcase name="HTTP-L-04c - no HTTP 500 server error" time="0.048" classname="AutomatedScenarioTestsLoadHttpHttpL04CMixedLoadMeterDetailRequest"/>
+    <testcase name="HTTP-L-04c - HTTP status is success" time="0.048" classname="AutomatedScenarioTestsLoadHttpHttpL04CMixedLoadMeterDetailRequest"/>
+    <testcase name="HTTP-L-04c - response is a JSON object" time="0.048" classname="AutomatedScenarioTestsLoadHttpHttpL04CMixedLoadMeterDetailRequest"/>
+    <testcase name="HTTP-L-04c - MeterDetail response has chart structure" time="0.048" classname="AutomatedScenarioTestsLoadHttpHttpL04CMixedLoadMeterDetailRequest"/>
+    <testcase name="HTTP-L-04c - each chart series is a bar series with valid data" time="0.048" classname="AutomatedScenarioTestsLoadHttpHttpL04CMixedLoadMeterDetailRequest"/>
+    <testcase name="HTTP-L-04c - stroke chart length matches chart series length" time="0.048" classname="AutomatedScenarioTestsLoadHttpHttpL04CMixedLoadMeterDetailRequest"/>
+    <testcase name="HTTP-L-04c - MeterLabelMap contains selected meter IDs" time="0.048" classname="AutomatedScenarioTestsLoadHttpHttpL04CMixedLoadMeterDetailRequest"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Load - HTTP / HTTP-L-05 - Sustained load MeterSum request" id="7fda247d-8847-4f77-9e57-9aa32727f3ee" timestamp="2026-05-05T04:51:39.566Z" tests="8" failures="0" errors="0" time="0.079">
+    <testcase name="HTTP-L-05 - request completed and returned a response code" time="0.048" classname="AutomatedScenarioTestsLoadHttpHttpL05SustainedLoadMeterSumRequest"/>
+    <testcase name="HTTP-L-05 - no HTTP 500 server error" time="0.048" classname="AutomatedScenarioTestsLoadHttpHttpL05SustainedLoadMeterSumRequest"/>
+    <testcase name="HTTP-L-05 - HTTP status is success" time="0.048" classname="AutomatedScenarioTestsLoadHttpHttpL05SustainedLoadMeterSumRequest"/>
+    <testcase name="HTTP-L-05 - response is a JSON object" time="0.048" classname="AutomatedScenarioTestsLoadHttpHttpL05SustainedLoadMeterSumRequest"/>
+    <testcase name="HTTP-L-05 - MeterCompare response has chart dictionaries and categories" time="0.048" classname="AutomatedScenarioTestsLoadHttpHttpL05SustainedLoadMeterSumRequest"/>
+    <testcase name="HTTP-L-05 - response dictionary keys match expected scenario keys" time="0.048" classname="AutomatedScenarioTestsLoadHttpHttpL05SustainedLoadMeterSumRequest"/>
+    <testcase name="HTTP-L-05 - data arrays align with ArrCategories" time="0.048" classname="AutomatedScenarioTestsLoadHttpHttpL05SustainedLoadMeterSumRequest"/>
+    <testcase name="HTTP-L-05 - max values are not lower than returned data" time="0.048" classname="AutomatedScenarioTestsLoadHttpHttpL05SustainedLoadMeterSumRequest"/>
+  </testsuite>
+</testsuites>

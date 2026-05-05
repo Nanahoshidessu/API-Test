@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Unimicron Pegasus API" tests="18" time="0.592">
+  <testsuite name="Automated Scenario Tests / Validation - Required Fields / VR-01 - MeterSum missing Type" id="bd226405-7473-45de-9d89-ec54c67452c4" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="1" errors="0" time="0.064">
+    <testcase name="VR-01 - request completed and returned a response code" time="0.064" classname="AutomatedScenarioTestsValidationRequiredFieldsVr01MeterSumMissingType"/>
+    <testcase name="VR-01 - no HTTP 500 server error" time="0.064" classname="AutomatedScenarioTestsValidationRequiredFieldsVr01MeterSumMissingType"/>
+    <testcase name="VR-01 - controlled validation response" time="0.064" classname="AutomatedScenarioTestsValidationRequiredFieldsVr01MeterSumMissingType">
+      <failure type="AssertionFailure" message="expected false to equal true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Required Fields / VR-01 - MeterSum missing Type.]]>
+        <![CDATA[Test description: VR-01 - controlled validation response.]]>
+        <![CDATA[Error message: expected false to equal true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to equal true
+   at Object.eval sandbox-script.js:3:1).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Required Fields / VR-02 - MeterSum missing Meter" id="f6483c24-1e99-45d4-b908-23b100dddeee" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="1" errors="0" time="0.039">
+    <testcase name="VR-02 - request completed and returned a response code" time="0.039" classname="AutomatedScenarioTestsValidationRequiredFieldsVr02MeterSumMissingMeter"/>
+    <testcase name="VR-02 - no HTTP 500 server error" time="0.039" classname="AutomatedScenarioTestsValidationRequiredFieldsVr02MeterSumMissingMeter"/>
+    <testcase name="VR-02 - controlled validation response" time="0.039" classname="AutomatedScenarioTestsValidationRequiredFieldsVr02MeterSumMissingMeter">
+      <failure type="AssertionFailure" message="expected false to equal true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Required Fields / VR-02 - MeterSum missing Meter.]]>
+        <![CDATA[Test description: VR-02 - controlled validation response.]]>
+        <![CDATA[Error message: expected false to equal true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to equal true
+   at Object.eval sandbox-script.js:3:2).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Required Fields / VR-03 - MeterSum missing DataSelect" id="5c0caff4-b1f7-4b94-bc39-823b3264bb28" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="1" errors="0" time="0.050">
+    <testcase name="VR-03 - request completed and returned a response code" time="0.050" classname="AutomatedScenarioTestsValidationRequiredFieldsVr03MeterSumMissingDataSelect"/>
+    <testcase name="VR-03 - no HTTP 500 server error" time="0.050" classname="AutomatedScenarioTestsValidationRequiredFieldsVr03MeterSumMissingDataSelect"/>
+    <testcase name="VR-03 - controlled validation response" time="0.050" classname="AutomatedScenarioTestsValidationRequiredFieldsVr03MeterSumMissingDataSelect">
+      <failure type="AssertionFailure" message="expected false to equal true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Required Fields / VR-03 - MeterSum missing DataSelect.]]>
+        <![CDATA[Test description: VR-03 - controlled validation response.]]>
+        <![CDATA[Error message: expected false to equal true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to equal true
+   at Object.eval sandbox-script.js:3:3).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Required Fields / VR-04 - Multimeter missing Interval" id="c4c30f6d-b1b4-4d50-92b0-3b2edf25c362" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="1" errors="0" time="0.033">
+    <testcase name="VR-04 - request completed and returned a response code" time="0.033" classname="AutomatedScenarioTestsValidationRequiredFieldsVr04MultimeterMissingInterval"/>
+    <testcase name="VR-04 - no HTTP 500 server error" time="0.033" classname="AutomatedScenarioTestsValidationRequiredFieldsVr04MultimeterMissingInterval"/>
+    <testcase name="VR-04 - controlled validation response" time="0.033" classname="AutomatedScenarioTestsValidationRequiredFieldsVr04MultimeterMissingInterval">
+      <failure type="AssertionFailure" message="expected false to equal true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Required Fields / VR-04 - Multimeter missing Interval.]]>
+        <![CDATA[Test description: VR-04 - controlled validation response.]]>
+        <![CDATA[Error message: expected false to equal true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to equal true
+   at Object.eval sandbox-script.js:3:4).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Required Fields / VR-05 - MeterDetail missing past" id="b4b1651a-0a40-4ace-a901-a69b1e4b2255" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="1" errors="0" time="0.053">
+    <testcase name="VR-05 - request completed and returned a response code" time="0.053" classname="AutomatedScenarioTestsValidationRequiredFieldsVr05MeterDetailMissingPast"/>
+    <testcase name="VR-05 - no HTTP 500 server error" time="0.053" classname="AutomatedScenarioTestsValidationRequiredFieldsVr05MeterDetailMissingPast"/>
+    <testcase name="VR-05 - controlled validation response" time="0.053" classname="AutomatedScenarioTestsValidationRequiredFieldsVr05MeterDetailMissingPast">
+      <failure type="AssertionFailure" message="expected false to equal true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Required Fields / VR-05 - MeterDetail missing past.]]>
+        <![CDATA[Test description: VR-05 - controlled validation response.]]>
+        <![CDATA[Error message: expected false to equal true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to equal true
+   at Object.eval sandbox-script.js:3:5).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Wrong Data Type / VT-01 - MeterSum Interval as string" id="29034da2-239f-4423-ab52-e16865ba4d3a" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="0" errors="0" time="0.017">
+    <testcase name="VT-01 - request completed and returned a response code" time="0.017" classname="AutomatedScenarioTestsValidationWrongDataTypeVt01MeterSumIntervalAsString"/>
+    <testcase name="VT-01 - no HTTP 500 server error" time="0.017" classname="AutomatedScenarioTestsValidationWrongDataTypeVt01MeterSumIntervalAsString"/>
+    <testcase name="VT-01 - controlled validation response" time="0.017" classname="AutomatedScenarioTestsValidationWrongDataTypeVt01MeterSumIntervalAsString"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Wrong Data Type / VT-02 - Multimeter Meter as scalar" id="57f8096f-6cff-48be-bf8a-dd81f8c02e45" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="0" errors="0" time="0.019">
+    <testcase name="VT-02 - request completed and returned a response code" time="0.019" classname="AutomatedScenarioTestsValidationWrongDataTypeVt02MultimeterMeterAsScalar"/>
+    <testcase name="VT-02 - no HTTP 500 server error" time="0.019" classname="AutomatedScenarioTestsValidationWrongDataTypeVt02MultimeterMeterAsScalar"/>
+    <testcase name="VT-02 - controlled validation response" time="0.019" classname="AutomatedScenarioTestsValidationWrongDataTypeVt02MultimeterMeterAsScalar"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Wrong Data Type / VT-03 - MeterSum DataSelect as string" id="7bd3de16-905b-4b38-b974-13ea6b79158e" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="0" errors="0" time="0.015">
+    <testcase name="VT-03 - request completed and returned a response code" time="0.015" classname="AutomatedScenarioTestsValidationWrongDataTypeVt03MeterSumDataSelectAsString"/>
+    <testcase name="VT-03 - no HTTP 500 server error" time="0.015" classname="AutomatedScenarioTestsValidationWrongDataTypeVt03MeterSumDataSelectAsString"/>
+    <testcase name="VT-03 - controlled validation response" time="0.015" classname="AutomatedScenarioTestsValidationWrongDataTypeVt03MeterSumDataSelectAsString"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Wrong Data Type / VT-04 - MeterDetail past as string" id="f40b099e-01da-4ad3-bdfe-9a6c4c0c43a8" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="0" errors="0" time="0.014">
+    <testcase name="VT-04 - request completed and returned a response code" time="0.014" classname="AutomatedScenarioTestsValidationWrongDataTypeVt04MeterDetailPastAsString"/>
+    <testcase name="VT-04 - no HTTP 500 server error" time="0.014" classname="AutomatedScenarioTestsValidationWrongDataTypeVt04MeterDetailPastAsString"/>
+    <testcase name="VT-04 - controlled validation response" time="0.014" classname="AutomatedScenarioTestsValidationWrongDataTypeVt04MeterDetailPastAsString"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Out Of Range / VO-01 - MeterSum negative Past" id="dac63a6c-26d4-4c6b-ac67-598ffba66a6c" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="1" errors="0" time="0.032">
+    <testcase name="VO-01 - request completed and returned a response code" time="0.032" classname="AutomatedScenarioTestsValidationOutOfRangeVo01MeterSumNegativePast"/>
+    <testcase name="VO-01 - no HTTP 500 server error" time="0.032" classname="AutomatedScenarioTestsValidationOutOfRangeVo01MeterSumNegativePast"/>
+    <testcase name="VO-01 - controlled validation response" time="0.032" classname="AutomatedScenarioTestsValidationOutOfRangeVo01MeterSumNegativePast">
+      <failure type="AssertionFailure" message="expected false to equal true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Out Of Range / VO-01 - MeterSum negative Past.]]>
+        <![CDATA[Test description: VO-01 - controlled validation response.]]>
+        <![CDATA[Error message: expected false to equal true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to equal true
+   at Object.eval sandbox-script.js:3:10).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Out Of Range / VO-02 - MeterSum unsupported Day interval" id="1e8317c7-f1b5-40f5-906e-e32c587bc51c" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="1" errors="0" time="0.031">
+    <testcase name="VO-02 - request completed and returned a response code" time="0.031" classname="AutomatedScenarioTestsValidationOutOfRangeVo02MeterSumUnsupportedDayInterval"/>
+    <testcase name="VO-02 - no HTTP 500 server error" time="0.031" classname="AutomatedScenarioTestsValidationOutOfRangeVo02MeterSumUnsupportedDayInterval"/>
+    <testcase name="VO-02 - controlled validation response" time="0.031" classname="AutomatedScenarioTestsValidationOutOfRangeVo02MeterSumUnsupportedDayInterval">
+      <failure type="AssertionFailure" message="expected false to equal true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Out Of Range / VO-02 - MeterSum unsupported Day interval.]]>
+        <![CDATA[Test description: VO-02 - controlled validation response.]]>
+        <![CDATA[Error message: expected false to equal true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to equal true
+   at Object.eval sandbox-script.js:3:11).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Out Of Range / VO-03 - MeterSum invalid Month 13" id="6602ee5c-8194-4151-b828-d8e458de5e3a" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="2" errors="0" time="0.015">
+    <testcase name="VO-03 - request completed and returned a response code" time="0.015" classname="AutomatedScenarioTestsValidationOutOfRangeVo03MeterSumInvalidMonth13"/>
+    <testcase name="VO-03 - no HTTP 500 server error" time="0.015" classname="AutomatedScenarioTestsValidationOutOfRangeVo03MeterSumInvalidMonth13">
+      <failure type="AssertionFailure" message="expected 500 to not equal 500">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Out Of Range / VO-03 - MeterSum invalid Month 13.]]>
+        <![CDATA[Test description: VO-03 - no HTTP 500 server error.]]>
+        <![CDATA[Error message: expected 500 to not equal 500.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 500 to not equal 500
+   at Object.eval sandbox-script.js:2:12).]]>
+      </failure>
+    </testcase>
+    <testcase name="VO-03 - controlled validation response" time="0.015" classname="AutomatedScenarioTestsValidationOutOfRangeVo03MeterSumInvalidMonth13">
+      <failure type="AssertionFailure" message="Response is not valid JSON: No data, empty input at 1:1&#xA;&#xA;^">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Out Of Range / VO-03 - MeterSum invalid Month 13.]]>
+        <![CDATA[Test description: VO-03 - controlled validation response.]]>
+        <![CDATA[Error message: Response is not valid JSON: No data, empty input at 1:1
+
+^.]]>
+        <![CDATA[Stacktrace: Error: Response is not valid JSON: No data, empty input at 1:1
+
+^
+   at Object.eval sandbox-script.js:3:12).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Out Of Range / VO-04 - MeterDetail unreasonably large past" id="19e005aa-e45d-42e4-abe0-6a1a8bbc33ea" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="2" errors="0" time="0.018">
+    <testcase name="VO-04 - request completed and returned a response code" time="0.018" classname="AutomatedScenarioTestsValidationOutOfRangeVo04MeterDetailUnreasonablyLargePast"/>
+    <testcase name="VO-04 - no HTTP 500 server error" time="0.018" classname="AutomatedScenarioTestsValidationOutOfRangeVo04MeterDetailUnreasonablyLargePast">
+      <failure type="AssertionFailure" message="expected 500 to not equal 500">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Out Of Range / VO-04 - MeterDetail unreasonably large past.]]>
+        <![CDATA[Test description: VO-04 - no HTTP 500 server error.]]>
+        <![CDATA[Error message: expected 500 to not equal 500.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 500 to not equal 500
+   at Object.eval sandbox-script.js:2:13).]]>
+      </failure>
+    </testcase>
+    <testcase name="VO-04 - controlled validation response" time="0.018" classname="AutomatedScenarioTestsValidationOutOfRangeVo04MeterDetailUnreasonablyLargePast">
+      <failure type="AssertionFailure" message="Response is not valid JSON: No data, empty input at 1:1&#xA;&#xA;^">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Out Of Range / VO-04 - MeterDetail unreasonably large past.]]>
+        <![CDATA[Test description: VO-04 - controlled validation response.]]>
+        <![CDATA[Error message: Response is not valid JSON: No data, empty input at 1:1
+
+^.]]>
+        <![CDATA[Stacktrace: Error: Response is not valid JSON: No data, empty input at 1:1
+
+^
+   at Object.eval sandbox-script.js:3:13).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Invalid Format / VF-01 - MeterSum malformed week DataSelect" id="b891c9c1-e5f0-4802-808f-804aee6e1927" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="2" errors="0" time="0.015">
+    <testcase name="VF-01 - request completed and returned a response code" time="0.015" classname="AutomatedScenarioTestsValidationInvalidFormatVf01MeterSumMalformedWeekDataSelect"/>
+    <testcase name="VF-01 - no HTTP 500 server error" time="0.015" classname="AutomatedScenarioTestsValidationInvalidFormatVf01MeterSumMalformedWeekDataSelect">
+      <failure type="AssertionFailure" message="expected 500 to not equal 500">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Invalid Format / VF-01 - MeterSum malformed week DataSelect.]]>
+        <![CDATA[Test description: VF-01 - no HTTP 500 server error.]]>
+        <![CDATA[Error message: expected 500 to not equal 500.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 500 to not equal 500
+   at Object.eval sandbox-script.js:2:14).]]>
+      </failure>
+    </testcase>
+    <testcase name="VF-01 - controlled validation response" time="0.015" classname="AutomatedScenarioTestsValidationInvalidFormatVf01MeterSumMalformedWeekDataSelect">
+      <failure type="AssertionFailure" message="Response is not valid JSON: No data, empty input at 1:1&#xA;&#xA;^">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Invalid Format / VF-01 - MeterSum malformed week DataSelect.]]>
+        <![CDATA[Test description: VF-01 - controlled validation response.]]>
+        <![CDATA[Error message: Response is not valid JSON: No data, empty input at 1:1
+
+^.]]>
+        <![CDATA[Stacktrace: Error: Response is not valid JSON: No data, empty input at 1:1
+
+^
+   at Object.eval sandbox-script.js:3:14).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Invalid Format / VF-02 - Multimeter malformed Max10Year DataSelect" id="0b479f94-a20b-47dc-873e-2ab549fee560" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="1" errors="0" time="0.050">
+    <testcase name="VF-02 - request completed and returned a response code" time="0.050" classname="AutomatedScenarioTestsValidationInvalidFormatVf02MultimeterMalformedMax10YearDataSelect"/>
+    <testcase name="VF-02 - no HTTP 500 server error" time="0.050" classname="AutomatedScenarioTestsValidationInvalidFormatVf02MultimeterMalformedMax10YearDataSelect"/>
+    <testcase name="VF-02 - controlled validation response" time="0.050" classname="AutomatedScenarioTestsValidationInvalidFormatVf02MultimeterMalformedMax10YearDataSelect">
+      <failure type="AssertionFailure" message="expected false to equal true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Invalid Format / VF-02 - Multimeter malformed Max10Year DataSelect.]]>
+        <![CDATA[Test description: VF-02 - controlled validation response.]]>
+        <![CDATA[Error message: expected false to equal true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to equal true
+   at Object.eval sandbox-script.js:3:15).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Invalid Format / VF-03 - MeterDetail month without leading zero" id="c409a0c0-6f8f-4508-ba41-7f7954104c22" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="1" errors="0" time="0.052">
+    <testcase name="VF-03 - request completed and returned a response code" time="0.052" classname="AutomatedScenarioTestsValidationInvalidFormatVf03MeterDetailMonthWithoutLeadingZero"/>
+    <testcase name="VF-03 - no HTTP 500 server error" time="0.052" classname="AutomatedScenarioTestsValidationInvalidFormatVf03MeterDetailMonthWithoutLeadingZero"/>
+    <testcase name="VF-03 - controlled validation response" time="0.052" classname="AutomatedScenarioTestsValidationInvalidFormatVf03MeterDetailMonthWithoutLeadingZero">
+      <failure type="AssertionFailure" message="expected false to equal true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Invalid Format / VF-03 - MeterDetail month without leading zero.]]>
+        <![CDATA[Test description: VF-03 - controlled validation response.]]>
+        <![CDATA[Error message: expected false to equal true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to equal true
+   at Object.eval sandbox-script.js:3:16).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Invalid Meter ID / VM-01 - MeterSum invalid meter ID" id="13d7927e-a8e3-4106-88c6-89e32d9dd5db" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="1" errors="0" time="0.037">
+    <testcase name="VM-01 - request completed and returned a response code" time="0.037" classname="AutomatedScenarioTestsValidationInvalidMeterIdVm01MeterSumInvalidMeterId"/>
+    <testcase name="VM-01 - no HTTP 500 server error" time="0.037" classname="AutomatedScenarioTestsValidationInvalidMeterIdVm01MeterSumInvalidMeterId"/>
+    <testcase name="VM-01 - controlled validation response" time="0.037" classname="AutomatedScenarioTestsValidationInvalidMeterIdVm01MeterSumInvalidMeterId">
+      <failure type="AssertionFailure" message="expected false to equal true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Invalid Meter ID / VM-01 - MeterSum invalid meter ID.]]>
+        <![CDATA[Test description: VM-01 - controlled validation response.]]>
+        <![CDATA[Error message: expected false to equal true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to equal true
+   at Object.eval sandbox-script.js:3:17).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Validation - Invalid Meter ID / VM-02 - Multimeter mixed valid and invalid meter IDs" id="f6800c44-8edf-46e1-8bbd-0d40d0dae8e4" timestamp="2026-05-05T04:51:08.244Z" tests="3" failures="1" errors="0" time="0.038">
+    <testcase name="VM-02 - request completed and returned a response code" time="0.038" classname="AutomatedScenarioTestsValidationInvalidMeterIdVm02MultimeterMixedValidAndInvalidMeterIDs"/>
+    <testcase name="VM-02 - no HTTP 500 server error" time="0.038" classname="AutomatedScenarioTestsValidationInvalidMeterIdVm02MultimeterMixedValidAndInvalidMeterIDs"/>
+    <testcase name="VM-02 - controlled validation response" time="0.038" classname="AutomatedScenarioTestsValidationInvalidMeterIdVm02MultimeterMixedValidAndInvalidMeterIDs">
+      <failure type="AssertionFailure" message="expected false to equal true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c955085b-3f25-4a59-b691-6049778dbe4e.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Validation - Invalid Meter ID / VM-02 - Multimeter mixed valid and invalid meter IDs.]]>
+        <![CDATA[Test description: VM-02 - controlled validation response.]]>
+        <![CDATA[Error message: expected false to equal true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to equal true
+   at Object.eval sandbox-script.js:3:18).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>

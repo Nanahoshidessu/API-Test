@@ -196,7 +196,7 @@
     },
     {
       "key": "iot_url",
-      "value": "http://localhost:5000",
+      "value": "https://tom-demo-01.proen.app.ruk-com.cloud/unimicron-api",
       "type": "default",
       "enabled": true
     },

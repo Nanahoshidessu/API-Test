@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Unimicron Pegasus API" tests="6" time="0.894">
+  <testsuite name="Automated Scenario Tests / Cross Endpoint Consistency / CE-I-01a - Store MeterSum actual Month data for CE-I-01" id="82ccc580-cbe6-46d6-a1da-723f2503885b" timestamp="2026-05-05T06:24:40.278Z" tests="8" failures="0" errors="0" time="0.378">
+    <testcase name="CE-I-01a - request completed and returned a response code" time="0.378" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01AStoreMeterSumActualMonthDataForCeI01"/>
+    <testcase name="CE-I-01a - no HTTP 500 server error" time="0.378" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01AStoreMeterSumActualMonthDataForCeI01"/>
+    <testcase name="CE-I-01a - HTTP status is success" time="0.378" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01AStoreMeterSumActualMonthDataForCeI01"/>
+    <testcase name="CE-I-01a - response is a JSON object" time="0.378" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01AStoreMeterSumActualMonthDataForCeI01"/>
+    <testcase name="CE-I-01a - MeterCompare response has chart dictionaries and categories" time="0.378" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01AStoreMeterSumActualMonthDataForCeI01"/>
+    <testcase name="CE-I-01a - response dictionary keys match expected scenario keys" time="0.378" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01AStoreMeterSumActualMonthDataForCeI01"/>
+    <testcase name="CE-I-01a - data arrays align with ArrCategories" time="0.378" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01AStoreMeterSumActualMonthDataForCeI01"/>
+    <testcase name="CE-I-01a - max values are not lower than returned data" time="0.378" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01AStoreMeterSumActualMonthDataForCeI01"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Cross Endpoint Consistency / CE-I-01b - Compare Multimeter actual data with MeterSum for CE-I-01" id="abbe7bfc-b056-4936-a396-ed4a61f39cd1" timestamp="2026-05-05T06:24:40.278Z" tests="9" failures="0" errors="0" time="0.116">
+    <testcase name="CE-I-01b - request completed and returned a response code" time="0.116" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01BCompareMultimeterActualDataWithMeterSumForCeI01"/>
+    <testcase name="CE-I-01b - no HTTP 500 server error" time="0.116" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01BCompareMultimeterActualDataWithMeterSumForCeI01"/>
+    <testcase name="CE-I-01b - HTTP status is success" time="0.116" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01BCompareMultimeterActualDataWithMeterSumForCeI01"/>
+    <testcase name="CE-I-01b - response is a JSON object" time="0.116" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01BCompareMultimeterActualDataWithMeterSumForCeI01"/>
+    <testcase name="CE-I-01b - MeterCompare response has chart dictionaries and categories" time="0.116" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01BCompareMultimeterActualDataWithMeterSumForCeI01"/>
+    <testcase name="CE-I-01b - response dictionary keys match expected scenario keys" time="0.116" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01BCompareMultimeterActualDataWithMeterSumForCeI01"/>
+    <testcase name="CE-I-01b - data arrays align with ArrCategories" time="0.116" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01BCompareMultimeterActualDataWithMeterSumForCeI01"/>
+    <testcase name="CE-I-01b - max values are not lower than returned data" time="0.116" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01BCompareMultimeterActualDataWithMeterSumForCeI01"/>
+    <testcase name="CE-I-01b - actual data matches stored cross-endpoint baseline" time="0.116" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI01BCompareMultimeterActualDataWithMeterSumForCeI01"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Cross Endpoint Consistency / CE-I-02a - Store Multimeter actual Month data for CE-I-02" id="68cd4232-a1c7-4a7d-a425-1906a2143fc8" timestamp="2026-05-05T06:24:40.278Z" tests="8" failures="0" errors="0" time="0.092">
+    <testcase name="CE-I-02a - request completed and returned a response code" time="0.092" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02AStoreMultimeterActualMonthDataForCeI02"/>
+    <testcase name="CE-I-02a - no HTTP 500 server error" time="0.092" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02AStoreMultimeterActualMonthDataForCeI02"/>
+    <testcase name="CE-I-02a - HTTP status is success" time="0.092" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02AStoreMultimeterActualMonthDataForCeI02"/>
+    <testcase name="CE-I-02a - response is a JSON object" time="0.092" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02AStoreMultimeterActualMonthDataForCeI02"/>
+    <testcase name="CE-I-02a - MeterCompare response has chart dictionaries and categories" time="0.092" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02AStoreMultimeterActualMonthDataForCeI02"/>
+    <testcase name="CE-I-02a - response dictionary keys match expected scenario keys" time="0.092" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02AStoreMultimeterActualMonthDataForCeI02"/>
+    <testcase name="CE-I-02a - data arrays align with ArrCategories" time="0.092" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02AStoreMultimeterActualMonthDataForCeI02"/>
+    <testcase name="CE-I-02a - max values are not lower than returned data" time="0.092" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02AStoreMultimeterActualMonthDataForCeI02"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Cross Endpoint Consistency / CE-I-02b - Compare MeterDetail summed data with Multimeter for CE-I-02" id="a2064757-8496-40b0-8417-53c9838630c8" timestamp="2026-05-05T06:24:40.278Z" tests="9" failures="0" errors="0" time="0.064">
+    <testcase name="CE-I-02b - request completed and returned a response code" time="0.064" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02BCompareMeterDetailSummedDataWithMultimeterForCeI02"/>
+    <testcase name="CE-I-02b - no HTTP 500 server error" time="0.064" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02BCompareMeterDetailSummedDataWithMultimeterForCeI02"/>
+    <testcase name="CE-I-02b - HTTP status is success" time="0.064" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02BCompareMeterDetailSummedDataWithMultimeterForCeI02"/>
+    <testcase name="CE-I-02b - response is a JSON object" time="0.064" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02BCompareMeterDetailSummedDataWithMultimeterForCeI02"/>
+    <testcase name="CE-I-02b - MeterDetail response has chart structure" time="0.064" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02BCompareMeterDetailSummedDataWithMultimeterForCeI02"/>
+    <testcase name="CE-I-02b - each chart series is a bar series with valid data" time="0.064" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02BCompareMeterDetailSummedDataWithMultimeterForCeI02"/>
+    <testcase name="CE-I-02b - stroke chart length matches chart series length" time="0.064" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02BCompareMeterDetailSummedDataWithMultimeterForCeI02"/>
+    <testcase name="CE-I-02b - MeterLabelMap contains selected meter IDs" time="0.064" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02BCompareMeterDetailSummedDataWithMultimeterForCeI02"/>
+    <testcase name="CE-I-02b - summed detail data matches stored multimeter baseline" time="0.064" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI02BCompareMeterDetailSummedDataWithMultimeterForCeI02"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Cross Endpoint Consistency / CE-I-03a - Store MeterSum Past 0 data for CE-I-03" id="47856f41-d8b1-48c0-be21-9e8a9cc66aca" timestamp="2026-05-05T06:24:40.278Z" tests="8" failures="0" errors="0" time="0.091">
+    <testcase name="CE-I-03a - request completed and returned a response code" time="0.091" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03AStoreMeterSumPast0DataForCeI03"/>
+    <testcase name="CE-I-03a - no HTTP 500 server error" time="0.091" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03AStoreMeterSumPast0DataForCeI03"/>
+    <testcase name="CE-I-03a - HTTP status is success" time="0.091" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03AStoreMeterSumPast0DataForCeI03"/>
+    <testcase name="CE-I-03a - response is a JSON object" time="0.091" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03AStoreMeterSumPast0DataForCeI03"/>
+    <testcase name="CE-I-03a - MeterCompare response has chart dictionaries and categories" time="0.091" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03AStoreMeterSumPast0DataForCeI03"/>
+    <testcase name="CE-I-03a - response dictionary keys match expected scenario keys" time="0.091" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03AStoreMeterSumPast0DataForCeI03"/>
+    <testcase name="CE-I-03a - data arrays align with ArrCategories" time="0.091" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03AStoreMeterSumPast0DataForCeI03"/>
+    <testcase name="CE-I-03a - max values are not lower than returned data" time="0.091" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03AStoreMeterSumPast0DataForCeI03"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Cross Endpoint Consistency / CE-I-03b - Compare MeterSum Past 1 data differs for CE-I-03" id="a794d776-18c6-4c0d-879d-1e0477bbfb71" timestamp="2026-05-05T06:24:40.278Z" tests="9" failures="1" errors="0" time="0.153">
+    <testcase name="CE-I-03b - request completed and returned a response code" time="0.153" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03BCompareMeterSumPast1DataDiffersForCeI03"/>
+    <testcase name="CE-I-03b - no HTTP 500 server error" time="0.153" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03BCompareMeterSumPast1DataDiffersForCeI03"/>
+    <testcase name="CE-I-03b - HTTP status is success" time="0.153" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03BCompareMeterSumPast1DataDiffersForCeI03"/>
+    <testcase name="CE-I-03b - response is a JSON object" time="0.153" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03BCompareMeterSumPast1DataDiffersForCeI03"/>
+    <testcase name="CE-I-03b - MeterCompare response has chart dictionaries and categories" time="0.153" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03BCompareMeterSumPast1DataDiffersForCeI03"/>
+    <testcase name="CE-I-03b - response dictionary keys match expected scenario keys" time="0.153" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03BCompareMeterSumPast1DataDiffersForCeI03"/>
+    <testcase name="CE-I-03b - data arrays align with ArrCategories" time="0.153" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03BCompareMeterSumPast1DataDiffersForCeI03"/>
+    <testcase name="CE-I-03b - max values are not lower than returned data" time="0.153" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03BCompareMeterSumPast1DataDiffersForCeI03"/>
+    <testcase name="CE-I-03b - actual data differs from stored baseline" time="0.153" classname="AutomatedScenarioTestsCrossEndpointConsistencyCeI03BCompareMeterSumPast1DataDiffersForCeI03">
+      <failure type="AssertionFailure" message="expected '[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,…' to not equal '[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,…'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: ea4a2cc4-012a-4d59-baa4-bdb8230ac670.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Cross Endpoint Consistency / CE-I-03b - Compare MeterSum Past 1 data differs for CE-I-03.]]>
+        <![CDATA[Test description: CE-I-03b - actual data differs from stored baseline.]]>
+        <![CDATA[Error message: expected '[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,…' to not equal '[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,…'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected '[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,…' to not equal '[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,…'
+   at Object.eval sandbox-script.js:9:6).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>
