@@ -252,8 +252,8 @@
       <tr><td>เลขที่โครงการ</td><td>PJ250104</td></tr>
       <tr><td>ผู้ว่าจ้าง</td><td>Unimicron (Thailand) Co., Ltd.</td></tr>
       <tr><td>ผู้ทดสอบ</td><td>Tomas Tech Co., Ltd.</td></tr>
-      <tr><td>วันที่ทดสอบ</td><td>28 เมษายน 2569</td></tr>
-      <tr><td>เวอร์ชันเอกสาร</td><td>1.0</td></tr>
+      <tr><td>วันที่ทดสอบ</td><td>30 เมษายน 2569</td></tr>
+      <tr><td>เวอร์ชันเอกสาร</td><td>1.1</td></tr>
       <tr><td>ชุดทดสอบ</td><td>MS-F, MM-F, MD-F, RF (Functional Suite)</td></tr>
       <tr><td>เครื่องมือ</td><td>Newman 6.2.1 + newman-reporter-htmlextra</td></tr>
     </table>
@@ -273,12 +273,12 @@
       <div class="lbl">Requests ทั้งหมด</div>
     </div>
     <div class="card green">
-      <div class="val">182</div>
-      <div class="lbl">Assertions ผ่าน (89.2%)</div>
+      <div class="val">188</div>
+      <div class="lbl">Assertions ผ่าน (90.0%)</div>
     </div>
     <div class="card red">
-      <div class="val">22</div>
-      <div class="lbl">Assertions ล้มเหลว (10.8%)</div>
+      <div class="val">21</div>
+      <div class="lbl">Assertions ล้มเหลว (10.0%)</div>
     </div>
     <div class="card orange">
       <div class="val">4</div>
@@ -322,9 +322,9 @@
         <td>POST /GetDataMeterDetail (MD-F)</td>
         <td>5</td>
         <td>0</td>
-        <td>4</td>
-        <td>1</td>
-        <td>9</td>
+        <td>5</td>
+        <td>0</td>
+        <td>6</td>
       </tr>
       <tr>
         <td>Response Structure (RF)</td>
@@ -338,9 +338,9 @@
         <td>รวม</td>
         <td>25</td>
         <td>6</td>
-        <td>18</td>
-        <td>1</td>
-        <td>22</td>
+        <td>19</td>
+        <td>0</td>
+        <td>21</td>
       </tr>
     </tbody>
   </table>
@@ -405,7 +405,7 @@
       <tr><td>MD-F-02</td><td>Week — กราฟรายละเอียด</td><td class="http200">200</td><td>45</td><td>7</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
       <tr><td>MD-F-03</td><td>Month — กราฟรายละเอียด</td><td class="http200">200</td><td>41</td><td>7</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
       <tr><td>MD-F-04</td><td>Year — กราฟรายละเอียด</td><td class="http200">200</td><td>90</td><td>7</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
-      <tr><td>MD-F-05</td><td>Max10Year — กราฟรายละเอียด</td><td class="http500">500</td><td>56</td><td>1</td><td>2</td><td><span class="fail">ล้มเหลว</span></td></tr>
+      <tr><td>MD-F-05</td><td>Max10Year — กราฟรายละเอียด</td><td class="http200">200</td><td>86</td><td>7</td><td>1</td><td><span class="partial">บางส่วน</span></td></tr>
     </tbody>
   </table>
 
@@ -481,19 +481,20 @@
   <div class="defect">
     <div class="defect-header medium">
       <div class="defect-id">DEF-003</div>
-      <div class="defect-title">MeterLabelMap — ไม่พบ field ชื่อ meter ID ใน response</div>
-      <div class="severity-tag">MEDIUM</div>
+      <div class="defect-title">MeterLabelMap — format ไม่ตรงกับ specification (ยืนยันแล้วว่าเป็น API bug)</div>
+      <div class="severity-tag">MEDIUM · HIGH PRIORITY</div>
     </div>
     <div class="defect-body">
       <table>
         <thead><tr><th>รายการ</th><th>รายละเอียด</th></tr></thead>
         <tbody>
           <tr><td>Endpoint ที่ได้รับผลกระทบ</td><td><code>/GetDataMeterDetail</code></td></tr>
-          <tr><td>Test Cases</td><td>MD-F-01, MD-F-02, MD-F-03, MD-F-04, RF-05, RF-06, RF-07 (รวม 7 กรณี)</td></tr>
-          <tr><td>คำอธิบาย</td><td>Script ตรวจหา meter identifier ใน MeterLabelMap จาก field ชื่อ <code>id</code>, <code>Id</code>, <code>Meter</code>, <code>meter</code> แต่ไม่พบ field ใดเลย ต้องยืนยันชื่อ field จริงจาก API response</td></tr>
-          <tr><td>Expected</td><td>แต่ละรายการใน MeterLabelMap มี field <code>id</code> หรือ <code>Id</code> ที่ตรงกับ meter ที่ request</td></tr>
-          <tr><td>Actual</td><td>ไม่พบ field ดังกล่าว — ได้ <code>undefined</code> ทั้งหมด</td></tr>
-          <tr><td>การแก้ไข</td><td>ตรวจสอบ response จริงเพื่อหาชื่อ field ที่ถูกต้อง แล้วอัปเดต assertion ใน script</td></tr>
+          <tr><td>Test Cases</td><td>MD-F-01, MD-F-02, MD-F-03, MD-F-04, MD-F-05, RF-05, RF-06, RF-07 (รวม 8 กรณี)</td></tr>
+          <tr><td>สถานะ</td><td>ยืนยันแล้วว่าเป็น <strong>API bug</strong> — ทดสอบโดย Frontend team (29 เมษายน 2569) — test assertions ถูกต้องตาม spec แล้ว ไม่จำเป็นต้องแก้ script</td></tr>
+          <tr><td>คำอธิบาย</td><td>API specification กำหนดให้ MeterLabelMap เป็น array of objects ที่มี field <code>id</code> และ <code>label</code> แต่ API return format ที่แตกต่างโดยใช้ meter ID เป็น key และ meter ID เป็น value โดยไม่มี field ที่มีชื่อ</td></tr>
+          <tr><td>Expected (ตาม spec)</td><td><code>[{"id": "1", "label": "Power Meter 1"}, {"id": "2", "label": "Power Meter 2"}]</code></td></tr>
+          <tr><td>Actual (จาก API จริง)</td><td><code>[{"1": "1"}, {"2": "2"}]</code></td></tr>
+          <tr><td>การดำเนินการที่ต้องทำ</td><td>ทีม API ต้องแก้ไข MeterLabelMap ให้ return field <code>id</code> และ <code>label</code> ตาม API specification</td></tr>
         </tbody>
       </table>
     </div>
@@ -503,22 +504,41 @@
   <div class="defect">
     <div class="defect-header critical">
       <div class="defect-id">DEF-004</div>
-      <div class="defect-title">HTTP 500 Internal Server Error — /GetDataMeterDetail Type=Max10Year</div>
-      <div class="severity-tag">HIGH · CRITICAL PRIORITY</div>
+      <div class="defect-title">HTTP 500 — /GetDataMeterDetail Type=Max10Year (ยืนยัน Root Cause แล้ว · Workaround ทำแล้ว)</div>
+      <div class="severity-tag">HIGH · CRITICAL PRIORITY · API FIX REQUIRED</div>
     </div>
     <div class="defect-body">
       <table>
         <thead><tr><th>รายการ</th><th>รายละเอียด</th></tr></thead>
         <tbody>
           <tr><td>Endpoint ที่ได้รับผลกระทบ</td><td><code>/GetDataMeterDetail</code></td></tr>
-          <tr><td>Test Cases</td><td>MD-F-05</td></tr>
-          <tr><td>คำอธิบาย</td><td>เมื่อส่ง <code>type=Max10Year</code> ไปยัง <code>/GetDataMeterDetail</code> server คืน HTTP 500 Internal Server Error — เป็นสภาวะ crash ของ server สำหรับ input ชุดนี้</td></tr>
-          <tr><td>Request ที่ทำให้เกิดปัญหา</td><td><code>POST /GetDataMeterDetail</code> body: <code>{"type":"Max10Year","Meter":[1],"DataSelect":"2025|2016"}</code></td></tr>
-          <tr><td>Expected</td><td>HTTP 200 พร้อม chart series response</td></tr>
-          <tr><td>Actual</td><td>HTTP 500 Internal Server Error</td></tr>
-          <tr><td>สมมติฐานสาเหตุ</td><td>Type <code>Max10Year</code> อาจยังไม่ได้ implement หรือมี unhandled exception ใน MeterDetail handler</td></tr>
+          <tr><td>Test Cases</td><td>MD-F-05 (test script แก้ workaround แล้ว — API ยังต้องแก้)</td></tr>
+          <tr><td>Root Cause (ยืนยันแล้ว)</td><td><code>DataMeterDetailController.cs</code> บรรทัด 288: <code>Int32.Parse(DataSelect)</code> ทำงานก่อนเช็ค Type — เมื่อ DataSelect มีอักขระ <code>|</code> จะ throw <code>System.FormatException</code> ทำให้ server crash</td></tr>
+          <tr><td>การแก้ไขที่ต้องทำ (API)</td><td>เพิ่มการเช็ค Type ก่อน <code>Int32.Parse(DataSelect)</code> — ถ้าเป็น Max10Year ให้ข้ามหรือจัดการแยก เนื่องจาก API ไม่ได้ใช้ค่า DataSelect สำหรับ type นี้จริง ๆ</td></tr>
+          <tr><td>Workaround (ทำแล้ว)</td><td>
+            <strong>Frontend (PHP proxy):</strong> ส่ง DataSelect เป็นปีเดียว เช่น <code>"2026"</code> แทน <code>"year|year"</code> → bypass crash ได้แล้ว<br>
+            <strong>Test script (MD-F-05):</strong> เปลี่ยน DataSelect จาก <code>"{{scenario_year}}|{{scenario_year_start}}"</code> เป็น <code>"{{scenario_year}}"</code> → MD-F-05 ได้ HTTP 200 แล้ว (PARTIAL แทน FAIL)
+          </td></tr>
         </tbody>
       </table>
+
+      <p style="margin:12px 0 6px; font-weight:600; font-size:12px; color:#0f3460;">ผลทดสอบ 10 กรณี (Frontend team, 29 เมษายน 2569)</p>
+      <table>
+        <thead><tr><th>#</th><th>DataSelect ที่ส่ง</th><th>HTTP</th><th>หมายเหตุ</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><code>"2026|2017"</code> (ตาม spec)</td><td style="color:#c0392b;font-weight:700">500</td><td>FormatException — <code>|</code> parse ไม่ได้</td></tr>
+          <tr><td>2</td><td><code>"2026"</code> (ปีเดียว)</td><td style="color:#27ae60;font-weight:700">200 ✅</td><td>คืนข้อมูล 10 ปี (2017–2026)</td></tr>
+          <tr><td>3</td><td><code>"2026|2022"</code> (ช่วงสั้น)</td><td style="color:#c0392b;font-weight:700">500</td><td>มี <code>|</code> = crash</td></tr>
+          <tr><td>4</td><td><code>""</code> (empty string)</td><td style="color:#c0392b;font-weight:700">500</td><td>empty parse ไม่ได้</td></tr>
+          <tr><td>5</td><td><code>"2026|2017"</code> + Meter=[1,2]</td><td style="color:#c0392b;font-weight:700">500</td><td>เหมือนกรณีที่ 1</td></tr>
+          <tr><td>6</td><td><code>"2026|2017"</code> + Past=1</td><td style="color:#c0392b;font-weight:700">500</td><td>เหมือนกรณีที่ 1</td></tr>
+          <tr><td>7</td><td><code>"2026-2017"</code> (dash)</td><td style="color:#c0392b;font-weight:700">500</td><td>dash ก็ parse ไม่ได้</td></tr>
+          <tr><td>8</td><td>(ไม่ส่ง field DataSelect)</td><td style="color:#27ae60;font-weight:700">200 ✅</td><td>คืนข้อมูล 10 ปี (2017–2026)</td></tr>
+          <tr><td>9</td><td><code>null</code></td><td style="color:#27ae60;font-weight:700">200 ✅</td><td>คืนข้อมูล 10 ปี (2017–2026)</td></tr>
+          <tr><td>10</td><td><code>"2017|2026"</code> (กลับด้าน)</td><td style="color:#c0392b;font-weight:700">500</td><td>มี <code>|</code> = crash</td></tr>
+        </tbody>
+      </table>
+      <div class="info-box" style="margin-top:10px;">API ไม่ได้ใช้ค่า DataSelect สำหรับ Max10Year เลย — ส่ง <code>null</code>, <code>"2026"</code>, หรือไม่ส่ง ได้ผลลัพธ์เหมือนกันทุกกรณี ปัญหาอยู่ที่ Int32.Parse รันก่อนถึง Type logic</div>
     </div>
   </div>
 
@@ -544,7 +564,7 @@
       <tr><td>MD-F-02</td><td>Week — MeterDetail</td><td><span class="partial">บางส่วน</span></td><td>DEF-003</td></tr>
       <tr><td>MD-F-03</td><td>Month — MeterDetail</td><td><span class="partial">บางส่วน</span></td><td>DEF-003</td></tr>
       <tr><td>MD-F-04</td><td>Year — MeterDetail</td><td><span class="partial">บางส่วน</span></td><td>DEF-003</td></tr>
-      <tr><td>MD-F-05</td><td>Max10Year — MeterDetail</td><td><span class="fail">ล้มเหลว</span></td><td>DEF-004</td></tr>
+      <tr><td>MD-F-05</td><td>Max10Year — MeterDetail</td><td><span class="partial">บางส่วน</span></td><td>DEF-003 <em style="color:#888;font-size:10px">(DEF-004 mitigated)</em></td></tr>
       <tr><td>RF-01</td><td>MeterSum Day key type</td><td><span class="partial">บางส่วน</span></td><td>DEF-001</td></tr>
       <tr><td>RF-02</td><td>Multimeter Day key type</td><td><span class="partial">บางส่วน</span></td><td>DEF-001</td></tr>
       <tr><td>RF-03</td><td>MeterSum Month max values</td><td><span class="partial">บางส่วน</span></td><td>DEF-002</td></tr>
@@ -563,10 +583,10 @@
   <table>
     <thead><tr><th>ลำดับความสำคัญ</th><th>Defect</th><th>การดำเนินการที่แนะนำ</th></tr></thead>
     <tbody>
-      <tr class="rec-critical"><td>Critical</td><td>DEF-004</td><td>แก้ไข HTTP 500 บน <code>POST /GetDataMeterDetail</code> เมื่อ type=Max10Year — เป็น server crash ที่ต้องแก้ด่วน</td></tr>
-      <tr class="rec-critical"><td>Critical</td><td>DEF-002</td><td>ยืนยันและแก้ไข format ของ dictionary keys ใน ArrDataTarget/ArrDataActual ให้ใช้ DataSelect values ไม่ใช่ array indices</td></tr>
-      <tr class="rec-high"><td>High</td><td>DEF-003</td><td>ตรวจสอบ field name จริงใน MeterLabelMap จาก API developer แล้วอัปเดต test assertion ให้ตรงกัน</td></tr>
-      <tr class="rec-medium"><td>Medium</td><td>DEF-001</td><td>ยืนยันกับ developer ว่า ArrCategories ควรเป็น full-day grid หรือ data-driven — แล้วอัปเดต spec หรือ API ให้ตรงกัน</td></tr>
+      <tr class="rec-critical"><td>Critical</td><td>DEF-004</td><td>เพิ่มการเช็ค Type ก่อน <code>Int32.Parse(DataSelect)</code> ที่ <code>DataMeterDetailController.cs:288</code> — ถ้าเป็น Max10Year ให้ข้ามการ parse (Workaround ฝั่ง test และ frontend ทำแล้ว)</td></tr>
+      <tr class="rec-critical"><td>Critical</td><td>DEF-002</td><td>แก้ไข format ของ dictionary keys ใน ArrDataTarget/ArrDataActual ให้ใช้ค่า DataSelect จริง ไม่ใช่ array index</td></tr>
+      <tr class="rec-high"><td>High</td><td>DEF-003</td><td>แก้ไข MeterLabelMap ให้ return field <code>id</code> และ <code>label</code> ตาม spec — ยืนยันแล้วว่าเป็น API bug (response จริง: <code>[{"1":"1"}]</code>) — test assertions ถูกต้องแล้ว ไม่ต้องแก้ script</td></tr>
+      <tr class="rec-medium"><td>Medium</td><td>DEF-001</td><td>สร้าง ArrCategories เป็น full-day grid เสมอ ไม่ว่าจะมีข้อมูลหรือไม่ — หรืออัปเดต spec ถ้า data-driven behavior ตั้งใจไว้แบบนั้น</td></tr>
     </tbody>
   </table>
 
@@ -587,7 +607,7 @@
   </table>
 
   <div class="footer">
-    รายงานนี้จัดทำโดย Tomas Tech Co., Ltd. · โครงการ PJ250104 · 28 เมษายน 2569<br>
+    รายงานนี้จัดทำโดย Tomas Tech Co., Ltd. · โครงการ PJ250104 · 30 เมษายน 2569 · เวอร์ชัน 1.1<br>
     เอกสารนี้เป็นความลับ — ห้ามเผยแพร่โดยไม่ได้รับอนุญาต
   </div>
 

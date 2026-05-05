@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Unimicron Pegasus API" tests="25" time="3.189">
+  <testsuite name="Automated Scenario Tests / Functional - MeterSum / MS-F-01 - Day comparison by selected days" id="1a66adf4-7b38-4023-96e3-e2f421c06b99" timestamp="2026-04-30T07:34:54.845Z" tests="9" failures="1" errors="0" time="0.682">
+    <testcase name="MS-F-01 - request completed and returned a response code" time="0.682" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+    <testcase name="MS-F-01 - no HTTP 500 server error" time="0.682" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+    <testcase name="MS-F-01 - HTTP status is success" time="0.682" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+    <testcase name="MS-F-01 - response is a JSON object" time="0.682" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+    <testcase name="MS-F-01 - MeterCompare response has chart dictionaries and categories" time="0.682" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+    <testcase name="MS-F-01 - response dictionary keys match expected scenario keys" time="0.682" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+    <testcase name="MS-F-01 - data arrays align with ArrCategories" time="0.682" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+    <testcase name="MS-F-01 - max values are not lower than returned data" time="0.682" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays"/>
+    <testcase name="MS-F-01 - ArrCategories length matches scenario interval" time="0.682" classname="AutomatedScenarioTestsFunctionalMeterSumMsF01DayComparisonBySelectedDays">
+      <failure type="AssertionFailure" message="expected 93 to equal 96">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Functional - MeterSum / MS-F-01 - Day comparison by selected days.]]>
+        <![CDATA[Test description: MS-F-01 - ArrCategories length matches scenario interval.]]>
+        <![CDATA[Error message: expected 93 to equal 96.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 93 to equal 96
+   at Object.eval sandbox-script.js:9:1).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterSum / MS-F-02 - Week comparison by selected week ranges" id="01228fdf-345b-4299-82a7-4dc964f76edc" timestamp="2026-04-30T07:34:54.845Z" tests="8" failures="1" errors="0" time="0.114">
+    <testcase name="MS-F-02 - request completed and returned a response code" time="0.114" classname="AutomatedScenarioTestsFunctionalMeterSumMsF02WeekComparisonBySelectedWeekRanges"/>
+    <testcase name="MS-F-02 - no HTTP 500 server error" time="0.114" classname="AutomatedScenarioTestsFunctionalMeterSumMsF02WeekComparisonBySelectedWeekRanges"/>
+    <testcase name="MS-F-02 - HTTP status is success" time="0.114" classname="AutomatedScenarioTestsFunctionalMeterSumMsF02WeekComparisonBySelectedWeekRanges"/>
+    <testcase name="MS-F-02 - response is a JSON object" time="0.114" classname="AutomatedScenarioTestsFunctionalMeterSumMsF02WeekComparisonBySelectedWeekRanges"/>
+    <testcase name="MS-F-02 - MeterCompare response has chart dictionaries and categories" time="0.114" classname="AutomatedScenarioTestsFunctionalMeterSumMsF02WeekComparisonBySelectedWeekRanges"/>
+    <testcase name="MS-F-02 - response dictionary keys match expected scenario keys" time="0.114" classname="AutomatedScenarioTestsFunctionalMeterSumMsF02WeekComparisonBySelectedWeekRanges">
+      <failure type="AssertionFailure" message="expected [ '0', '1' ] to include '2025-06-02||2025-06-08'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Functional - MeterSum / MS-F-02 - Week comparison by selected week ranges.]]>
+        <![CDATA[Test description: MS-F-02 - response dictionary keys match expected scenario keys.]]>
+        <![CDATA[Error message: expected [ '0', '1' ] to include '2025-06-02||2025-06-08'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ '0', '1' ] to include '2025-06-02||2025-06-08'
+   at Object.eval sandbox-script.js:6:2).]]>
+      </failure>
+    </testcase>
+    <testcase name="MS-F-02 - data arrays align with ArrCategories" time="0.114" classname="AutomatedScenarioTestsFunctionalMeterSumMsF02WeekComparisonBySelectedWeekRanges"/>
+    <testcase name="MS-F-02 - max values are not lower than returned data" time="0.114" classname="AutomatedScenarioTestsFunctionalMeterSumMsF02WeekComparisonBySelectedWeekRanges"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterSum / MS-F-03 - Month comparison by selected months" id="3764218f-75da-4289-a3ba-e140485bf632" timestamp="2026-04-30T07:34:54.845Z" tests="8" failures="1" errors="0" time="0.140">
+    <testcase name="MS-F-03 - request completed and returned a response code" time="0.140" classname="AutomatedScenarioTestsFunctionalMeterSumMsF03MonthComparisonBySelectedMonths"/>
+    <testcase name="MS-F-03 - no HTTP 500 server error" time="0.140" classname="AutomatedScenarioTestsFunctionalMeterSumMsF03MonthComparisonBySelectedMonths"/>
+    <testcase name="MS-F-03 - HTTP status is success" time="0.140" classname="AutomatedScenarioTestsFunctionalMeterSumMsF03MonthComparisonBySelectedMonths"/>
+    <testcase name="MS-F-03 - response is a JSON object" time="0.140" classname="AutomatedScenarioTestsFunctionalMeterSumMsF03MonthComparisonBySelectedMonths"/>
+    <testcase name="MS-F-03 - MeterCompare response has chart dictionaries and categories" time="0.140" classname="AutomatedScenarioTestsFunctionalMeterSumMsF03MonthComparisonBySelectedMonths"/>
+    <testcase name="MS-F-03 - response dictionary keys match expected scenario keys" time="0.140" classname="AutomatedScenarioTestsFunctionalMeterSumMsF03MonthComparisonBySelectedMonths">
+      <failure type="AssertionFailure" message="expected [ '0', '1', '2' ] to include '04'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Functional - MeterSum / MS-F-03 - Month comparison by selected months.]]>
+        <![CDATA[Test description: MS-F-03 - response dictionary keys match expected scenario keys.]]>
+        <![CDATA[Error message: expected [ '0', '1', '2' ] to include '04'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ '0', '1', '2' ] to include '04'
+   at Object.eval sandbox-script.js:6:3).]]>
+      </failure>
+    </testcase>
+    <testcase name="MS-F-03 - data arrays align with ArrCategories" time="0.140" classname="AutomatedScenarioTestsFunctionalMeterSumMsF03MonthComparisonBySelectedMonths"/>
+    <testcase name="MS-F-03 - max values are not lower than returned data" time="0.140" classname="AutomatedScenarioTestsFunctionalMeterSumMsF03MonthComparisonBySelectedMonths"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterSum / MS-F-04 - Year comparison by selected years" id="a596d94b-9735-41a9-afda-b8e28d9ad06e" timestamp="2026-04-30T07:34:54.845Z" tests="8" failures="1" errors="0" time="0.107">
+    <testcase name="MS-F-04 - request completed and returned a response code" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterSumMsF04YearComparisonBySelectedYears"/>
+    <testcase name="MS-F-04 - no HTTP 500 server error" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterSumMsF04YearComparisonBySelectedYears"/>
+    <testcase name="MS-F-04 - HTTP status is success" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterSumMsF04YearComparisonBySelectedYears"/>
+    <testcase name="MS-F-04 - response is a JSON object" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterSumMsF04YearComparisonBySelectedYears"/>
+    <testcase name="MS-F-04 - MeterCompare response has chart dictionaries and categories" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterSumMsF04YearComparisonBySelectedYears"/>
+    <testcase name="MS-F-04 - response dictionary keys match expected scenario keys" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterSumMsF04YearComparisonBySelectedYears">
+      <failure type="AssertionFailure" message="expected [ '0', '1', '2' ] to include '2023'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Functional - MeterSum / MS-F-04 - Year comparison by selected years.]]>
+        <![CDATA[Test description: MS-F-04 - response dictionary keys match expected scenario keys.]]>
+        <![CDATA[Error message: expected [ '0', '1', '2' ] to include '2023'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ '0', '1', '2' ] to include '2023'
+   at Object.eval sandbox-script.js:6:4).]]>
+      </failure>
+    </testcase>
+    <testcase name="MS-F-04 - data arrays align with ArrCategories" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterSumMsF04YearComparisonBySelectedYears"/>
+    <testcase name="MS-F-04 - max values are not lower than returned data" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterSumMsF04YearComparisonBySelectedYears"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterSum / MS-F-05 - Max10Year comparison across ten years" id="8a7df468-453a-4705-b7c1-3b8dfda4e5dc" timestamp="2026-04-30T07:34:54.845Z" tests="8" failures="1" errors="0" time="0.195">
+    <testcase name="MS-F-05 - request completed and returned a response code" time="0.195" classname="AutomatedScenarioTestsFunctionalMeterSumMsF05Max10YearComparisonAcrossTenYears"/>
+    <testcase name="MS-F-05 - no HTTP 500 server error" time="0.195" classname="AutomatedScenarioTestsFunctionalMeterSumMsF05Max10YearComparisonAcrossTenYears"/>
+    <testcase name="MS-F-05 - HTTP status is success" time="0.195" classname="AutomatedScenarioTestsFunctionalMeterSumMsF05Max10YearComparisonAcrossTenYears"/>
+    <testcase name="MS-F-05 - response is a JSON object" time="0.195" classname="AutomatedScenarioTestsFunctionalMeterSumMsF05Max10YearComparisonAcrossTenYears"/>
+    <testcase name="MS-F-05 - MeterCompare response has chart dictionaries and categories" time="0.195" classname="AutomatedScenarioTestsFunctionalMeterSumMsF05Max10YearComparisonAcrossTenYears"/>
+    <testcase name="MS-F-05 - response dictionary keys match expected scenario keys" time="0.195" classname="AutomatedScenarioTestsFunctionalMeterSumMsF05Max10YearComparisonAcrossTenYears">
+      <failure type="AssertionFailure" message="expected [ '0', '1', '2', '3', '4', '5', …(4) ] to include '2016'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Functional - MeterSum / MS-F-05 - Max10Year comparison across ten years.]]>
+        <![CDATA[Test description: MS-F-05 - response dictionary keys match expected scenario keys.]]>
+        <![CDATA[Error message: expected [ '0', '1', '2', '3', '4', '5', …(4) ] to include '2016'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ '0', '1', '2', '3', '4', '5', …(4) ] to include '2016'
+   at Object.eval sandbox-script.js:6:5).]]>
+      </failure>
+    </testcase>
+    <testcase name="MS-F-05 - data arrays align with ArrCategories" time="0.195" classname="AutomatedScenarioTestsFunctionalMeterSumMsF05Max10YearComparisonAcrossTenYears"/>
+    <testcase name="MS-F-05 - max values are not lower than returned data" time="0.195" classname="AutomatedScenarioTestsFunctionalMeterSumMsF05Max10YearComparisonAcrossTenYears"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - Multimeter / MM-F-01 - Day data for multiple meters" id="8a45de66-b8e9-4320-acb6-d8d71af8cf4c" timestamp="2026-04-30T07:34:54.845Z" tests="9" failures="1" errors="0" time="0.310">
+    <testcase name="MM-F-01 - request completed and returned a response code" time="0.310" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+    <testcase name="MM-F-01 - no HTTP 500 server error" time="0.310" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+    <testcase name="MM-F-01 - HTTP status is success" time="0.310" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+    <testcase name="MM-F-01 - response is a JSON object" time="0.310" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+    <testcase name="MM-F-01 - MeterCompare response has chart dictionaries and categories" time="0.310" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+    <testcase name="MM-F-01 - response dictionary keys match expected scenario keys" time="0.310" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+    <testcase name="MM-F-01 - data arrays align with ArrCategories" time="0.310" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+    <testcase name="MM-F-01 - max values are not lower than returned data" time="0.310" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters"/>
+    <testcase name="MM-F-01 - ArrCategories length matches scenario interval" time="0.310" classname="AutomatedScenarioTestsFunctionalMultimeterMmF01DayDataForMultipleMeters">
+      <failure type="AssertionFailure" message="expected 93 to equal 96">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Functional - Multimeter / MM-F-01 - Day data for multiple meters.]]>
+        <![CDATA[Test description: MM-F-01 - ArrCategories length matches scenario interval.]]>
+        <![CDATA[Error message: expected 93 to equal 96.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 93 to equal 96
+   at Object.eval sandbox-script.js:9:6).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - Multimeter / MM-F-02 - Week data for multiple meters" id="aec2b37e-ab97-4fd6-9c8c-8040f5c7fa74" timestamp="2026-04-30T07:34:54.845Z" tests="8" failures="0" errors="0" time="0.079">
+    <testcase name="MM-F-02 - request completed and returned a response code" time="0.079" classname="AutomatedScenarioTestsFunctionalMultimeterMmF02WeekDataForMultipleMeters"/>
+    <testcase name="MM-F-02 - no HTTP 500 server error" time="0.079" classname="AutomatedScenarioTestsFunctionalMultimeterMmF02WeekDataForMultipleMeters"/>
+    <testcase name="MM-F-02 - HTTP status is success" time="0.079" classname="AutomatedScenarioTestsFunctionalMultimeterMmF02WeekDataForMultipleMeters"/>
+    <testcase name="MM-F-02 - response is a JSON object" time="0.079" classname="AutomatedScenarioTestsFunctionalMultimeterMmF02WeekDataForMultipleMeters"/>
+    <testcase name="MM-F-02 - MeterCompare response has chart dictionaries and categories" time="0.079" classname="AutomatedScenarioTestsFunctionalMultimeterMmF02WeekDataForMultipleMeters"/>
+    <testcase name="MM-F-02 - response dictionary keys match expected scenario keys" time="0.079" classname="AutomatedScenarioTestsFunctionalMultimeterMmF02WeekDataForMultipleMeters"/>
+    <testcase name="MM-F-02 - data arrays align with ArrCategories" time="0.079" classname="AutomatedScenarioTestsFunctionalMultimeterMmF02WeekDataForMultipleMeters"/>
+    <testcase name="MM-F-02 - max values are not lower than returned data" time="0.079" classname="AutomatedScenarioTestsFunctionalMultimeterMmF02WeekDataForMultipleMeters"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - Multimeter / MM-F-03 - Month data for multiple meters" id="a926f0b2-1788-4c59-b10b-9940f9222e6b" timestamp="2026-04-30T07:34:54.845Z" tests="8" failures="0" errors="0" time="0.073">
+    <testcase name="MM-F-03 - request completed and returned a response code" time="0.073" classname="AutomatedScenarioTestsFunctionalMultimeterMmF03MonthDataForMultipleMeters"/>
+    <testcase name="MM-F-03 - no HTTP 500 server error" time="0.073" classname="AutomatedScenarioTestsFunctionalMultimeterMmF03MonthDataForMultipleMeters"/>
+    <testcase name="MM-F-03 - HTTP status is success" time="0.073" classname="AutomatedScenarioTestsFunctionalMultimeterMmF03MonthDataForMultipleMeters"/>
+    <testcase name="MM-F-03 - response is a JSON object" time="0.073" classname="AutomatedScenarioTestsFunctionalMultimeterMmF03MonthDataForMultipleMeters"/>
+    <testcase name="MM-F-03 - MeterCompare response has chart dictionaries and categories" time="0.073" classname="AutomatedScenarioTestsFunctionalMultimeterMmF03MonthDataForMultipleMeters"/>
+    <testcase name="MM-F-03 - response dictionary keys match expected scenario keys" time="0.073" classname="AutomatedScenarioTestsFunctionalMultimeterMmF03MonthDataForMultipleMeters"/>
+    <testcase name="MM-F-03 - data arrays align with ArrCategories" time="0.073" classname="AutomatedScenarioTestsFunctionalMultimeterMmF03MonthDataForMultipleMeters"/>
+    <testcase name="MM-F-03 - max values are not lower than returned data" time="0.073" classname="AutomatedScenarioTestsFunctionalMultimeterMmF03MonthDataForMultipleMeters"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - Multimeter / MM-F-04 - Year data for multiple meters" id="500d3311-f1e3-482b-86b0-41ac074e0a36" timestamp="2026-04-30T07:34:54.845Z" tests="8" failures="0" errors="0" time="0.102">
+    <testcase name="MM-F-04 - request completed and returned a response code" time="0.102" classname="AutomatedScenarioTestsFunctionalMultimeterMmF04YearDataForMultipleMeters"/>
+    <testcase name="MM-F-04 - no HTTP 500 server error" time="0.102" classname="AutomatedScenarioTestsFunctionalMultimeterMmF04YearDataForMultipleMeters"/>
+    <testcase name="MM-F-04 - HTTP status is success" time="0.102" classname="AutomatedScenarioTestsFunctionalMultimeterMmF04YearDataForMultipleMeters"/>
+    <testcase name="MM-F-04 - response is a JSON object" time="0.102" classname="AutomatedScenarioTestsFunctionalMultimeterMmF04YearDataForMultipleMeters"/>
+    <testcase name="MM-F-04 - MeterCompare response has chart dictionaries and categories" time="0.102" classname="AutomatedScenarioTestsFunctionalMultimeterMmF04YearDataForMultipleMeters"/>
+    <testcase name="MM-F-04 - response dictionary keys match expected scenario keys" time="0.102" classname="AutomatedScenarioTestsFunctionalMultimeterMmF04YearDataForMultipleMeters"/>
+    <testcase name="MM-F-04 - data arrays align with ArrCategories" time="0.102" classname="AutomatedScenarioTestsFunctionalMultimeterMmF04YearDataForMultipleMeters"/>
+    <testcase name="MM-F-04 - max values are not lower than returned data" time="0.102" classname="AutomatedScenarioTestsFunctionalMultimeterMmF04YearDataForMultipleMeters"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - Multimeter / MM-F-05 - Max10Year data for multiple meters" id="53164db9-fff6-47d9-a73a-09a2d078a9dc" timestamp="2026-04-30T07:34:54.845Z" tests="8" failures="0" errors="0" time="0.135">
+    <testcase name="MM-F-05 - request completed and returned a response code" time="0.135" classname="AutomatedScenarioTestsFunctionalMultimeterMmF05Max10YearDataForMultipleMeters"/>
+    <testcase name="MM-F-05 - no HTTP 500 server error" time="0.135" classname="AutomatedScenarioTestsFunctionalMultimeterMmF05Max10YearDataForMultipleMeters"/>
+    <testcase name="MM-F-05 - HTTP status is success" time="0.135" classname="AutomatedScenarioTestsFunctionalMultimeterMmF05Max10YearDataForMultipleMeters"/>
+    <testcase name="MM-F-05 - response is a JSON object" time="0.135" classname="AutomatedScenarioTestsFunctionalMultimeterMmF05Max10YearDataForMultipleMeters"/>
+    <testcase name="MM-F-05 - MeterCompare response has chart dictionaries and categories" time="0.135" classname="AutomatedScenarioTestsFunctionalMultimeterMmF05Max10YearDataForMultipleMeters"/>
+    <testcase name="MM-F-05 - response dictionary keys match expected scenario keys" time="0.135" classname="AutomatedScenarioTestsFunctionalMultimeterMmF05Max10YearDataForMultipleMeters"/>
+    <testcase name="MM-F-05 - data arrays align with ArrCategories" time="0.135" classname="AutomatedScenarioTestsFunctionalMultimeterMmF05Max10YearDataForMultipleMeters"/>
+    <testcase name="MM-F-05 - max values are not lower than returned data" time="0.135" classname="AutomatedScenarioTestsFunctionalMultimeterMmF05Max10YearDataForMultipleMeters"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterDetail / MD-F-01 - Day detail chart" id="442f7eb8-0dc3-4eea-99dd-9a40e0ee696b" timestamp="2026-04-30T07:34:54.845Z" tests="9" failures="2" errors="0" time="0.107">
+    <testcase name="MD-F-01 - request completed and returned a response code" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart"/>
+    <testcase name="MD-F-01 - no HTTP 500 server error" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart"/>
+    <testcase name="MD-F-01 - HTTP status is success" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart"/>
+    <testcase name="MD-F-01 - response is a JSON object" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart"/>
+    <testcase name="MD-F-01 - MeterDetail response has chart structure" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart"/>
+    <testcase name="MD-F-01 - each chart series is a bar series with valid data" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart"/>
+    <testcase name="MD-F-01 - stroke chart length matches chart series length" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart"/>
+    <testcase name="MD-F-01 - MeterLabelMap contains selected meter IDs" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart">
+      <failure type="AssertionFailure" message="expected [ 'undefined', 'undefined' ] to include '1'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Functional - MeterDetail / MD-F-01 - Day detail chart.]]>
+        <![CDATA[Test description: MD-F-01 - MeterLabelMap contains selected meter IDs.]]>
+        <![CDATA[Error message: expected [ 'undefined', 'undefined' ] to include '1'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ 'undefined', 'undefined' ] to include '1'
+   at Object.eval sandbox-script.js:8:11).]]>
+      </failure>
+    </testcase>
+    <testcase name="MD-F-01 - ArrCategories length matches scenario interval" time="0.107" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF01DayDetailChart">
+      <failure type="AssertionFailure" message="expected 93 to equal 96">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Functional - MeterDetail / MD-F-01 - Day detail chart.]]>
+        <![CDATA[Test description: MD-F-01 - ArrCategories length matches scenario interval.]]>
+        <![CDATA[Error message: expected 93 to equal 96.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 93 to equal 96
+   at Object.eval sandbox-script.js:9:11).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterDetail / MD-F-02 - Week detail chart" id="d767d129-e637-49c6-8017-11609a87b47e" timestamp="2026-04-30T07:34:54.845Z" tests="8" failures="1" errors="0" time="0.049">
+    <testcase name="MD-F-02 - request completed and returned a response code" time="0.049" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF02WeekDetailChart"/>
+    <testcase name="MD-F-02 - no HTTP 500 server error" time="0.049" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF02WeekDetailChart"/>
+    <testcase name="MD-F-02 - HTTP status is success" time="0.049" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF02WeekDetailChart"/>
+    <testcase name="MD-F-02 - response is a JSON object" time="0.049" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF02WeekDetailChart"/>
+    <testcase name="MD-F-02 - MeterDetail response has chart structure" time="0.049" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF02WeekDetailChart"/>
+    <testcase name="MD-F-02 - each chart series is a bar series with valid data" time="0.049" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF02WeekDetailChart"/>
+    <testcase name="MD-F-02 - stroke chart length matches chart series length" time="0.049" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF02WeekDetailChart"/>
+    <testcase name="MD-F-02 - MeterLabelMap contains selected meter IDs" time="0.049" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF02WeekDetailChart">
+      <failure type="AssertionFailure" message="expected [] to include '1'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Functional - MeterDetail / MD-F-02 - Week detail chart.]]>
+        <![CDATA[Test description: MD-F-02 - MeterLabelMap contains selected meter IDs.]]>
+        <![CDATA[Error message: expected [] to include '1'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [] to include '1'
+   at Object.eval sandbox-script.js:8:12).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterDetail / MD-F-03 - Month detail chart" id="7665ac7e-1901-4c97-9c41-c4f461fb5aa1" timestamp="2026-04-30T07:34:54.845Z" tests="8" failures="1" errors="0" time="0.044">
+    <testcase name="MD-F-03 - request completed and returned a response code" time="0.044" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF03MonthDetailChart"/>
+    <testcase name="MD-F-03 - no HTTP 500 server error" time="0.044" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF03MonthDetailChart"/>
+    <testcase name="MD-F-03 - HTTP status is success" time="0.044" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF03MonthDetailChart"/>
+    <testcase name="MD-F-03 - response is a JSON object" time="0.044" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF03MonthDetailChart"/>
+    <testcase name="MD-F-03 - MeterDetail response has chart structure" time="0.044" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF03MonthDetailChart"/>
+    <testcase name="MD-F-03 - each chart series is a bar series with valid data" time="0.044" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF03MonthDetailChart"/>
+    <testcase name="MD-F-03 - stroke chart length matches chart series length" time="0.044" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF03MonthDetailChart"/>
+    <testcase name="MD-F-03 - MeterLabelMap contains selected meter IDs" time="0.044" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF03MonthDetailChart">
+      <failure type="AssertionFailure" message="expected [ 'undefined' ] to include '1'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Functional - MeterDetail / MD-F-03 - Month detail chart.]]>
+        <![CDATA[Test description: MD-F-03 - MeterLabelMap contains selected meter IDs.]]>
+        <![CDATA[Error message: expected [ 'undefined' ] to include '1'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ 'undefined' ] to include '1'
+   at Object.eval sandbox-script.js:8:13).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterDetail / MD-F-04 - Year detail chart" id="57df9356-47f3-4d5a-8a0d-fdb0a8b18f9f" timestamp="2026-04-30T07:34:54.845Z" tests="8" failures="1" errors="0" time="0.184">
+    <testcase name="MD-F-04 - request completed and returned a response code" time="0.184" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF04YearDetailChart"/>
+    <testcase name="MD-F-04 - no HTTP 500 server error" time="0.184" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF04YearDetailChart"/>
+    <testcase name="MD-F-04 - HTTP status is success" time="0.184" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF04YearDetailChart"/>
+    <testcase name="MD-F-04 - response is a JSON object" time="0.184" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF04YearDetailChart"/>
+    <testcase name="MD-F-04 - MeterDetail response has chart structure" time="0.184" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF04YearDetailChart"/>
+    <testcase name="MD-F-04 - each chart series is a bar series with valid data" time="0.184" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF04YearDetailChart"/>
+    <testcase name="MD-F-04 - stroke chart length matches chart series length" time="0.184" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF04YearDetailChart"/>
+    <testcase name="MD-F-04 - MeterLabelMap contains selected meter IDs" time="0.184" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF04YearDetailChart">
+      <failure type="AssertionFailure" message="expected [ 'undefined', 'undefined' ] to include '1'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Functional - MeterDetail / MD-F-04 - Year detail chart.]]>
+        <![CDATA[Test description: MD-F-04 - MeterLabelMap contains selected meter IDs.]]>
+        <![CDATA[Error message: expected [ 'undefined', 'undefined' ] to include '1'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ 'undefined', 'undefined' ] to include '1'
+   at Object.eval sandbox-script.js:8:14).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Functional - MeterDetail / MD-F-05 - Max10Year detail chart" id="c4423ac9-6995-4e80-90b3-67da689f2217" timestamp="2026-04-30T07:34:54.845Z" tests="8" failures="1" errors="0" time="0.086">
+    <testcase name="MD-F-05 - request completed and returned a response code" time="0.086" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF05Max10YearDetailChart"/>
+    <testcase name="MD-F-05 - no HTTP 500 server error" time="0.086" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF05Max10YearDetailChart"/>
+    <testcase name="MD-F-05 - HTTP status is success" time="0.086" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF05Max10YearDetailChart"/>
+    <testcase name="MD-F-05 - response is a JSON object" time="0.086" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF05Max10YearDetailChart"/>
+    <testcase name="MD-F-05 - MeterDetail response has chart structure" time="0.086" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF05Max10YearDetailChart"/>
+    <testcase name="MD-F-05 - each chart series is a bar series with valid data" time="0.086" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF05Max10YearDetailChart"/>
+    <testcase name="MD-F-05 - stroke chart length matches chart series length" time="0.086" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF05Max10YearDetailChart"/>
+    <testcase name="MD-F-05 - MeterLabelMap contains selected meter IDs" time="0.086" classname="AutomatedScenarioTestsFunctionalMeterDetailMdF05Max10YearDetailChart">
+      <failure type="AssertionFailure" message="expected [] to include '1'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Functional - MeterDetail / MD-F-05 - Max10Year detail chart.]]>
+        <![CDATA[Test description: MD-F-05 - MeterLabelMap contains selected meter IDs.]]>
+        <![CDATA[Error message: expected [] to include '1'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [] to include '1'
+   at Object.eval sandbox-script.js:8:15).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-01 - MeterSum Day keys are time/data-select strings" id="121acf23-7d30-4b55-8d26-186cb2c49ed2" timestamp="2026-04-30T07:34:54.845Z" tests="9" failures="1" errors="0" time="0.113">
+    <testcase name="RF-01 - request completed and returned a response code" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+    <testcase name="RF-01 - no HTTP 500 server error" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+    <testcase name="RF-01 - HTTP status is success" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+    <testcase name="RF-01 - response is a JSON object" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+    <testcase name="RF-01 - MeterCompare response has chart dictionaries and categories" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+    <testcase name="RF-01 - response dictionary keys match expected scenario keys" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+    <testcase name="RF-01 - data arrays align with ArrCategories" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+    <testcase name="RF-01 - max values are not lower than returned data" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings"/>
+    <testcase name="RF-01 - ArrCategories length matches scenario interval" time="0.113" classname="AutomatedScenarioTestsResponseIntegrityRf01MeterSumDayKeysAreTimeDataSelectStrings">
+      <failure type="AssertionFailure" message="expected 93 to equal 96">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Response Integrity / RF-01 - MeterSum Day keys are time/data-select strings.]]>
+        <![CDATA[Test description: RF-01 - ArrCategories length matches scenario interval.]]>
+        <![CDATA[Error message: expected 93 to equal 96.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 93 to equal 96
+   at Object.eval sandbox-script.js:9:16).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-02 - Multimeter Day keys are meter IDs" id="bb7562db-1945-4656-a615-de100958b415" timestamp="2026-04-30T07:34:54.845Z" tests="9" failures="1" errors="0" time="0.045">
+    <testcase name="RF-02 - request completed and returned a response code" time="0.045" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+    <testcase name="RF-02 - no HTTP 500 server error" time="0.045" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+    <testcase name="RF-02 - HTTP status is success" time="0.045" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+    <testcase name="RF-02 - response is a JSON object" time="0.045" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+    <testcase name="RF-02 - MeterCompare response has chart dictionaries and categories" time="0.045" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+    <testcase name="RF-02 - response dictionary keys match expected scenario keys" time="0.045" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+    <testcase name="RF-02 - data arrays align with ArrCategories" time="0.045" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+    <testcase name="RF-02 - max values are not lower than returned data" time="0.045" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs"/>
+    <testcase name="RF-02 - ArrCategories length matches scenario interval" time="0.045" classname="AutomatedScenarioTestsResponseIntegrityRf02MultimeterDayKeysAreMeterIDs">
+      <failure type="AssertionFailure" message="expected 93 to equal 96">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Response Integrity / RF-02 - Multimeter Day keys are meter IDs.]]>
+        <![CDATA[Test description: RF-02 - ArrCategories length matches scenario interval.]]>
+        <![CDATA[Error message: expected 93 to equal 96.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 93 to equal 96
+   at Object.eval sandbox-script.js:9:17).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-03 - MeterSum max values cover Month data" id="f0db3f26-1185-4407-8ff0-2fbb000b0959" timestamp="2026-04-30T07:34:54.845Z" tests="8" failures="1" errors="0" time="0.043">
+    <testcase name="RF-03 - request completed and returned a response code" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf03MeterSumMaxValuesCoverMonthData"/>
+    <testcase name="RF-03 - no HTTP 500 server error" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf03MeterSumMaxValuesCoverMonthData"/>
+    <testcase name="RF-03 - HTTP status is success" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf03MeterSumMaxValuesCoverMonthData"/>
+    <testcase name="RF-03 - response is a JSON object" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf03MeterSumMaxValuesCoverMonthData"/>
+    <testcase name="RF-03 - MeterCompare response has chart dictionaries and categories" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf03MeterSumMaxValuesCoverMonthData"/>
+    <testcase name="RF-03 - response dictionary keys match expected scenario keys" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf03MeterSumMaxValuesCoverMonthData">
+      <failure type="AssertionFailure" message="expected [ '0' ] to include '06'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Response Integrity / RF-03 - MeterSum max values cover Month data.]]>
+        <![CDATA[Test description: RF-03 - response dictionary keys match expected scenario keys.]]>
+        <![CDATA[Error message: expected [ '0' ] to include '06'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ '0' ] to include '06'
+   at Object.eval sandbox-script.js:6:18).]]>
+      </failure>
+    </testcase>
+    <testcase name="RF-03 - data arrays align with ArrCategories" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf03MeterSumMaxValuesCoverMonthData"/>
+    <testcase name="RF-03 - max values are not lower than returned data" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf03MeterSumMaxValuesCoverMonthData"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-04 - Multimeter max values cover Month data" id="9d04f92f-0e16-4665-ad8b-428cb7d6c225" timestamp="2026-04-30T07:34:54.845Z" tests="8" failures="0" errors="0" time="0.080">
+    <testcase name="RF-04 - request completed and returned a response code" time="0.080" classname="AutomatedScenarioTestsResponseIntegrityRf04MultimeterMaxValuesCoverMonthData"/>
+    <testcase name="RF-04 - no HTTP 500 server error" time="0.080" classname="AutomatedScenarioTestsResponseIntegrityRf04MultimeterMaxValuesCoverMonthData"/>
+    <testcase name="RF-04 - HTTP status is success" time="0.080" classname="AutomatedScenarioTestsResponseIntegrityRf04MultimeterMaxValuesCoverMonthData"/>
+    <testcase name="RF-04 - response is a JSON object" time="0.080" classname="AutomatedScenarioTestsResponseIntegrityRf04MultimeterMaxValuesCoverMonthData"/>
+    <testcase name="RF-04 - MeterCompare response has chart dictionaries and categories" time="0.080" classname="AutomatedScenarioTestsResponseIntegrityRf04MultimeterMaxValuesCoverMonthData"/>
+    <testcase name="RF-04 - response dictionary keys match expected scenario keys" time="0.080" classname="AutomatedScenarioTestsResponseIntegrityRf04MultimeterMaxValuesCoverMonthData"/>
+    <testcase name="RF-04 - data arrays align with ArrCategories" time="0.080" classname="AutomatedScenarioTestsResponseIntegrityRf04MultimeterMaxValuesCoverMonthData"/>
+    <testcase name="RF-04 - max values are not lower than returned data" time="0.080" classname="AutomatedScenarioTestsResponseIntegrityRf04MultimeterMaxValuesCoverMonthData"/>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-05 - MeterDetail chart series object structure" id="66baefd6-2a55-4be7-94d3-4de3942f4881" timestamp="2026-04-30T07:34:54.845Z" tests="9" failures="2" errors="0" time="0.215">
+    <testcase name="RF-05 - request completed and returned a response code" time="0.215" classname="AutomatedScenarioTestsResponseIntegrityRf05MeterDetailChartSeriesObjectStructure"/>
+    <testcase name="RF-05 - no HTTP 500 server error" time="0.215" classname="AutomatedScenarioTestsResponseIntegrityRf05MeterDetailChartSeriesObjectStructure"/>
+    <testcase name="RF-05 - HTTP status is success" time="0.215" classname="AutomatedScenarioTestsResponseIntegrityRf05MeterDetailChartSeriesObjectStructure"/>
+    <testcase name="RF-05 - response is a JSON object" time="0.215" classname="AutomatedScenarioTestsResponseIntegrityRf05MeterDetailChartSeriesObjectStructure"/>
+    <testcase name="RF-05 - MeterDetail response has chart structure" time="0.215" classname="AutomatedScenarioTestsResponseIntegrityRf05MeterDetailChartSeriesObjectStructure"/>
+    <testcase name="RF-05 - each chart series is a bar series with valid data" time="0.215" classname="AutomatedScenarioTestsResponseIntegrityRf05MeterDetailChartSeriesObjectStructure"/>
+    <testcase name="RF-05 - stroke chart length matches chart series length" time="0.215" classname="AutomatedScenarioTestsResponseIntegrityRf05MeterDetailChartSeriesObjectStructure"/>
+    <testcase name="RF-05 - MeterLabelMap contains selected meter IDs" time="0.215" classname="AutomatedScenarioTestsResponseIntegrityRf05MeterDetailChartSeriesObjectStructure">
+      <failure type="AssertionFailure" message="expected [ 'undefined', 'undefined' ] to include '1'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Response Integrity / RF-05 - MeterDetail chart series object structure.]]>
+        <![CDATA[Test description: RF-05 - MeterLabelMap contains selected meter IDs.]]>
+        <![CDATA[Error message: expected [ 'undefined', 'undefined' ] to include '1'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ 'undefined', 'undefined' ] to include '1'
+   at Object.eval sandbox-script.js:8:20).]]>
+      </failure>
+    </testcase>
+    <testcase name="RF-05 - ArrCategories length matches scenario interval" time="0.215" classname="AutomatedScenarioTestsResponseIntegrityRf05MeterDetailChartSeriesObjectStructure">
+      <failure type="AssertionFailure" message="expected 93 to equal 96">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Response Integrity / RF-05 - MeterDetail chart series object structure.]]>
+        <![CDATA[Test description: RF-05 - ArrCategories length matches scenario interval.]]>
+        <![CDATA[Error message: expected 93 to equal 96.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 93 to equal 96
+   at Object.eval sandbox-script.js:9:20).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-06 - MeterDetail MeterLabelMap selected IDs" id="2230bbd1-470d-474a-b53f-3a938ffa42ff" timestamp="2026-04-30T07:34:54.845Z" tests="8" failures="1" errors="0" time="0.070">
+    <testcase name="RF-06 - request completed and returned a response code" time="0.070" classname="AutomatedScenarioTestsResponseIntegrityRf06MeterDetailMeterLabelMapSelectedIDs"/>
+    <testcase name="RF-06 - no HTTP 500 server error" time="0.070" classname="AutomatedScenarioTestsResponseIntegrityRf06MeterDetailMeterLabelMapSelectedIDs"/>
+    <testcase name="RF-06 - HTTP status is success" time="0.070" classname="AutomatedScenarioTestsResponseIntegrityRf06MeterDetailMeterLabelMapSelectedIDs"/>
+    <testcase name="RF-06 - response is a JSON object" time="0.070" classname="AutomatedScenarioTestsResponseIntegrityRf06MeterDetailMeterLabelMapSelectedIDs"/>
+    <testcase name="RF-06 - MeterDetail response has chart structure" time="0.070" classname="AutomatedScenarioTestsResponseIntegrityRf06MeterDetailMeterLabelMapSelectedIDs"/>
+    <testcase name="RF-06 - each chart series is a bar series with valid data" time="0.070" classname="AutomatedScenarioTestsResponseIntegrityRf06MeterDetailMeterLabelMapSelectedIDs"/>
+    <testcase name="RF-06 - stroke chart length matches chart series length" time="0.070" classname="AutomatedScenarioTestsResponseIntegrityRf06MeterDetailMeterLabelMapSelectedIDs"/>
+    <testcase name="RF-06 - MeterLabelMap contains selected meter IDs" time="0.070" classname="AutomatedScenarioTestsResponseIntegrityRf06MeterDetailMeterLabelMapSelectedIDs">
+      <failure type="AssertionFailure" message="expected [ 'undefined', 'undefined' ] to include '1'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Response Integrity / RF-06 - MeterDetail MeterLabelMap selected IDs.]]>
+        <![CDATA[Test description: RF-06 - MeterLabelMap contains selected meter IDs.]]>
+        <![CDATA[Error message: expected [ 'undefined', 'undefined' ] to include '1'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ 'undefined', 'undefined' ] to include '1'
+   at Object.eval sandbox-script.js:8:21).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-07 - MeterDetail stroke length consistency" id="f9473149-4c9e-49f9-9dd1-47c2515c8611" timestamp="2026-04-30T07:34:54.845Z" tests="8" failures="1" errors="0" time="0.070">
+    <testcase name="RF-07 - request completed and returned a response code" time="0.070" classname="AutomatedScenarioTestsResponseIntegrityRf07MeterDetailStrokeLengthConsistency"/>
+    <testcase name="RF-07 - no HTTP 500 server error" time="0.070" classname="AutomatedScenarioTestsResponseIntegrityRf07MeterDetailStrokeLengthConsistency"/>
+    <testcase name="RF-07 - HTTP status is success" time="0.070" classname="AutomatedScenarioTestsResponseIntegrityRf07MeterDetailStrokeLengthConsistency"/>
+    <testcase name="RF-07 - response is a JSON object" time="0.070" classname="AutomatedScenarioTestsResponseIntegrityRf07MeterDetailStrokeLengthConsistency"/>
+    <testcase name="RF-07 - MeterDetail response has chart structure" time="0.070" classname="AutomatedScenarioTestsResponseIntegrityRf07MeterDetailStrokeLengthConsistency"/>
+    <testcase name="RF-07 - each chart series is a bar series with valid data" time="0.070" classname="AutomatedScenarioTestsResponseIntegrityRf07MeterDetailStrokeLengthConsistency"/>
+    <testcase name="RF-07 - stroke chart length matches chart series length" time="0.070" classname="AutomatedScenarioTestsResponseIntegrityRf07MeterDetailStrokeLengthConsistency"/>
+    <testcase name="RF-07 - MeterLabelMap contains selected meter IDs" time="0.070" classname="AutomatedScenarioTestsResponseIntegrityRf07MeterDetailStrokeLengthConsistency">
+      <failure type="AssertionFailure" message="expected [ 'undefined', 'undefined' ] to include '1'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Response Integrity / RF-07 - MeterDetail stroke length consistency.]]>
+        <![CDATA[Test description: RF-07 - MeterLabelMap contains selected meter IDs.]]>
+        <![CDATA[Error message: expected [ 'undefined', 'undefined' ] to include '1'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected [ 'undefined', 'undefined' ] to include '1'
+   at Object.eval sandbox-script.js:8:22).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-08a - MeterSum Day categories for 5 minute interval" id="85f9c5a5-c6a2-41ca-b5ea-7ccc861a74a5" timestamp="2026-04-30T07:34:54.845Z" tests="9" failures="1" errors="0" time="0.051">
+    <testcase name="RF-08a - request completed and returned a response code" time="0.051" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+    <testcase name="RF-08a - no HTTP 500 server error" time="0.051" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+    <testcase name="RF-08a - HTTP status is success" time="0.051" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+    <testcase name="RF-08a - response is a JSON object" time="0.051" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+    <testcase name="RF-08a - MeterCompare response has chart dictionaries and categories" time="0.051" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+    <testcase name="RF-08a - response dictionary keys match expected scenario keys" time="0.051" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+    <testcase name="RF-08a - data arrays align with ArrCategories" time="0.051" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+    <testcase name="RF-08a - max values are not lower than returned data" time="0.051" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval"/>
+    <testcase name="RF-08a - ArrCategories length matches scenario interval" time="0.051" classname="AutomatedScenarioTestsResponseIntegrityRf08AMeterSumDayCategoriesFor5MinuteInterval">
+      <failure type="AssertionFailure" message="expected 277 to equal 288">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Response Integrity / RF-08a - MeterSum Day categories for 5 minute interval.]]>
+        <![CDATA[Test description: RF-08a - ArrCategories length matches scenario interval.]]>
+        <![CDATA[Error message: expected 277 to equal 288.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 277 to equal 288
+   at Object.eval sandbox-script.js:9:23).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-08b - MeterSum Day categories for 15 minute interval" id="ef2f0abf-9661-4f49-8f46-2d2a866a3f88" timestamp="2026-04-30T07:34:54.845Z" tests="9" failures="1" errors="0" time="0.043">
+    <testcase name="RF-08b - request completed and returned a response code" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+    <testcase name="RF-08b - no HTTP 500 server error" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+    <testcase name="RF-08b - HTTP status is success" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+    <testcase name="RF-08b - response is a JSON object" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+    <testcase name="RF-08b - MeterCompare response has chart dictionaries and categories" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+    <testcase name="RF-08b - response dictionary keys match expected scenario keys" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+    <testcase name="RF-08b - data arrays align with ArrCategories" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+    <testcase name="RF-08b - max values are not lower than returned data" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval"/>
+    <testcase name="RF-08b - ArrCategories length matches scenario interval" time="0.043" classname="AutomatedScenarioTestsResponseIntegrityRf08BMeterSumDayCategoriesFor15MinuteInterval">
+      <failure type="AssertionFailure" message="expected 93 to equal 96">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8a1ce666-0039-4b1a-9ac5-0f4dcba13124.]]>
+        <![CDATA[Collection name: Unimicron Pegasus API.]]>
+        <![CDATA[Request name: Automated Scenario Tests / Response Integrity / RF-08b - MeterSum Day categories for 15 minute interval.]]>
+        <![CDATA[Test description: RF-08b - ArrCategories length matches scenario interval.]]>
+        <![CDATA[Error message: expected 93 to equal 96.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 93 to equal 96
+   at Object.eval sandbox-script.js:9:24).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Automated Scenario Tests / Response Integrity / RF-08c - MeterSum Day categories for 60 minute interval" id="de05be31-5dc1-4ee1-b3f1-21b792ba8a6f" timestamp="2026-04-30T07:34:54.845Z" tests="9" failures="0" errors="0" time="0.052">
+    <testcase name="RF-08c - request completed and returned a response code" time="0.052" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+    <testcase name="RF-08c - no HTTP 500 server error" time="0.052" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+    <testcase name="RF-08c - HTTP status is success" time="0.052" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+    <testcase name="RF-08c - response is a JSON object" time="0.052" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+    <testcase name="RF-08c - MeterCompare response has chart dictionaries and categories" time="0.052" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+    <testcase name="RF-08c - response dictionary keys match expected scenario keys" time="0.052" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+    <testcase name="RF-08c - data arrays align with ArrCategories" time="0.052" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+    <testcase name="RF-08c - max values are not lower than returned data" time="0.052" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+    <testcase name="RF-08c - ArrCategories length matches scenario interval" time="0.052" classname="AutomatedScenarioTestsResponseIntegrityRf08CMeterSumDayCategoriesFor60MinuteInterval"/>
+  </testsuite>
+</testsuites>
