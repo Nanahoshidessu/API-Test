@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node scripts/generate-pptx-report.js)"
+      "Bash(node scripts/generate-pptx-report.js)",
+      "Bash(npm run *)"
     ]
   }
 }
